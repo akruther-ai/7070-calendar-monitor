@@ -170,6 +170,62 @@
       "startDatetime": "2026-08-31T18:30:00.000Z"
     }
   },
-  "lastCheckedAt": "2026-08-25T00:29:29.917Z",
-  "feedGeneratedAt": null
+  "advanceAlerted": {
+    "cal-ecf4cca4ff3e4715a8e7f75112b5": {
+      "notifiedAt": "2026-08-25T21:15:22Z",
+      "registrationOpenedAt": "2026-08-25T22:30:00.000Z",
+      "title": "Middle School Skills",
+      "startDatetime": "2026-09-01T16:30:00.000Z",
+      "issueNumber": 4
+    },
+    "cal-e867379893ba440abbe639e06626": {
+      "notifiedAt": "2026-08-25T21:15:22Z",
+      "registrationOpenedAt": "2026-08-25T22:30:00.000Z",
+      "title": "IPT Middle School ",
+      "startDatetime": "2026-09-01T16:30:00.000Z",
+      "issueNumber": 4
+    },
+    "cal-d2b24cfcef6742b0905a30a3e531": {
+      "notifiedAt": "2026-08-25T21:15:22Z",
+      "registrationOpenedAt": "2026-08-25T23:30:00.000Z",
+      "title": "Middle School Skills",
+      "startDatetime": "2026-09-01T17:30:00.000Z",
+      "issueNumber": 4
+    },
+    "cal-259ba97cd4d846ccb425476ba1f2": {
+      "notifiedAt": "2026-08-25T21:15:22Z",
+      "registrationOpenedAt": "2026-08-26T00:30:00.000Z",
+      "title": "Middle School Skills",
+      "startDatetime": "2026-09-01T18:30:00.000Z",
+      "issueNumber": 4
+    },
+    "cal-7cbc9484b76d4a21abeed1884e81": {
+      "notifiedAt": "2026-08-25T21:15:23Z",
+      "registrationOpenedAt": "2026-08-26T22:30:00.000Z",
+      "title": "Middle School Skills",
+      "startDatetime": "2026-09-02T16:30:00.000Z",
+      "issueNumber": 5
+    },
+    "cal-145c7751b4364fdb92bfc8a078dd": {
+      "notifiedAt": "2026-08-25T21:15:23Z",
+      "registrationOpenedAt": "2026-08-26T22:30:00.000Z",
+      "title": "Middle School Skills ",
+      "startDatetime": "2026-09-02T16:30:00.000Z",
+      "issueNumber": 5
+    },
+    "cal-451289197bfb4cfdb5b9402bf423": {
+      "notifiedAt": "2026-08-25T21:15:23Z",
+      "registrationOpenedAt": "2026-08-26T23:30:00.000Z",
+      "title": "Middle School Skills",
+      "startDatetime": "2026-09-02T17:30:00.000Z",
+      "issueNumber": 5
+    },
+    "cal-c15b477ac0164f99afb4c33a2d78": {
+      "notifiedAt": "2026-08-25T21:15:23Z",
+      "registrationOpenedAt": "2026-08-27T00:30:00.000Z",
+      "title": "Upper Middle School Skills ",
+      "startDatetime": "2026-09-02T18:30:00.000Z",
+      "issueNumber": 5
+    }
+  }
 }

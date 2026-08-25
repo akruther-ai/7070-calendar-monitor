@@ -140,6 +140,23 @@ function middleSchoolMatch(item) {
     }
 
     const all = captured.flatMap(c => c.items);
+    const malformed = all.filter(item => !item?.uuid || !item?.startDatetime);
+    if (malformed.length) {
+      throw new Error(`Calendar scrape contained ${malformed.length} item(s) without uuid/startDatetime; refusing to publish ambiguous data.`);
+    }
+
+    // UUID is expected to identify one calendar occurrence. Detect a backend
+    // behavior change rather than silently collapsing two differently timed
+    // classes into one record.
+    const seenUuidStart = new Map();
+    for (const item of all) {
+      const priorStart = seenUuidStart.get(item.uuid);
+      if (priorStart && priorStart !== item.startDatetime) {
+        throw new Error(`PushPress reused UUID ${item.uuid} for different start times (${priorStart} vs ${item.startDatetime}).`);
+      }
+      seenUuidStart.set(item.uuid, item.startDatetime);
+    }
+
     const deduped = Array.from(new Map(all.map(item => [item.uuid, item])).values())
       .sort((a, b) => String(a.startDatetime).localeCompare(String(b.startDatetime)));
 
@@ -151,7 +168,7 @@ function middleSchoolMatch(item) {
     // Matching the calendar-item type as well as the title protects against a
     // future class whose display title omits the literal words “Middle School.”
     const middleSchool = deduped.filter(item => {
-      const startDate = String(item?.startDatetime || '').slice(0, 10);
+      const startDate = String(item.startDatetime).slice(0, 10);
       return startDate >= today && middleSchoolMatch(item);
     });
 

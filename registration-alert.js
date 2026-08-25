@@ -88,24 +88,35 @@ function formatLocalWall(iso) {
   return `${date} at ${time} MT`;
 }
 
-async function createIssue(event) {
-  const [owner, repo] = REPO.split('/');
-  const marker = `<!-- 7070-event:${event.uuid} -->`;
-  const coach = event.mainCoach
-    ? `${event.mainCoach.firstName || ''} ${event.mainCoach.lastName || ''}`.trim()
+function coachName(event) {
+  return event.mainCoach
+    ? `${event.mainCoach.firstName || ''} ${event.mainCoach.lastName || ''}`.trim() || 'Not listed'
     : 'Not listed';
+}
 
-  const body = [
+async function createIssue(events, opensAt) {
+  const [owner, repo] = REPO.split('/');
+  const first = events[0];
+  const markers = events.map(e => `<!-- 7070-event:${e.uuid} -->`);
+  const lines = [
     `@${ASSIGNEE} **Registration is open now.**`,
     '',
-    `**Class:** ${String(event.title || '').trim()}`,
-    `**Class time:** ${formatLocalWall(event.startDatetime)}`,
-    `**Coach:** ${coach}`,
+  ];
+
+  for (const event of events) {
+    lines.push(`- **${String(event.title || '').trim()}** — ${formatLocalWall(event.startDatetime)} — Coach: ${coachName(event)}`);
+  }
+
+  lines.push(
     '',
     '7070 opens registration exactly 7 days before the class start time.',
     '',
-    marker,
-  ].join('\n');
+    ...markers,
+  );
+
+  const titlePrefix = events.length > 1
+    ? `7070 registration open: ${events.length} Middle School classes`
+    : `7070 registration open: ${String(first.title || '').trim()}`;
 
   const response = await fetch(`https://api.github.com/repos/${owner}/${repo}/issues`, {
     method: 'POST',
@@ -116,8 +127,8 @@ async function createIssue(event) {
       'content-type': 'application/json',
     },
     body: JSON.stringify({
-      title: `7070 registration open: ${String(event.title || '').trim()} — ${formatLocalWall(event.startDatetime)}`,
-      body,
+      title: `${titlePrefix} — ${formatLocalWall(first.startDatetime)}`,
+      body: lines.join('\n'),
       assignees: [ASSIGNEE],
     }),
   });
@@ -127,7 +138,7 @@ async function createIssue(event) {
   }
 
   const issue = await response.json();
-  console.log(`Created registration alert issue #${issue.number} for ${event.uuid}`);
+  console.log(`Created registration alert issue #${issue.number} for ${events.length} event(s) opening at ${new Date(opensAt).toISOString()}`);
 }
 
 (async () => {
@@ -141,11 +152,14 @@ async function createIssue(event) {
 
   const now = Date.now();
   const initialGraceMs = 20 * 60 * 1000;
+  let stateChanged = false;
   let alertsCreated = 0;
 
   const events = feed.items
     .filter(e => e && e.uuid && e.startDatetime)
     .sort((a, b) => String(a.startDatetime).localeCompare(String(b.startDatetime)));
+
+  const dueGroups = new Map();
 
   for (const event of events) {
     if (state.alerted[event.uuid]) continue;
@@ -160,26 +174,47 @@ async function createIssue(event) {
         suppressedInitialBacklog: true,
         registrationOpenedAt: new Date(opensAt).toISOString(),
       };
+      stateChanged = true;
       continue;
     }
 
-    await createIssue(event);
-    state.alerted[event.uuid] = {
-      notifiedAt: new Date().toISOString(),
-      registrationOpenedAt: new Date(opensAt).toISOString(),
-      title: event.title,
-      startDatetime: event.startDatetime,
-    };
+    const key = String(opensAt);
+    if (!dueGroups.has(key)) dueGroups.set(key, []);
+    dueGroups.get(key).push(event);
+  }
+
+  for (const [opensAtText, group] of dueGroups.entries()) {
+    const opensAt = Number(opensAtText);
+    await createIssue(group, opensAt);
+    const notifiedAt = new Date().toISOString();
+    for (const event of group) {
+      state.alerted[event.uuid] = {
+        notifiedAt,
+        registrationOpenedAt: new Date(opensAt).toISOString(),
+        title: event.title,
+        startDatetime: event.startDatetime,
+      };
+    }
+    stateChanged = true;
     alertsCreated++;
   }
 
-  state.initialized = true;
-  state.lastCheckedAt = new Date().toISOString();
-  state.feedGeneratedAt = feed.generatedAt || null;
+  if (!state.initialized) {
+    state.initialized = true;
+    stateChanged = true;
+  }
 
-  fs.mkdirSync(path.dirname(STATE_PATH), { recursive: true });
-  fs.writeFileSync(STATE_PATH, JSON.stringify(state, null, 2) + '\n');
-  console.log(`Registration alert check complete; ${alertsCreated} new alert(s).`);
+  // Persist state only when something meaningful changed. This avoids creating
+  // a Git commit every five minutes just to update a last-checked timestamp.
+  if (stateChanged) {
+    fs.mkdirSync(path.dirname(STATE_PATH), { recursive: true });
+    fs.writeFileSync(STATE_PATH, JSON.stringify(state, null, 2) + '\n');
+    console.log('Alert state changed and was written to disk.');
+  } else {
+    console.log('No newly opened registration windows; alert state unchanged.');
+  }
+
+  console.log(`Registration alert check complete; ${alertsCreated} new alert issue(s).`);
 })().catch(err => {
   console.error(err);
   process.exit(1);

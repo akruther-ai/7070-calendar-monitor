@@ -3,107 +3,159 @@
   "alerted": {
     "cal-338f07ff4fe14dfd92e2105eaa3f": {
       "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-16T18:00:00.000Z"
+      "registrationOpenedAt": "2026-08-16T18:00:00.000Z",
+      "startDatetime": "2026-08-23T12:00:00.000Z",
+      "title": "IPT Middle School"
     },
     "cal-79b6475fed934deea3c3a00f4ded": {
       "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-16T19:00:00.000Z"
+      "registrationOpenedAt": "2026-08-16T19:00:00.000Z",
+      "startDatetime": "2026-08-23T13:00:00.000Z",
+      "title": "Middle School Skills "
     },
     "cal-01fb2eb41768480fa370bf4abde6": {
       "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-17T22:30:00.000Z"
+      "registrationOpenedAt": "2026-08-17T22:30:00.000Z",
+      "startDatetime": "2026-08-24T16:30:00.000Z",
+      "title": "Middle School Skills"
     },
     "cal-cf3d50db8a1144ba927a93b34542": {
       "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-17T22:30:00.000Z"
+      "registrationOpenedAt": "2026-08-17T22:30:00.000Z",
+      "startDatetime": "2026-08-24T16:30:00.000Z",
+      "title": "Middle School Skills "
     },
     "cal-8f9d563df16c4a50bff717ee1d9b": {
       "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-17T23:30:00.000Z"
+      "registrationOpenedAt": "2026-08-17T23:30:00.000Z",
+      "startDatetime": "2026-08-24T17:30:00.000Z",
+      "title": "Middle School Skills"
     },
     "cal-2d62de03b977470dbb571d9594a8": {
       "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-18T00:30:00.000Z"
+      "registrationOpenedAt": "2026-08-18T00:30:00.000Z",
+      "startDatetime": "2026-08-24T18:30:00.000Z",
+      "title": "Shot Doctor - Middle School (Grades 7-8)"
     },
     "cal-032d236b29eb41dba8f964a3e392": {
       "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-18T00:30:00.000Z"
+      "registrationOpenedAt": "2026-08-18T00:30:00.000Z",
+      "startDatetime": "2026-08-24T18:30:00.000Z",
+      "title": "Upper Middle School Skills "
     },
     "cal-5ab6a9ad78c74ed6a7f3513a8657": {
       "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-18T22:30:00.000Z"
+      "registrationOpenedAt": "2026-08-18T22:30:00.000Z",
+      "startDatetime": "2026-08-25T16:30:00.000Z",
+      "title": "Middle School Skills"
     },
     "cal-831d4e92cf1043b19a86e6ddc499": {
       "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-18T22:30:00.000Z"
+      "registrationOpenedAt": "2026-08-18T22:30:00.000Z",
+      "startDatetime": "2026-08-25T16:30:00.000Z",
+      "title": "IPT Middle School "
     },
     "cal-4841d46c5dfb406cbeb656f0156e": {
       "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-18T23:30:00.000Z"
+      "registrationOpenedAt": "2026-08-18T23:30:00.000Z",
+      "startDatetime": "2026-08-25T17:30:00.000Z",
+      "title": "Middle School Skills"
     },
     "cal-f21d88f77f0b4f03a95cf871a862": {
       "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-19T00:30:00.000Z"
+      "registrationOpenedAt": "2026-08-19T00:30:00.000Z",
+      "startDatetime": "2026-08-25T18:30:00.000Z",
+      "title": "Middle School Skills"
     },
     "cal-c6cb112a468b40fba0be2298fe8c": {
       "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-19T00:30:00.000Z"
+      "registrationOpenedAt": "2026-08-19T00:30:00.000Z",
+      "startDatetime": "2026-08-25T18:30:00.000Z",
+      "title": "Upper Middle School Skills "
     },
     "cal-279f3816af15409694300fb6367b": {
       "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-19T22:30:00.000Z"
+      "registrationOpenedAt": "2026-08-19T22:30:00.000Z",
+      "startDatetime": "2026-08-26T16:30:00.000Z",
+      "title": "Middle School Skills"
     },
     "cal-2460f0619dfd4004b67049aee379": {
       "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-19T23:30:00.000Z"
+      "registrationOpenedAt": "2026-08-19T23:30:00.000Z",
+      "startDatetime": "2026-08-26T17:30:00.000Z",
+      "title": "Middle School Skills"
     },
     "cal-e3124d3c00a04c669cb82cf229d6": {
       "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-20T00:00:00.000Z"
+      "registrationOpenedAt": "2026-08-20T00:00:00.000Z",
+      "startDatetime": "2026-08-26T18:00:00.000Z",
+      "title": "Middle School Skills "
     },
     "cal-2285bbfb390b40e5b276217b2236": {
       "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-20T00:30:00.000Z"
+      "registrationOpenedAt": "2026-08-20T00:30:00.000Z",
+      "startDatetime": "2026-08-26T18:30:00.000Z",
+      "title": "Upper Middle School Skills "
     },
     "cal-a37d4513322d4be799e6afe99728": {
       "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-20T22:30:00.000Z"
+      "registrationOpenedAt": "2026-08-20T22:30:00.000Z",
+      "startDatetime": "2026-08-27T16:30:00.000Z",
+      "title": "Middle School Skills"
     },
     "cal-f94864989a384bf7aa7a13d326c0": {
       "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-20T22:30:00.000Z"
+      "registrationOpenedAt": "2026-08-20T22:30:00.000Z",
+      "startDatetime": "2026-08-27T16:30:00.000Z",
+      "title": "Middle School Skills "
     },
     "cal-26014d9743534b6a82b7b60c96e1": {
       "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-20T23:30:00.000Z"
+      "registrationOpenedAt": "2026-08-20T23:30:00.000Z",
+      "startDatetime": "2026-08-27T17:30:00.000Z",
+      "title": "Middle School Skills"
     },
     "cal-3ecd4020261f4a659cfa16aa54cb": {
       "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-21T00:30:00.000Z"
+      "registrationOpenedAt": "2026-08-21T00:30:00.000Z",
+      "startDatetime": "2026-08-27T18:30:00.000Z",
+      "title": "Shot Doctor - Middle School (Grades 7-8)"
     },
     "cal-cfa4cdf9abac42018d41db2b8a56": {
       "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-21T00:30:00.000Z"
+      "registrationOpenedAt": "2026-08-21T00:30:00.000Z",
+      "startDatetime": "2026-08-27T18:30:00.000Z",
+      "title": "Upper Middle School Skills "
     },
     "cal-fc5942c02c6042c1b3848d4d7a7c": {
       "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-21T23:30:00.000Z"
+      "registrationOpenedAt": "2026-08-21T23:30:00.000Z",
+      "startDatetime": "2026-08-28T17:30:00.000Z",
+      "title": "Middle School Skills"
     },
     "cal-65047da5f2654c5d9467dc11ea73": {
       "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-22T00:30:00.000Z"
+      "registrationOpenedAt": "2026-08-22T00:30:00.000Z",
+      "startDatetime": "2026-08-28T18:30:00.000Z",
+      "title": "Middle Schools 3v3"
     },
     "cal-28f39101e25740bcaf288f51c8ae": {
       "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-24T22:30:00.000Z"
+      "registrationOpenedAt": "2026-08-24T22:30:00.000Z",
+      "startDatetime": "2026-08-31T16:30:00.000Z",
+      "title": "Middle School Skills"
     },
     "cal-d9580eded1a24642be112ecfba4f": {
       "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-24T22:30:00.000Z"
+      "registrationOpenedAt": "2026-08-24T22:30:00.000Z",
+      "startDatetime": "2026-08-31T16:30:00.000Z",
+      "title": "Middle School Skills "
     },
     "cal-1071d418166341d6b1893e554a3d": {
       "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-24T23:30:00.000Z"
+      "registrationOpenedAt": "2026-08-24T23:30:00.000Z",
+      "startDatetime": "2026-08-31T17:30:00.000Z",
+      "title": "Middle School Skills"
     },
     "cal-63d0d216047741f0a450d62ef5f8": {
       "notifiedAt": "2026-08-25T08:39:44.312Z",

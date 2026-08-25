@@ -17,14 +17,14 @@ permissions:
   issues: write
 
 concurrency:
-  # Shared with the 5-minute checker so feed/state writes and alerts never overlap.
+  # Shared with the 5-minute checker to serialize issue/state writes.
   group: 7070-registration-monitor
   cancel-in-progress: false
 
 jobs:
   scrape:
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
 
     steps:
       - name: Check out repository
@@ -36,13 +36,20 @@ jobs:
           node-version: '24'
           package-manager-cache: false
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install JavaScript dependencies
+        env:
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+        run: npm install --no-audit --no-fund
 
-      - name: Install Chromium
-        run: npx playwright install --with-deps chromium
+      # Check the last-known-good feed first. If GitHub's scheduler causes this
+      # longer workflow to run before the lightweight checker, an already-due
+      # opening can still alert before any browser work begins.
+      - name: Check registration openings against last known good calendar
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node registration-alert.js
 
-      - name: Capture live calendar
+      - name: Capture live calendar with system Chrome
         run: npm run scrape
 
       - name: Check registration openings against fresh calendar
@@ -62,3 +69,32 @@ jobs:
             git pull --rebase origin main
             git push
           fi
+
+      - name: Report degraded calendar monitor
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          title='7070 MONITOR DEGRADED: calendar refresh'
+          existing=$(gh api "repos/$GITHUB_REPOSITORY/issues?state=open&per_page=100" --jq ".[] | select(.title == \"$title\") | .number" | head -n 1)
+          if [ -z "$existing" ]; then
+            gh issue create \
+              --repo "$GITHUB_REPOSITORY" \
+              --title "$title" \
+              --body $'@akruther-ai **The 15-minute live 7070 calendar refresh failed.**\n\nThe 5-minute checker will continue using the last known good feed, but schedule changes/new classes may be stale until a refresh succeeds.' \
+              --assignee akruther-ai
+          else
+            echo "Degraded-monitor issue #$existing is already open."
+          fi
+
+      - name: Clear degraded calendar monitor alert after recovery
+        if: success()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          title='7070 MONITOR DEGRADED: calendar refresh'
+          gh api "repos/$GITHUB_REPOSITORY/issues?state=open&per_page=100" \
+            --jq ".[] | select(.title == \"$title\") | .number" | \
+          while read -r issue; do
+            [ -n "$issue" ] && gh issue close "$issue" --repo "$GITHUB_REPOSITORY" --reason completed --comment 'Automated recovery: the live calendar refresh completed successfully.'
+          done

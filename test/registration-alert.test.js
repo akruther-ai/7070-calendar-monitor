@@ -74,6 +74,7 @@ test('daily advance digest, issue recovery, live confirmation, and closure are i
   fs.writeFileSync(statePath, JSON.stringify({ initialized: true, alerted: {} }));
 
   const originalFetch = global.fetch;
+  const originalLog = console.log;
   const issues = [];
   const requests = [];
   let activeNow = Date.parse('2026-08-24T23:00:00.000Z');
@@ -104,6 +105,7 @@ test('daily advance digest, issue recovery, live confirmation, and closure are i
     }
     return new Response('unsupported', { status: 500 });
   };
+  console.log = () => {};
 
   try {
     let result = await main({
@@ -157,6 +159,7 @@ test('daily advance digest, issue recovery, live confirmation, and closure are i
     assert.equal(Object.values(state.advanceAlerted).every(entry => entry.issueClosedAt), true);
   } finally {
     global.fetch = originalFetch;
+    console.log = originalLog;
     fs.rmSync(tempDir, { recursive: true, force: true });
   }
 });

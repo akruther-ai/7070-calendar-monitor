@@ -18,9 +18,12 @@ The Middle School feed includes any event whose title contains `Middle School` (
 
 - The live PushPress calendar is refreshed every 15 minutes with Playwright/Chromium.
 - The lightweight registration checker runs every 5 minutes and also runs immediately whenever `data/middle-school.json` changes.
+- The 15-minute refresh workflow independently runs the registration checker after each fresh scrape, providing a second scheduled alert path.
+- Both workflows share one concurrency group so they cannot create overlapping duplicate alerts.
 - Registration opening is calculated as exactly 7 calendar days before each class at the same America/Denver wall-clock time.
 - When registration opens, GitHub Actions creates an issue assigned to and @mentioning `akruther-ai`, which drives GitHub Mobile push notifications.
 - Classes that open at the same instant are grouped into one issue.
 - Alert state is persisted only when an opening is actually processed, avoiding noisy 5-minute commits.
+- Alerts delayed by more than 15 minutes are explicitly labeled `LATE` rather than pretending they fired on time.
 
 The scraper captures the public calendar application's successful `GetPublicCalendarItems` network responses. It does not store a PushPress login, private credentials, or authorization token.

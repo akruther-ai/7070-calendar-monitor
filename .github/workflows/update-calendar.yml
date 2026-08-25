@@ -39,7 +39,7 @@ jobs:
       - name: Install JavaScript dependencies
         env:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
-        run: npm install --no-audit --no-fund
+        run: npm install --no-package-lock --no-audit --no-fund
 
       # Check the last-known-good feed first. If GitHub's scheduler causes this
       # longer workflow to run before the lightweight checker, an already-due

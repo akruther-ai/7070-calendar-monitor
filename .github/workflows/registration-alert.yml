@@ -3,12 +3,17 @@ name: 7070 registration alerts
 on:
   workflow_dispatch:
   schedule:
-    # Every 5 minutes, offset from the top of the hour to reduce GitHub cron congestion.
+    # Every 5 minutes, offset from the top of the hour to reduce cron congestion.
     - cron: '2,7,12,17,22,27,32,37,42,47,52,57 * * * *'
   push:
+    branches: [main]
     paths:
       - 'registration-alert.js'
+      - 'lib/registration-time.js'
       - 'data/middle-school.json'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'test/**'
       - '.github/workflows/registration-alert.yml'
 
 permissions:
@@ -17,24 +22,34 @@ permissions:
 
 concurrency:
   group: 7070-registration-monitor
-  cancel-in-progress: false
+  # Preserve scheduled checks instead of replacing an older pending run.
+  queue: max
 
 jobs:
-  check-registration:
+  check_registration:
     runs-on: ubuntu-24.04
-    timeout-minutes: 3
+    timeout-minutes: 5
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
 
       - name: Set up Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6.5.0
         with:
           node-version: '24'
-          package-manager-cache: false
+          cache: npm
+          cache-dependency-path: package-lock.json
 
-      - name: Check for newly opened registration windows
+      - name: Install locked JavaScript dependencies
+        env:
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+        run: npm ci --ignore-scripts --no-audit --no-fund
+
+      - name: Run deterministic checks
+        run: npm run check
+
+      - name: Check advance and live registration windows
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node registration-alert.js
@@ -52,31 +67,33 @@ jobs:
             git push
           fi
 
-      - name: Report degraded registration monitor
-        if: failure()
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          title='7070 MONITOR DEGRADED: registration checker'
-          existing=$(gh api "repos/$GITHUB_REPOSITORY/issues?state=open&per_page=100" --jq ".[] | select(.title == \"$title\") | .number" | head -n 1)
-          if [ -z "$existing" ]; then
-            gh issue create \
-              --repo "$GITHUB_REPOSITORY" \
-              --title "$title" \
-              --body $'@akruther-ai **The 5-minute 7070 registration checker failed.**\n\nThe 15-minute fresh-calendar workflow remains a backup path, but the monitor is degraded until a later run succeeds.' \
-              --assignee akruther-ai
-          else
-            echo "Degraded-monitor issue #$existing is already open."
-          fi
+  registration_health:
+    needs: check_registration
+    if: ${{ always() }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 2
 
-      - name: Clear degraded registration monitor alert after recovery
-        if: success()
+    steps:
+      - name: Report failure or clear recovered health alert
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          set -euo pipefail
           title='7070 MONITOR DEGRADED: registration checker'
-          gh api "repos/$GITHUB_REPOSITORY/issues?state=open&per_page=100" \
-            --jq ".[] | select(.title == \"$title\") | .number" | \
-          while read -r issue; do
-            [ -n "$issue" ] && gh issue close "$issue" --repo "$GITHUB_REPOSITORY" --reason completed --comment 'Automated recovery: the registration checker completed successfully.'
-          done
+          query="repo:${GITHUB_REPOSITORY} is:issue is:open in:title \"${title}\""
+          issues=$(gh api --method GET search/issues -f q="$query" -f per_page=100 --jq ".items[] | select(.title == \"$title\") | .number")
+          run_url="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+
+          if [ '${{ needs.check_registration.result }}' != 'success' ]; then
+            existing=$(echo "$issues" | sed -n '1p')
+            if [ -z "$existing" ]; then
+              body=$'@akruther-ai **The 5-minute 7070 registration checker failed or timed out.**\n\nThe 15-minute fresh-calendar workflow remains a backup path, but the monitor is degraded until a later run succeeds.\n\nFailed run: '"${run_url}"
+              gh issue create --repo "$GITHUB_REPOSITORY" --title "$title" --body "$body" --assignee akruther-ai
+            else
+              echo "Degraded-monitor issue #$existing is already open."
+            fi
+          else
+            for issue in $issues; do
+              gh issue close "$issue" --repo "$GITHUB_REPOSITORY" --reason completed --comment 'Automated recovery: the registration checker completed successfully.'
+            done
+          fi

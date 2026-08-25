@@ -1,12 +1,17 @@
+'use strict';
+
 const fs = require('fs');
 const path = require('path');
-const { chromium } = require('playwright');
+const { parseWallClock } = require('./lib/registration-time');
 
 const CALENDAR_URL = 'https://7070athletics.pushpress.com/landing/calendar?framed=1';
 const API_URL = 'https://api.pushpress.com/v2/graph/graphql';
 const TIME_ZONE = 'America/Denver';
 const TARGET_DAYS_AHEAD = 21;
 const MAX_PAGE_TURNS = 8;
+const MIN_TOTAL_EVENTS = 20;
+const MIN_MIDDLE_SCHOOL_EVENTS = 1;
+const MIN_BASELINE_RATIO = 0.5;
 
 function localDateParts(date, timeZone = TIME_ZONE) {
   const parts = new Intl.DateTimeFormat('en-CA', {
@@ -15,15 +20,32 @@ function localDateParts(date, timeZone = TIME_ZONE) {
     month: '2-digit',
     day: '2-digit',
   }).formatToParts(date);
-  const map = Object.fromEntries(parts.map(p => [p.type, p.value]));
+  const map = Object.fromEntries(parts.map(part => [part.type, part.value]));
   return `${map.year}-${map.month}-${map.day}`;
 }
 
+function calendarDateMs(ymd) {
+  const match = String(ymd).match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (!match) throw new Error(`Invalid calendar date: ${ymd}`);
+  const year = Number(match[1]);
+  const month = Number(match[2]);
+  const day = Number(match[3]);
+  const date = new Date(Date.UTC(year, month - 1, day));
+  if (
+    date.getUTCFullYear() !== year ||
+    date.getUTCMonth() + 1 !== month ||
+    date.getUTCDate() !== day
+  ) {
+    throw new Error(`Invalid calendar date: ${ymd}`);
+  }
+  return date.getTime();
+}
+
 function addCalendarDays(ymd, days) {
-  const m = String(ymd).match(/^(\d{4})-(\d{2})-(\d{2})$/);
-  if (!m) throw new Error(`Invalid calendar date: ${ymd}`);
-  const d = new Date(Date.UTC(Number(m[1]), Number(m[2]) - 1, Number(m[3]) + days));
-  return d.toISOString().slice(0, 10);
+  if (!Number.isInteger(days)) throw new Error(`Calendar-day offset must be an integer: ${days}`);
+  const shifted = new Date(calendarDateMs(ymd));
+  shifted.setUTCDate(shifted.getUTCDate() + days);
+  return shifted.toISOString().slice(0, 10);
 }
 
 function calendarInputFromRequest(request) {
@@ -55,7 +77,7 @@ async function captureCalendarResponse(response) {
   const items = json?.data?.getPublicCalendarItems;
   if (!Array.isArray(items)) {
     const apiErrors = Array.isArray(json?.errors)
-      ? json.errors.map(e => e?.message).filter(Boolean).join('; ')
+      ? json.errors.map(error => error?.message).filter(Boolean).join('; ')
       : '';
     throw new Error(`PushPress calendar response did not contain an items array${apiErrors ? `: ${apiErrors}` : ''}.`);
   }
@@ -72,10 +94,76 @@ function middleSchoolMatch(item) {
   return searchable.includes('middle school');
 }
 
-(async () => {
+function validateCapturedCoverage(captured, today, targetEnd) {
+  calendarDateMs(today);
+  calendarDateMs(targetEnd);
+  if (!Array.isArray(captured) || !captured.length) {
+    throw new Error('The PushPress page did not return any GetPublicCalendarItems responses.');
+  }
+
+  let maxEnd = '';
+  let minStart = '';
+  for (const [index, capture] of captured.entries()) {
+    const startDate = capture?.startDate;
+    const endDate = capture?.endDate;
+    calendarDateMs(startDate);
+    calendarDateMs(endDate);
+    if (startDate > endDate) {
+      throw new Error(`Calendar response ${index + 1} has an inverted range: ${startDate}..${endDate}.`);
+    }
+    if (!Array.isArray(capture.items) || !capture.items.length) {
+      throw new Error(`Calendar response ${startDate}..${endDate} contained no events; refusing to publish incomplete data.`);
+    }
+
+    if (index === 0 && (startDate > today || endDate < today)) {
+      throw new Error(`Initial calendar response ${startDate}..${endDate} does not cover today (${today}).`);
+    }
+    if (index > 0) {
+      const nextAllowedStart = addCalendarDays(maxEnd, 1);
+      if (startDate > nextAllowedStart) {
+        throw new Error(`Calendar coverage has a gap after ${maxEnd}; next response starts ${startDate}.`);
+      }
+      if (endDate <= maxEnd) {
+        throw new Error(`Calendar navigation did not advance beyond ${maxEnd}; received ${startDate}..${endDate}.`);
+      }
+    }
+
+    minStart = !minStart || startDate < minStart ? startDate : minStart;
+    maxEnd = endDate > maxEnd ? endDate : maxEnd;
+  }
+
+  if (maxEnd < targetEnd) {
+    throw new Error(`Calendar coverage is incomplete: captured through ${maxEnd}, expected at least ${targetEnd}. Refusing to overwrite the last good feed.`);
+  }
+  return { startDate: minStart, endDate: maxEnd };
+}
+
+function readPreviousItemCount(file) {
+  if (!fs.existsSync(file)) return null;
+  try {
+    const parsed = JSON.parse(fs.readFileSync(file, 'utf8'));
+    return Array.isArray(parsed?.items) ? parsed.items.length : null;
+  } catch (err) {
+    console.warn(`Could not read prior baseline ${file}: ${err.message}`);
+    return null;
+  }
+}
+
+function validatePopulation(label, nextCount, previousCount, minimum) {
+  const baselineMinimum = Number.isInteger(previousCount)
+    ? Math.floor(previousCount * MIN_BASELINE_RATIO)
+    : 0;
+  const required = Math.max(minimum, baselineMinimum);
+  if (nextCount < required) {
+    const comparison = Number.isInteger(previousCount) ? `; previous feed contained ${previousCount}` : '';
+    throw new Error(`${label} scrape returned only ${nextCount} event(s), below safety threshold ${required}${comparison}. Refusing to overwrite the last good feed.`);
+  }
+}
+
+async function main({ now = new Date() } = {}) {
   // GitHub's ubuntu-24.04 runner includes Google Chrome. Using Playwright's
-  // supported Chrome channel avoids downloading a separate browser image on
-  // every scheduled run while preserving full Playwright browser automation.
+  // supported Chrome channel avoids downloading a separate browser image.
+  const { chromium } = require('playwright');
   const browser = await chromium.launch({ headless: true, channel: 'chrome' });
   const context = await browser.newContext({
     locale: 'en-US',
@@ -85,12 +173,12 @@ function middleSchoolMatch(item) {
   const page = await context.newPage();
 
   try {
-    const today = localDateParts(new Date());
+    const today = localDateParts(now);
     const targetEnd = addCalendarDays(today, TARGET_DAYS_AHEAD);
     const captured = [];
 
-    // Start waiting before navigation so the initial calendar API response
-    // cannot race past the listener. This replaces the old fixed 5-second wait.
+    // Start waiting before navigation so the initial API response cannot race
+    // past the listener.
     const initialResponsePromise = page.waitForResponse(isCalendarResponse, { timeout: 30000 });
     await page.goto(CALENDAR_URL, { waitUntil: 'domcontentloaded', timeout: 60000 });
     captured.push(await captureCalendarResponse(await initialResponsePromise));
@@ -108,19 +196,19 @@ function middleSchoolMatch(item) {
     }
 
     if (!(await nextButton.count())) {
-      const buttons = await page.locator('button').evaluateAll(btns =>
-        btns.map(b => ({
-          text: b.innerText,
-          title: b.title,
-          aria: b.getAttribute('aria-label'),
-          className: b.className,
+      const buttons = await page.locator('button').evaluateAll(buttons =>
+        buttons.map(button => ({
+          text: button.innerText,
+          title: button.title,
+          aria: button.getAttribute('aria-label'),
+          className: button.className,
         }))
       );
       throw new Error(`Could not locate calendar Next button. Buttons: ${JSON.stringify(buttons)}`);
     }
 
     const maxCapturedEnd = () => captured.reduce(
-      (max, c) => c.endDate > max ? c.endDate : max,
+      (max, capture) => capture.endDate > max ? capture.endDate : max,
       ''
     );
 
@@ -130,24 +218,16 @@ function middleSchoolMatch(item) {
       captured.push(await captureCalendarResponse(await responsePromise));
     }
 
-    if (!captured.length) {
-      throw new Error('The PushPress page did not return any GetPublicCalendarItems responses.');
-    }
-    if (maxCapturedEnd() < targetEnd) {
-      throw new Error(
-        `Calendar coverage is incomplete: captured through ${maxCapturedEnd()}, expected at least ${targetEnd}. Refusing to overwrite the last good feed.`
-      );
-    }
-
-    const all = captured.flatMap(c => c.items);
+    const dateRange = validateCapturedCoverage(captured, today, targetEnd);
+    const all = captured.flatMap(capture => capture.items);
     const malformed = all.filter(item => !item?.uuid || !item?.startDatetime);
     if (malformed.length) {
       throw new Error(`Calendar scrape contained ${malformed.length} item(s) without uuid/startDatetime; refusing to publish ambiguous data.`);
     }
+    for (const item of all) parseWallClock(item.startDatetime);
 
     // UUID is expected to identify one calendar occurrence. Detect a backend
-    // behavior change rather than silently collapsing two differently timed
-    // classes into one record.
+    // behavior change rather than silently collapsing differently timed items.
     const seenUuidStart = new Map();
     for (const item of all) {
       const priorStart = seenUuidStart.get(item.uuid);
@@ -160,31 +240,30 @@ function middleSchoolMatch(item) {
     const deduped = Array.from(new Map(all.map(item => [item.uuid, item])).values())
       .sort((a, b) => String(a.startDatetime).localeCompare(String(b.startDatetime)));
 
-    if (deduped.length < 20) {
-      throw new Error(`Calendar scrape returned only ${deduped.length} unique events; refusing to publish suspiciously sparse data.`);
-    }
-
     // Registration monitoring only needs current/future Middle School classes.
-    // Matching the calendar-item type as well as the title protects against a
-    // future class whose display title omits the literal words “Middle School.”
     const middleSchool = deduped.filter(item => {
       const startDate = String(item.startDatetime).slice(0, 10);
       return startDate >= today && middleSchoolMatch(item);
     });
 
-    if (!middleSchool.length) {
-      throw new Error('No current/future Middle School classes were found; refusing to overwrite the last good feed.');
-    }
-
-    const dateRange = {
-      startDate: captured.reduce((min, c) => !min || c.startDate < min ? c.startDate : min, ''),
-      endDate: captured.reduce((max, c) => c.endDate > max ? c.endDate : max, ''),
-    };
-
     const dataDir = path.join(__dirname, 'data');
-    fs.mkdirSync(dataDir, { recursive: true });
+    const calendarPath = path.join(dataDir, 'calendar.json');
+    const middleSchoolPath = path.join(dataDir, 'middle-school.json');
+    validatePopulation(
+      'Calendar',
+      deduped.length,
+      readPreviousItemCount(calendarPath),
+      MIN_TOTAL_EVENTS,
+    );
+    validatePopulation(
+      'Middle School',
+      middleSchool.length,
+      readPreviousItemCount(middleSchoolPath),
+      MIN_MIDDLE_SCHOOL_EVENTS,
+    );
 
-    fs.writeFileSync(path.join(dataDir, 'calendar.json'), JSON.stringify({
+    fs.mkdirSync(dataDir, { recursive: true });
+    fs.writeFileSync(calendarPath, JSON.stringify({
       source: CALENDAR_URL,
       timeZone: TIME_ZONE,
       requestedFrom: today,
@@ -194,7 +273,7 @@ function middleSchoolMatch(item) {
       items: deduped,
     }, null, 2) + '\n');
 
-    fs.writeFileSync(path.join(dataDir, 'middle-school.json'), JSON.stringify({
+    fs.writeFileSync(middleSchoolPath, JSON.stringify({
       source: CALENDAR_URL,
       timeZone: TIME_ZONE,
       requestedFrom: today,
@@ -209,7 +288,21 @@ function middleSchoolMatch(item) {
   } finally {
     await browser.close();
   }
-})().catch(err => {
-  console.error(err);
-  process.exit(1);
-});
+}
+
+if (require.main === module) {
+  main().catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
+}
+
+module.exports = {
+  addCalendarDays,
+  calendarDateMs,
+  localDateParts,
+  main,
+  middleSchoolMatch,
+  validateCapturedCoverage,
+  validatePopulation,
+};

@@ -1,15 +1,17 @@
 {
   "name": "7070-calendar-monitor",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": true,
   "description": "Monitors the public 7070 Athletics PushPress calendar and sends time-critical Middle School registration alerts.",
   "engines": {
     "node": ">=24"
   },
   "scripts": {
-    "scrape": "node scrape.js"
+    "scrape": "node scrape.js",
+    "test": "node --test",
+    "check": "node --check registration-alert.js && node --check scrape.js && node --check lib/registration-time.js && node --test"
   },
   "dependencies": {
-    "playwright": "^1.62.1"
+    "playwright": "1.62.1"
   }
 }

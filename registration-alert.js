@@ -1,19 +1,27 @@
+'use strict';
+
 const fs = require('fs');
 const path = require('path');
+const {
+  formatInstantLocal,
+  formatInstantLocalDate,
+  formatLocalWall,
+  localDateKey,
+  registrationOpenMs,
+  scheduleKey,
+} = require('./lib/registration-time');
 
-const TIME_ZONE = 'America/Denver';
 const CALENDAR_URL = 'https://7070athletics.pushpress.com/landing/calendar?framed=1';
 const FEED_PATH = path.join(__dirname, 'data', 'middle-school.json');
 const STATE_PATH = path.join(__dirname, 'data', 'registration-alerted.json');
-const REPO = process.env.GITHUB_REPOSITORY;
-const TOKEN = process.env.GITHUB_TOKEN;
 const ASSIGNEE = 'akruther-ai';
 const INITIAL_GRACE_MS = 20 * 60 * 1000;
+const ADVANCE_NOTICE_MS = 30 * 60 * 60 * 1000;
+const LATE_AFTER_MS = 15 * 60 * 1000;
+const ALERT_CLOSE_AFTER_MS = 24 * 60 * 60 * 1000;
 const STATE_RETENTION_MS = 90 * 24 * 60 * 60 * 1000;
-
-if (!REPO || !TOKEN) {
-  throw new Error('GITHUB_REPOSITORY and GITHUB_TOKEN are required.');
-}
+const MAX_ISSUE_PAGES = 10;
+const MAX_GITHUB_ATTEMPTS = 3;
 
 function readRequiredJson(file, description) {
   let text;
@@ -29,81 +37,57 @@ function readRequiredJson(file, description) {
   }
 }
 
-function readState() {
-  if (!fs.existsSync(STATE_PATH)) return { initialized: false, alerted: {} };
-  const state = readRequiredJson(STATE_PATH, 'Alert state');
-  if (!state || typeof state !== 'object') throw new Error('Alert state must be a JSON object.');
-  state.alerted = state.alerted && typeof state.alerted === 'object' ? state.alerted : {};
+function readState(statePath = STATE_PATH) {
+  if (!fs.existsSync(statePath)) return { initialized: false, alerted: {}, advanceAlerted: {} };
+  const state = readRequiredJson(statePath, 'Alert state');
+  if (!state || typeof state !== 'object' || Array.isArray(state)) {
+    throw new Error('Alert state must be a JSON object.');
+  }
+  if (!state.alerted || typeof state.alerted !== 'object' || Array.isArray(state.alerted)) {
+    state.alerted = {};
+  }
+  if (!state.advanceAlerted || typeof state.advanceAlerted !== 'object' || Array.isArray(state.advanceAlerted)) {
+    state.advanceAlerted = {};
+  }
+  if (state.initialized !== undefined && typeof state.initialized !== 'boolean') {
+    throw new Error('Alert state initialized flag must be a boolean.');
+  }
   state.initialized = Boolean(state.initialized);
   return state;
 }
 
-function parseWallClock(iso) {
-  const m = String(iso).match(/^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})/);
-  if (!m) throw new Error(`Unrecognized startDatetime: ${iso}`);
-  return {
-    year: Number(m[1]), month: Number(m[2]), day: Number(m[3]),
-    hour: Number(m[4]), minute: Number(m[5]), second: Number(m[6]),
-  };
-}
-
-function tzOffsetMs(utcMs, timeZone) {
-  const parts = new Intl.DateTimeFormat('en-US', {
-    timeZone,
-    year: 'numeric', month: '2-digit', day: '2-digit',
-    hour: '2-digit', minute: '2-digit', second: '2-digit',
-    hourCycle: 'h23',
-  }).formatToParts(new Date(utcMs));
-  const p = Object.fromEntries(parts.map(x => [x.type, x.value]));
-  const asUtc = Date.UTC(
-    Number(p.year), Number(p.month) - 1, Number(p.day),
-    Number(p.hour), Number(p.minute), Number(p.second)
-  );
-  return asUtc - utcMs;
-}
-
-function zonedWallToUtcMs(parts, timeZone) {
-  const wallAsUtc = Date.UTC(
-    parts.year, parts.month - 1, parts.day,
-    parts.hour, parts.minute, parts.second
-  );
-  let guess = wallAsUtc;
-  for (let i = 0; i < 3; i++) {
-    guess = wallAsUtc - tzOffsetMs(guess, timeZone);
+function validateFeed(feed) {
+  if (!feed || typeof feed !== 'object' || Array.isArray(feed) || !Array.isArray(feed.items)) {
+    throw new Error('data/middle-school.json is missing a valid items array.');
   }
-  return guess;
-}
+  if (feed.count !== undefined && feed.count !== feed.items.length) {
+    throw new Error(`Middle School feed count mismatch: metadata says ${feed.count}, file contains ${feed.items.length}.`);
+  }
 
-function registrationOpenMs(startDatetime) {
-  // PushPress encodes the local class wall-clock time with a trailing Z.
-  // Treat the date/time fields as America/Denver local time, subtract seven
-  // calendar days at the same local clock time, then convert that wall time
-  // to a real instant for comparison with the current time.
-  const c = parseWallClock(startDatetime);
-  const shifted = new Date(Date.UTC(
-    c.year, c.month - 1, c.day - 7,
-    c.hour, c.minute, c.second
-  ));
-  return zonedWallToUtcMs({
-    year: shifted.getUTCFullYear(),
-    month: shifted.getUTCMonth() + 1,
-    day: shifted.getUTCDate(),
-    hour: shifted.getUTCHours(),
-    minute: shifted.getUTCMinutes(),
-    second: shifted.getUTCSeconds(),
-  }, TIME_ZONE);
-}
+  const malformed = feed.items.filter(event =>
+    !event || typeof event !== 'object' || !event.uuid || !event.startDatetime
+  );
+  if (malformed.length) {
+    throw new Error(`Middle School feed contains ${malformed.length} malformed event(s).`);
+  }
 
-function formatLocalWall(iso) {
-  const c = parseWallClock(iso);
-  const d = new Date(Date.UTC(c.year, c.month - 1, c.day, c.hour, c.minute, c.second));
-  const date = new Intl.DateTimeFormat('en-US', {
-    weekday: 'long', month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC'
-  }).format(d);
-  const time = new Intl.DateTimeFormat('en-US', {
-    hour: 'numeric', minute: '2-digit', timeZone: 'UTC'
-  }).format(d);
-  return `${date} at ${time} MT`;
+  const seen = new Map();
+  for (const event of feed.items) {
+    const priorStart = seen.get(event.uuid);
+    if (priorStart) {
+      const detail = priorStart === event.startDatetime
+        ? `duplicate schedule ${event.uuid}|${event.startDatetime}`
+        : `reused UUID ${event.uuid} for ${priorStart} and ${event.startDatetime}`;
+      throw new Error(`Middle School feed contains ${detail}.`);
+    }
+    // This validates the date shape and catches impossible calendar fields.
+    registrationOpenMs(event.startDatetime);
+    seen.set(event.uuid, event.startDatetime);
+  }
+
+  return [...feed.items].sort((a, b) =>
+    String(a.startDatetime).localeCompare(String(b.startDatetime))
+  );
 }
 
 function coachName(event) {
@@ -112,12 +96,12 @@ function coachName(event) {
     : 'Not listed';
 }
 
-function scheduleKey(event) {
-  return `${event.uuid}|${event.startDatetime}`;
-}
-
 function markerFor(event) {
   return `<!-- 7070-event:${scheduleKey(event)} -->`;
+}
+
+function advanceMarkerFor(event) {
+  return `<!-- 7070-advance:${scheduleKey(event)} -->`;
 }
 
 function stateMatchesSchedule(entry, event, opensAt) {
@@ -127,40 +111,101 @@ function stateMatchesSchedule(entry, event, opensAt) {
   return entry.registrationOpenedAt === new Date(opensAt).toISOString();
 }
 
-async function fetchRecentAlertMarkers() {
-  const [owner, repo] = REPO.split('/');
-  const response = await fetch(
-    `https://api.github.com/repos/${owner}/${repo}/issues?state=all&per_page=100&sort=created&direction=desc`,
-    {
-      headers: {
-        accept: 'application/vnd.github+json',
-        authorization: `Bearer ${TOKEN}`,
-        'x-github-api-version': '2022-11-28',
-      },
-    }
-  );
-  if (!response.ok) {
-    throw new Error(`GitHub issue lookup failed (${response.status}): ${await response.text()}`);
-  }
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
-  const issues = await response.json();
-  const found = new Map();
-  const markerPattern = /<!-- 7070-event:([^|>]+\|[^>]+) -->/g;
-  for (const issue of issues) {
-    const body = String(issue.body || '');
-    for (const match of body.matchAll(markerPattern)) {
-      if (!found.has(match[1])) found.set(match[1], issue.created_at || null);
+async function githubRequest(url, options, description, token) {
+  const method = String(options?.method || 'GET').toUpperCase();
+  // POST issue creation is intentionally not retried. A lost response is
+  // ambiguous: GitHub may have created the issue. The next scheduled run will
+  // recover its marker, avoiding an immediate duplicate POST.
+  const canRetry = method !== 'POST';
+  let lastError;
+  for (let attempt = 1; attempt <= MAX_GITHUB_ATTEMPTS; attempt++) {
+    try {
+      const response = await fetch(url, {
+        ...options,
+        headers: {
+          accept: 'application/vnd.github+json',
+          authorization: `Bearer ${token}`,
+          'x-github-api-version': '2022-11-28',
+          ...(options?.body ? { 'content-type': 'application/json' } : {}),
+          ...(options?.headers || {}),
+        },
+      });
+      const raw = await response.text();
+      if (response.ok) {
+        return {
+          data: raw ? JSON.parse(raw) : null,
+          headers: response.headers,
+          status: response.status,
+        };
+      }
+
+      const retryable = canRetry && (response.status === 429 || response.status >= 500);
+      lastError = new Error(`${description} failed (${response.status}): ${raw}`);
+      if (!retryable || attempt === MAX_GITHUB_ATTEMPTS) throw lastError;
+
+      const retryAfterSeconds = Number(response.headers.get('retry-after'));
+      const backoffMs = Number.isFinite(retryAfterSeconds) && retryAfterSeconds > 0
+        ? retryAfterSeconds * 1000
+        : 500 * (2 ** (attempt - 1));
+      console.warn(`${description} failed transiently; retrying in ${backoffMs} ms.`);
+      await sleep(backoffMs);
+    } catch (err) {
+      lastError = err;
+      if (!canRetry || attempt === MAX_GITHUB_ATTEMPTS || /failed \(4\d\d\)/.test(String(err.message))) throw err;
+      const backoffMs = 500 * (2 ** (attempt - 1));
+      console.warn(`${description} errored transiently; retrying in ${backoffMs} ms: ${err.message}`);
+      await sleep(backoffMs);
     }
+  }
+  throw lastError;
+}
+
+async function fetchRecentAlertMarkers(repoFullName, token) {
+  const [owner, repo] = repoFullName.split('/');
+  const found = { live: new Map(), advance: new Map() };
+  const markerPatterns = [
+    { target: found.live, pattern: /<!-- 7070-event:([^|>]+\|[^>]+) -->/g },
+    { target: found.advance, pattern: /<!-- 7070-advance:([^|>]+\|[^>]+) -->/g },
+  ];
+
+  for (let page = 1; page <= MAX_ISSUE_PAGES; page++) {
+    const result = await githubRequest(
+      `https://api.github.com/repos/${owner}/${repo}/issues?state=all&per_page=100&sort=created&direction=desc&page=${page}`,
+      {},
+      'GitHub issue lookup',
+      token,
+    );
+    const issues = result.data;
+    if (!Array.isArray(issues)) throw new Error('GitHub issue lookup returned a non-array response.');
+
+    for (const issue of issues) {
+      const body = String(issue.body || '');
+      for (const { target, pattern } of markerPatterns) {
+        for (const match of body.matchAll(pattern)) {
+          if (!target.has(match[1])) {
+            target.set(match[1], {
+              createdAt: issue.created_at || null,
+              issueNumber: issue.number || null,
+            });
+          }
+        }
+      }
+    }
+    if (issues.length < 100) break;
   }
   return found;
 }
 
-async function createIssue(events, opensAt) {
-  const [owner, repo] = REPO.split('/');
+async function createIssue(events, opensAt, repoFullName, token, nowMs = Date.now()) {
+  const [owner, repo] = repoFullName.split('/');
   const first = events[0];
   const markers = events.map(markerFor);
-  const delayMinutes = Math.max(0, Math.floor((Date.now() - opensAt) / 60000));
-  const isLate = delayMinutes > 15;
+  const delayMinutes = Math.max(0, Math.floor((nowMs - opensAt) / 60000));
+  const isLate = nowMs - opensAt > LATE_AFTER_MS;
   const statusLine = isLate
     ? `@${ASSIGNEE} **LATE ALERT: registration opened about ${delayMinutes} minutes ago. Check availability now.**`
     : `@${ASSIGNEE} **Registration is open now.**`;
@@ -183,54 +228,141 @@ async function createIssue(events, opensAt) {
     : `7070 registration open: ${String(first.title || '').trim()}`;
   const titlePrefix = isLate ? `LATE — ${basePrefix}` : basePrefix;
 
-  const response = await fetch(`https://api.github.com/repos/${owner}/${repo}/issues`, {
-    method: 'POST',
-    headers: {
-      accept: 'application/vnd.github+json',
-      authorization: `Bearer ${TOKEN}`,
-      'x-github-api-version': '2022-11-28',
-      'content-type': 'application/json',
+  const result = await githubRequest(
+    `https://api.github.com/repos/${owner}/${repo}/issues`,
+    {
+      method: 'POST',
+      body: JSON.stringify({
+        title: `${titlePrefix} — ${formatLocalWall(first.startDatetime)}`,
+        body: lines.join('\n'),
+        assignees: [ASSIGNEE],
+      }),
     },
-    body: JSON.stringify({
-      title: `${titlePrefix} — ${formatLocalWall(first.startDatetime)}`,
-      body: lines.join('\n'),
-      assignees: [ASSIGNEE],
-    }),
-  });
-
-  if (!response.ok) {
-    throw new Error(`GitHub issue creation failed (${response.status}): ${await response.text()}`);
-  }
-
-  const issue = await response.json();
+    'GitHub issue creation',
+    token,
+  );
+  const issue = result.data;
   console.log(`Created registration alert issue #${issue.number} for ${events.length} event(s) opening at ${new Date(opensAt).toISOString()}`);
   return issue;
 }
 
-(async () => {
-  const feed = readRequiredJson(FEED_PATH, 'Middle School feed');
-  if (!feed || !Array.isArray(feed.items)) {
-    throw new Error('data/middle-school.json is missing a valid items array.');
+async function createAdvanceIssue(entries, repoFullName, token) {
+  const [owner, repo] = repoFullName.split('/');
+  const sorted = [...entries].sort((a, b) => a.opensAt - b.opensAt);
+  const openingDate = formatInstantLocalDate(sorted[0].opensAt);
+  const markers = sorted.map(({ event }) => advanceMarkerFor(event));
+  const lines = [
+    `@${ASSIGNEE} **Advance notice: the following registration windows are expected on ${openingDate}.**`,
+    '',
+  ];
+  for (const { event, opensAt } of sorted) {
+    lines.push(`- **Opens ${formatInstantLocal(opensAt)}** — ${String(event.title || '').trim()} — class is ${formatLocalWall(event.startDatetime)} — Coach: ${coachName(event)}`);
+  }
+  lines.push(
+    '',
+    `[Open the 7070 calendar](${CALENDAR_URL})`,
+    '',
+    'The live checker will create a separate confirmation when registration is due to be open.',
+    '',
+    ...markers,
+  );
+
+  const result = await githubRequest(
+    `https://api.github.com/repos/${owner}/${repo}/issues`,
+    {
+      method: 'POST',
+      body: JSON.stringify({
+        title: `UPCOMING — 7070 registration on ${openingDate}`,
+        body: lines.join('\n'),
+        assignees: [ASSIGNEE],
+      }),
+    },
+    'GitHub advance-notice issue creation',
+    token,
+  );
+  const issue = result.data;
+  console.log(`Created advance registration issue #${issue.number} for ${entries.length} event(s) on ${openingDate}.`);
+  return issue;
+}
+
+async function closeIssue(issueNumber, repoFullName, token) {
+  const [owner, repo] = repoFullName.split('/');
+  await githubRequest(
+    `https://api.github.com/repos/${owner}/${repo}/issues/${issueNumber}`,
+    {
+      method: 'PATCH',
+      body: JSON.stringify({ state: 'closed', state_reason: 'completed' }),
+    },
+    `Closing GitHub issue #${issueNumber}`,
+    token,
+  );
+  console.log(`Closed completed registration issue #${issueNumber}.`);
+}
+
+async function main({
+  repoFullName = process.env.GITHUB_REPOSITORY,
+  token = process.env.GITHUB_TOKEN,
+  nowMs = Date.now(),
+  feedPath = FEED_PATH,
+  statePath = STATE_PATH,
+} = {}) {
+  if (!repoFullName || !token || !repoFullName.includes('/')) {
+    throw new Error('GITHUB_REPOSITORY and GITHUB_TOKEN are required.');
   }
 
-  const state = readState();
-  const now = Date.now();
-  let stateChanged = false;
+  const feed = readRequiredJson(feedPath, 'Middle School feed');
+  const events = validateFeed(feed);
+  const state = readState(statePath);
+  const hadLegacyFields = Object.hasOwn(state, 'lastCheckedAt') || Object.hasOwn(state, 'feedGeneratedAt');
+  delete state.lastCheckedAt;
+  delete state.feedGeneratedAt;
+
+  let stateChanged = hadLegacyFields;
   let alertsCreated = 0;
-
-  const events = feed.items
-    .filter(e => e && e.uuid && e.startDatetime)
-    .sort((a, b) => String(a.startDatetime).localeCompare(String(b.startDatetime)));
-
+  let advanceNoticesCreated = 0;
   const dueGroups = new Map();
+  const futureByDate = new Map();
+  const eventsByUuid = new Map(events.map(event => [event.uuid, event]));
+
+  // An advance issue can contain a full day's windows. If one represented
+  // schedule changes or disappears before opening, invalidate the whole issue
+  // and rebuild a coherent daily digest from the current feed.
+  const invalidAdvanceIssueNumbers = new Set();
+  for (const [uuid, entry] of Object.entries(state.advanceAlerted)) {
+    const current = eventsByUuid.get(uuid);
+    const opensAt = Date.parse(entry?.registrationOpenedAt || '');
+    const changed = current && !stateMatchesSchedule(entry, current, registrationOpenMs(current.startDatetime));
+    const removedBeforeOpening = !current && Number.isFinite(opensAt) && opensAt > nowMs;
+    if (!changed && !removedBeforeOpening) continue;
+
+    if (Number.isInteger(entry?.issueNumber) && !entry.issueClosedAt) {
+      invalidAdvanceIssueNumbers.add(entry.issueNumber);
+    } else {
+      delete state.advanceAlerted[uuid];
+      stateChanged = true;
+    }
+  }
+
+  for (const issueNumber of invalidAdvanceIssueNumbers) {
+    await closeIssue(issueNumber, repoFullName, token);
+    for (const [uuid, entry] of Object.entries(state.advanceAlerted)) {
+      if (entry?.issueNumber === issueNumber) delete state.advanceAlerted[uuid];
+    }
+    stateChanged = true;
+  }
 
   for (const event of events) {
     const opensAt = registrationOpenMs(event.startDatetime);
     const opensAtIso = new Date(opensAt).toISOString();
     const prior = state.alerted[event.uuid];
 
+    if (opensAt > nowMs) {
+      const dateKey = localDateKey(opensAt);
+      if (!futureByDate.has(dateKey)) futureByDate.set(dateKey, []);
+      futureByDate.get(dateKey).push({ event, opensAt });
+    }
+
     if (stateMatchesSchedule(prior, event, opensAt)) {
-      // Migrate older state entries so future reschedules can be distinguished.
       if (!prior.startDatetime) {
         prior.startDatetime = event.startDatetime;
         prior.title = prior.title || event.title;
@@ -239,11 +371,11 @@ async function createIssue(events, opensAt) {
       continue;
     }
 
-    if (opensAt > now) continue;
+    if (opensAt > nowMs) continue;
 
     // On the very first run only, suppress a backlog of old openings while
     // retaining enough schedule detail to recognize a later reschedule.
-    if (!state.initialized && opensAt < now - INITIAL_GRACE_MS) {
+    if (!state.initialized && opensAt < nowMs - INITIAL_GRACE_MS) {
       state.alerted[event.uuid] = {
         suppressedInitialBacklog: true,
         registrationOpenedAt: opensAtIso,
@@ -259,10 +391,68 @@ async function createIssue(events, opensAt) {
     dueGroups.get(key).push(event);
   }
 
-  // GitHub Issues are the second idempotency layer. If an issue was created but
-  // the state-file commit/push failed, the marker prevents a duplicate alert on
-  // the next run and lets us reconstruct the missing state.
-  const existingMarkers = dueGroups.size ? await fetchRecentAlertMarkers() : new Map();
+  const advanceGroups = new Map();
+  for (const [dateKey, entries] of futureByDate) {
+    const earliest = Math.min(...entries.map(entry => entry.opensAt));
+    if (earliest > nowMs + ADVANCE_NOTICE_MS) continue;
+
+    const missing = [];
+    for (const entry of entries) {
+      const prior = state.advanceAlerted[entry.event.uuid];
+      if (stateMatchesSchedule(prior, entry.event, entry.opensAt)) {
+        if (!prior.startDatetime) {
+          prior.startDatetime = entry.event.startDatetime;
+          prior.title = prior.title || entry.event.title;
+          stateChanged = true;
+        }
+      } else {
+        missing.push(entry);
+      }
+    }
+    if (missing.length) advanceGroups.set(dateKey, missing);
+  }
+
+  // GitHub Issues are the second idempotency layer. If issue creation succeeds
+  // but the state push fails, the marker reconstructs state on the next run.
+  const existingMarkers = dueGroups.size || advanceGroups.size
+    ? await fetchRecentAlertMarkers(repoFullName, token)
+    : { live: new Map(), advance: new Map() };
+
+  for (const entries of advanceGroups.values()) {
+    const needsIssue = [];
+    for (const entry of entries) {
+      const existing = existingMarkers.advance.get(scheduleKey(entry.event));
+      if (existing !== undefined) {
+        state.advanceAlerted[entry.event.uuid] = {
+          notifiedAt: existing.createdAt || new Date(nowMs).toISOString(),
+          registrationOpenedAt: new Date(entry.opensAt).toISOString(),
+          title: entry.event.title,
+          startDatetime: entry.event.startDatetime,
+          issueNumber: existing.issueNumber,
+          recoveredFromIssue: true,
+        };
+        stateChanged = true;
+      } else {
+        needsIssue.push(entry);
+      }
+    }
+
+    if (!needsIssue.length) continue;
+
+    const issue = await createAdvanceIssue(needsIssue, repoFullName, token);
+    const notifiedAt = issue.created_at || new Date(nowMs).toISOString();
+    for (const { event, opensAt } of needsIssue) {
+      state.advanceAlerted[event.uuid] = {
+        notifiedAt,
+        registrationOpenedAt: new Date(opensAt).toISOString(),
+        title: event.title,
+        startDatetime: event.startDatetime,
+        issueNumber: issue.number,
+      };
+    }
+    stateChanged = true;
+    advanceNoticesCreated++;
+  }
 
   for (const [opensAtText, group] of dueGroups.entries()) {
     const opensAt = Number(opensAtText);
@@ -270,13 +460,14 @@ async function createIssue(events, opensAt) {
     const needsIssue = [];
 
     for (const event of group) {
-      const existingCreatedAt = existingMarkers.get(scheduleKey(event));
-      if (existingCreatedAt !== undefined) {
+      const existing = existingMarkers.live.get(scheduleKey(event));
+      if (existing !== undefined) {
         state.alerted[event.uuid] = {
-          notifiedAt: existingCreatedAt || new Date().toISOString(),
+          notifiedAt: existing.createdAt || new Date(nowMs).toISOString(),
           registrationOpenedAt: opensAtIso,
           title: event.title,
           startDatetime: event.startDatetime,
+          issueNumber: existing.issueNumber,
           recoveredFromIssue: true,
         };
         stateChanged = true;
@@ -287,14 +478,15 @@ async function createIssue(events, opensAt) {
 
     if (!needsIssue.length) continue;
 
-    const issue = await createIssue(needsIssue, opensAt);
-    const notifiedAt = issue.created_at || new Date().toISOString();
+    const issue = await createIssue(needsIssue, opensAt, repoFullName, token, nowMs);
+    const notifiedAt = issue.created_at || new Date(nowMs).toISOString();
     for (const event of needsIssue) {
       state.alerted[event.uuid] = {
         notifiedAt,
         registrationOpenedAt: opensAtIso,
         title: event.title,
         startDatetime: event.startDatetime,
+        issueNumber: issue.number,
       };
     }
     stateChanged = true;
@@ -306,26 +498,107 @@ async function createIssue(events, opensAt) {
     stateChanged = true;
   }
 
-  // Keep the state file bounded over the long term. UUIDs older than 90 days
-  // no longer matter because the feed only contains current/future classes.
+  // Registration issues are actionable for one day. Close them afterward so
+  // open-issue searches remain bounded without deleting the audit trail.
+  const issueEntries = new Map();
+  for (const [uuid, entry] of Object.entries(state.alerted)) {
+    const notified = Date.parse(entry?.notifiedAt || '');
+    if (
+      Number.isInteger(entry?.issueNumber) &&
+      !entry.issueClosedAt &&
+      Number.isFinite(notified) &&
+      notified < nowMs - ALERT_CLOSE_AFTER_MS
+    ) {
+      if (!issueEntries.has(entry.issueNumber)) issueEntries.set(entry.issueNumber, []);
+      issueEntries.get(entry.issueNumber).push(uuid);
+    }
+  }
+  for (const [issueNumber] of issueEntries) {
+    await closeIssue(issueNumber, repoFullName, token);
+    const closedAt = new Date(nowMs).toISOString();
+    for (const entry of Object.values(state.alerted)) {
+      if (entry?.issueNumber === issueNumber) entry.issueClosedAt = closedAt;
+    }
+    stateChanged = true;
+  }
+
+  // Keep each daily advance digest open until every represented window has a
+  // live confirmation (or has been stale for a full day).
+  const advanceIssueEntries = new Map();
+  for (const [uuid, entry] of Object.entries(state.advanceAlerted)) {
+    if (!Number.isInteger(entry?.issueNumber) || entry.issueClosedAt) continue;
+    if (!advanceIssueEntries.has(entry.issueNumber)) advanceIssueEntries.set(entry.issueNumber, []);
+    advanceIssueEntries.get(entry.issueNumber).push({ uuid, entry });
+  }
+  for (const [issueNumber, entries] of advanceIssueEntries) {
+    const allConfirmedOrExpired = entries.every(({ uuid, entry }) => {
+      const live = state.alerted[uuid];
+      const opened = Date.parse(entry?.registrationOpenedAt || '');
+      const confirmed = Boolean(
+        live?.notifiedAt &&
+        !live.suppressedInitialBacklog &&
+        live.startDatetime === entry.startDatetime
+      );
+      return confirmed || (Number.isFinite(opened) && opened < nowMs - ALERT_CLOSE_AFTER_MS);
+    });
+    if (!allConfirmedOrExpired) continue;
+
+    await closeIssue(issueNumber, repoFullName, token);
+    const closedAt = new Date(nowMs).toISOString();
+    for (const entry of Object.values(state.advanceAlerted)) {
+      if (entry?.issueNumber === issueNumber) entry.issueClosedAt = closedAt;
+    }
+    stateChanged = true;
+  }
+
+  // Keep state bounded; the live feed only contains current/future classes.
   for (const [uuid, entry] of Object.entries(state.alerted)) {
     const opened = Date.parse(entry?.registrationOpenedAt || '');
-    if (Number.isFinite(opened) && opened < now - STATE_RETENTION_MS) {
+    if (Number.isFinite(opened) && opened < nowMs - STATE_RETENTION_MS) {
       delete state.alerted[uuid];
+      stateChanged = true;
+    }
+  }
+  for (const [uuid, entry] of Object.entries(state.advanceAlerted)) {
+    const opened = Date.parse(entry?.registrationOpenedAt || '');
+    if (Number.isFinite(opened) && opened < nowMs - STATE_RETENTION_MS) {
+      delete state.advanceAlerted[uuid];
       stateChanged = true;
     }
   }
 
   if (stateChanged) {
-    fs.mkdirSync(path.dirname(STATE_PATH), { recursive: true });
-    fs.writeFileSync(STATE_PATH, JSON.stringify(state, null, 2) + '\n');
+    fs.mkdirSync(path.dirname(statePath), { recursive: true });
+    fs.writeFileSync(statePath, JSON.stringify(state, null, 2) + '\n');
     console.log('Alert state changed and was written to disk.');
   } else {
-    console.log('No newly opened registration windows; alert state unchanged.');
+    console.log('No new advance or live registration windows; alert state unchanged.');
   }
 
-  console.log(`Registration alert check complete; ${alertsCreated} new alert issue(s).`);
-})().catch(err => {
-  console.error(err);
-  process.exit(1);
-});
+  console.log(`Registration alert check complete; ${advanceNoticesCreated} advance digest(s), ${alertsCreated} live alert issue(s).`);
+  return { advanceNoticesCreated, alertsCreated, stateChanged };
+}
+
+if (require.main === module) {
+  main().catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
+}
+
+module.exports = {
+  ALERT_CLOSE_AFTER_MS,
+  ADVANCE_NOTICE_MS,
+  INITIAL_GRACE_MS,
+  LATE_AFTER_MS,
+  advanceMarkerFor,
+  closeIssue,
+  createAdvanceIssue,
+  createIssue,
+  fetchRecentAlertMarkers,
+  main,
+  markerFor,
+  readState,
+  stateMatchesSchedule,
+  validateFeed,
+};

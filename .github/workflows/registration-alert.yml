@@ -47,5 +47,6 @@ jobs:
             echo "No alert-state changes to commit."
           else
             git commit -m "Update 7070 registration alert state"
+            git pull --rebase origin main
             git push
           fi

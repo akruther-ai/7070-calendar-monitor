@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const TIME_ZONE = 'America/Denver';
+const CALENDAR_URL = 'https://7070athletics.pushpress.com/landing/calendar?framed=1';
 const FEED_PATH = path.join(__dirname, 'data', 'middle-school.json');
 const STATE_PATH = path.join(__dirname, 'data', 'registration-alerted.json');
 const REPO = process.env.GITHUB_REPOSITORY;
@@ -98,10 +99,13 @@ async function createIssue(events, opensAt) {
   const [owner, repo] = REPO.split('/');
   const first = events[0];
   const markers = events.map(e => `<!-- 7070-event:${e.uuid} -->`);
-  const lines = [
-    `@${ASSIGNEE} **Registration is open now.**`,
-    '',
-  ];
+  const delayMinutes = Math.max(0, Math.floor((Date.now() - opensAt) / 60000));
+  const isLate = delayMinutes > 15;
+  const statusLine = isLate
+    ? `@${ASSIGNEE} **LATE ALERT: registration opened about ${delayMinutes} minutes ago. Check availability now.**`
+    : `@${ASSIGNEE} **Registration is open now.**`;
+
+  const lines = [statusLine, ''];
 
   for (const event of events) {
     lines.push(`- **${String(event.title || '').trim()}** — ${formatLocalWall(event.startDatetime)} — Coach: ${coachName(event)}`);
@@ -109,14 +113,17 @@ async function createIssue(events, opensAt) {
 
   lines.push(
     '',
+    `[Open the 7070 calendar](${CALENDAR_URL})`,
+    '',
     '7070 opens registration exactly 7 days before the class start time.',
     '',
     ...markers,
   );
 
-  const titlePrefix = events.length > 1
+  const basePrefix = events.length > 1
     ? `7070 registration open: ${events.length} Middle School classes`
     : `7070 registration open: ${String(first.title || '').trim()}`;
+  const titlePrefix = isLate ? `LATE — ${basePrefix}` : basePrefix;
 
   const response = await fetch(`https://api.github.com/repos/${owner}/${repo}/issues`, {
     method: 'POST',

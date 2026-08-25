@@ -52,11 +52,7 @@ function calendarInputFromRequest(request) {
       const json = await response.json();
       const items = json?.data?.getPublicCalendarItems;
       if (Array.isArray(items)) {
-        captured.push({
-          startDate: input.startDate,
-          endDate: input.endDate,
-          items,
-        });
+        captured.push({ startDate: input.startDate, endDate: input.endDate, items });
         console.log(`Captured ${input.startDate}..${input.endDate}: ${items.length} events`);
       }
     } catch (err) {
@@ -75,6 +71,13 @@ function calendarInputFromRequest(request) {
     if (!(await nextButton.count())) {
       nextButton = page.locator('button[title*="next" i], button[aria-label*="next" i]').first();
     }
+    if (!(await nextButton.count())) {
+      const iconButtons = page.locator('button[class*="IconButton-module__icon-button"]');
+      if ((await iconButtons.count()) >= 2) {
+        // PushPress renders: Today, previous-arrow, next-arrow, Filter.
+        nextButton = iconButtons.nth(1);
+      }
+    }
 
     if (!(await nextButton.count())) {
       const buttons = await page.locator('button').evaluateAll(btns =>
@@ -85,10 +88,12 @@ function calendarInputFromRequest(request) {
 
     const maxCapturedEnd = () => captured.reduce((max, c) => c.endDate > max ? c.endDate : max, '');
 
-    // Keep advancing the real PushPress calendar. This lets the application's own
-    // authenticated browser requests succeed without replaying or exporting tokens.
     for (let i = 0; i < 70 && maxCapturedEnd() < targetEnd; i++) {
-      const responsePromise = page.waitForResponse(resp => !!calendarInputFromRequest(resp.request()), { timeout: 10000 }).catch(() => null);
+      const responsePromise = page.waitForResponse(
+        resp => !!calendarInputFromRequest(resp.request()),
+        { timeout: 10000 }
+      ).catch(() => null);
+
       await nextButton.click();
       await responsePromise;
       await page.waitForTimeout(250);
@@ -106,7 +111,6 @@ function calendarInputFromRequest(request) {
       String(item.title || '').toLowerCase().includes('middle school')
     );
 
-    const generatedAt = new Date().toISOString();
     const dateRange = {
       startDate: captured.reduce((min, c) => !min || c.startDate < min ? c.startDate : min, ''),
       endDate: captured.reduce((max, c) => c.endDate > max ? c.endDate : max, ''),
@@ -117,7 +121,6 @@ function calendarInputFromRequest(request) {
 
     fs.writeFileSync(path.join(dataDir, 'calendar.json'), JSON.stringify({
       source: CALENDAR_URL,
-      generatedAt,
       timeZone: TIME_ZONE,
       requestedFrom: today,
       targetThrough: targetEnd,
@@ -128,7 +131,6 @@ function calendarInputFromRequest(request) {
 
     fs.writeFileSync(path.join(dataDir, 'middle-school.json'), JSON.stringify({
       source: CALENDAR_URL,
-      generatedAt,
       timeZone: TIME_ZONE,
       requestedFrom: today,
       targetThrough: targetEnd,

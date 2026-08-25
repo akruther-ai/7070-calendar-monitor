@@ -3,18 +3,17 @@ name: Update 7070 calendar
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/10 * * * *'
+    # Daily at 10:05 UTC (~4:05 AM MDT / 3:05 AM MST)
+    - cron: '5 10 * * *'
   push:
     branches: [main]
     paths:
       - 'scrape.js'
-      - 'registration-alert.js'
       - 'package.json'
       - '.github/workflows/update-calendar.yml'
 
 permissions:
   contents: write
-  issues: write
 
 concurrency:
   group: update-7070-calendar
@@ -43,18 +42,13 @@ jobs:
       - name: Capture live calendar
         run: npm run scrape
 
-      - name: Check for newly opened registrations
-        run: node registration-alert.js
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Commit updated calendar and alert state
+      - name: Commit updated calendar data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/calendar.json data/middle-school.json data/registration-alerted.json
+          git add data/calendar.json data/middle-school.json
           if git diff --cached --quiet; then
-            echo "No calendar or alert-state changes to commit."
+            echo "No calendar changes to commit."
           else
             git commit -m "Update 7070 calendar data"
             git push

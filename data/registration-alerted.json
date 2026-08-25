@@ -172,6 +172,22 @@
       "startDatetime": "2026-08-31T18:30:00.000Z",
       "issueNumber": 3,
       "recoveredFromIssue": true
+    },
+    "cal-ecf4cca4ff3e4715a8e7f75112b5": {
+      "notifiedAt": "2026-08-25T22:49:09Z",
+      "registrationOpenedAt": "2026-08-25T22:30:00.000Z",
+      "title": "Middle School Skills",
+      "startDatetime": "2026-09-01T16:30:00.000Z",
+      "issueNumber": 9,
+      "recoveredFromIssue": true
+    },
+    "cal-e867379893ba440abbe639e06626": {
+      "notifiedAt": "2026-08-25T22:49:09Z",
+      "registrationOpenedAt": "2026-08-25T22:30:00.000Z",
+      "title": "IPT Middle School ",
+      "startDatetime": "2026-09-01T16:30:00.000Z",
+      "issueNumber": 9,
+      "recoveredFromIssue": true
     }
   },
   "advanceAlerted": {

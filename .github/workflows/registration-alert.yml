@@ -3,15 +3,19 @@ name: 7070 registration alerts
 on:
   workflow_dispatch:
   schedule:
-    # Check every 5 minutes, offset from the top of the hour to reduce cron congestion.
-    - cron: '2-57/5 * * * *'
+    # Every 5 minutes, offset from the top of the hour to reduce GitHub cron congestion.
+    - cron: '2,7,12,17,22,27,32,37,42,47,52,57 * * * *'
+  push:
+    paths:
+      - 'registration-alert.js'
+      - '.github/workflows/registration-alert.yml'
 
 permissions:
   contents: write
   issues: write
 
 concurrency:
-  group: 7070-registration-alerts
+  group: 7070-registration-monitor
   cancel-in-progress: false
 
 jobs:
@@ -33,7 +37,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node registration-alert.js
 
-      - name: Save alert state
+      - name: Save alert state if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

@@ -21,8 +21,8 @@ concurrency:
 
 jobs:
   check-registration:
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
 
     steps:
       - name: Check out repository
@@ -51,3 +51,32 @@ jobs:
             git pull --rebase origin main
             git push
           fi
+
+      - name: Report degraded registration monitor
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          title='7070 MONITOR DEGRADED: registration checker'
+          existing=$(gh api "repos/$GITHUB_REPOSITORY/issues?state=open&per_page=100" --jq ".[] | select(.title == \"$title\") | .number" | head -n 1)
+          if [ -z "$existing" ]; then
+            gh issue create \
+              --repo "$GITHUB_REPOSITORY" \
+              --title "$title" \
+              --body $'@akruther-ai **The 5-minute 7070 registration checker failed.**\n\nThe 15-minute fresh-calendar workflow remains a backup path, but the monitor is degraded until a later run succeeds.' \
+              --assignee akruther-ai
+          else
+            echo "Degraded-monitor issue #$existing is already open."
+          fi
+
+      - name: Clear degraded registration monitor alert after recovery
+        if: success()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          title='7070 MONITOR DEGRADED: registration checker'
+          gh api "repos/$GITHUB_REPOSITORY/issues?state=open&per_page=100" \
+            --jq ".[] | select(.title == \"$title\") | .number" | \
+          while read -r issue; do
+            [ -n "$issue" ] && gh issue close "$issue" --repo "$GITHUB_REPOSITORY" --reason completed --comment 'Automated recovery: the registration checker completed successfully.'
+          done

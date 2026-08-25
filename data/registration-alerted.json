@@ -161,13 +161,17 @@
       "notifiedAt": "2026-08-25T08:39:44.312Z",
       "registrationOpenedAt": "2026-08-25T00:30:00.000Z",
       "title": "Shot Doctor - Middle School (Grades 7-8)",
-      "startDatetime": "2026-08-31T18:30:00.000Z"
+      "startDatetime": "2026-08-31T18:30:00.000Z",
+      "issueNumber": 3,
+      "recoveredFromIssue": true
     },
     "cal-b36cc509558241d58ce7704aca6a": {
       "notifiedAt": "2026-08-25T08:39:44.312Z",
       "registrationOpenedAt": "2026-08-25T00:30:00.000Z",
       "title": "Upper Middle School Skills ",
-      "startDatetime": "2026-08-31T18:30:00.000Z"
+      "startDatetime": "2026-08-31T18:30:00.000Z",
+      "issueNumber": 3,
+      "recoveredFromIssue": true
     }
   },
   "advanceAlerted": {

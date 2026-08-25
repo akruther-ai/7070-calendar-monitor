@@ -1,8 +1,8 @@
 {
   "source": "https://7070athletics.pushpress.com/landing/calendar?framed=1",
   "timeZone": "America/Denver",
-  "requestedFrom": "2026-08-24",
-  "targetThrough": "2026-10-25",
+  "requestedFrom": "2026-08-25",
+  "targetThrough": "2026-10-26",
   "dateRange": {
     "startDate": "2026-08-23",
     "endDate": "2026-10-31"
@@ -1307,9 +1307,9 @@
         "__typename": "CalendarItemLocation"
       },
       "mainCoach": {
-        "userUuid": "ac130104cee48758d7145556887dac4f",
-        "firstName": "Keion",
-        "lastName": "Mitchem",
+        "userUuid": "usr_354c5c2551abc4",
+        "firstName": "Anna",
+        "lastName": "Poe",
         "__typename": "Profile"
       },
       "assistantCoach": null,

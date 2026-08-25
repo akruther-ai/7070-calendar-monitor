@@ -14,9 +14,10 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
-  # Shared with the registration checker so feed/state writes never overlap.
+  # Shared with the 5-minute checker so feed/state writes and alerts never overlap.
   group: 7070-registration-monitor
   cancel-in-progress: false
 
@@ -43,14 +44,20 @@ jobs:
       - name: Capture live calendar
         run: npm run scrape
 
-      - name: Commit updated calendar data
+      - name: Check registration openings against fresh calendar
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node registration-alert.js
+
+      - name: Commit updated calendar and alert state
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/calendar.json data/middle-school.json
+          git add data/calendar.json data/middle-school.json data/registration-alerted.json
           if git diff --cached --quiet; then
-            echo "No calendar changes to commit."
+            echo "No calendar or alert-state changes to commit."
           else
-            git commit -m "Update 7070 calendar data"
+            git commit -m "Update 7070 calendar/alert state"
+            git pull --rebase origin main
             git push
           fi

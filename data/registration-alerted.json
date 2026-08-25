@@ -188,6 +188,13 @@
       "startDatetime": "2026-09-01T16:30:00.000Z",
       "issueNumber": 9,
       "recoveredFromIssue": true
+    },
+    "cal-d2b24cfcef6742b0905a30a3e531": {
+      "notifiedAt": "2026-08-25T23:55:57Z",
+      "registrationOpenedAt": "2026-08-25T23:30:00.000Z",
+      "title": "Middle School Skills",
+      "startDatetime": "2026-09-01T17:30:00.000Z",
+      "issueNumber": 10
     }
   },
   "advanceAlerted": {

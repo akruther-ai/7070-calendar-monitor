@@ -8,17 +8,34 @@ const STATE_PATH = path.join(__dirname, 'data', 'registration-alerted.json');
 const REPO = process.env.GITHUB_REPOSITORY;
 const TOKEN = process.env.GITHUB_TOKEN;
 const ASSIGNEE = 'akruther-ai';
+const INITIAL_GRACE_MS = 20 * 60 * 1000;
+const STATE_RETENTION_MS = 90 * 24 * 60 * 60 * 1000;
 
 if (!REPO || !TOKEN) {
   throw new Error('GITHUB_REPOSITORY and GITHUB_TOKEN are required.');
 }
 
-function readJson(file, fallback) {
+function readRequiredJson(file, description) {
+  let text;
   try {
-    return JSON.parse(fs.readFileSync(file, 'utf8'));
-  } catch {
-    return fallback;
+    text = fs.readFileSync(file, 'utf8');
+  } catch (err) {
+    throw new Error(`${description} is missing or unreadable: ${err.message}`);
   }
+  try {
+    return JSON.parse(text);
+  } catch (err) {
+    throw new Error(`${description} contains invalid JSON: ${err.message}`);
+  }
+}
+
+function readState() {
+  if (!fs.existsSync(STATE_PATH)) return { initialized: false, alerted: {} };
+  const state = readRequiredJson(STATE_PATH, 'Alert state');
+  if (!state || typeof state !== 'object') throw new Error('Alert state must be a JSON object.');
+  state.alerted = state.alerted && typeof state.alerted === 'object' ? state.alerted : {};
+  state.initialized = Boolean(state.initialized);
+  return state;
 }
 
 function parseWallClock(iso) {
@@ -95,10 +112,53 @@ function coachName(event) {
     : 'Not listed';
 }
 
+function scheduleKey(event) {
+  return `${event.uuid}|${event.startDatetime}`;
+}
+
+function markerFor(event) {
+  return `<!-- 7070-event:${scheduleKey(event)} -->`;
+}
+
+function stateMatchesSchedule(entry, event, opensAt) {
+  if (!entry) return false;
+  if (entry.startDatetime) return entry.startDatetime === event.startDatetime;
+  // Migration support for state written before startDatetime was persisted.
+  return entry.registrationOpenedAt === new Date(opensAt).toISOString();
+}
+
+async function fetchRecentAlertMarkers() {
+  const [owner, repo] = REPO.split('/');
+  const response = await fetch(
+    `https://api.github.com/repos/${owner}/${repo}/issues?state=all&per_page=100&sort=created&direction=desc`,
+    {
+      headers: {
+        accept: 'application/vnd.github+json',
+        authorization: `Bearer ${TOKEN}`,
+        'x-github-api-version': '2022-11-28',
+      },
+    }
+  );
+  if (!response.ok) {
+    throw new Error(`GitHub issue lookup failed (${response.status}): ${await response.text()}`);
+  }
+
+  const issues = await response.json();
+  const found = new Map();
+  const markerPattern = /<!-- 7070-event:([^|>]+\|[^>]+) -->/g;
+  for (const issue of issues) {
+    const body = String(issue.body || '');
+    for (const match of body.matchAll(markerPattern)) {
+      if (!found.has(match[1])) found.set(match[1], issue.created_at || null);
+    }
+  }
+  return found;
+}
+
 async function createIssue(events, opensAt) {
   const [owner, repo] = REPO.split('/');
   const first = events[0];
-  const markers = events.map(e => `<!-- 7070-event:${e.uuid} -->`);
+  const markers = events.map(markerFor);
   const delayMinutes = Math.max(0, Math.floor((Date.now() - opensAt) / 60000));
   const isLate = delayMinutes > 15;
   const statusLine = isLate
@@ -106,11 +166,9 @@ async function createIssue(events, opensAt) {
     : `@${ASSIGNEE} **Registration is open now.**`;
 
   const lines = [statusLine, ''];
-
   for (const event of events) {
     lines.push(`- **${String(event.title || '').trim()}** — ${formatLocalWall(event.startDatetime)} — Coach: ${coachName(event)}`);
   }
-
   lines.push(
     '',
     `[Open the 7070 calendar](${CALENDAR_URL})`,
@@ -128,8 +186,8 @@ async function createIssue(events, opensAt) {
   const response = await fetch(`https://api.github.com/repos/${owner}/${repo}/issues`, {
     method: 'POST',
     headers: {
-      'accept': 'application/vnd.github+json',
-      'authorization': `Bearer ${TOKEN}`,
+      accept: 'application/vnd.github+json',
+      authorization: `Bearer ${TOKEN}`,
       'x-github-api-version': '2022-11-28',
       'content-type': 'application/json',
     },
@@ -146,19 +204,17 @@ async function createIssue(events, opensAt) {
 
   const issue = await response.json();
   console.log(`Created registration alert issue #${issue.number} for ${events.length} event(s) opening at ${new Date(opensAt).toISOString()}`);
+  return issue;
 }
 
 (async () => {
-  const feed = readJson(FEED_PATH, null);
+  const feed = readRequiredJson(FEED_PATH, 'Middle School feed');
   if (!feed || !Array.isArray(feed.items)) {
-    throw new Error('data/middle-school.json is missing or invalid.');
+    throw new Error('data/middle-school.json is missing a valid items array.');
   }
 
-  const state = readJson(STATE_PATH, { initialized: false, alerted: {} });
-  state.alerted = state.alerted || {};
-
+  const state = readState();
   const now = Date.now();
-  const initialGraceMs = 20 * 60 * 1000;
   let stateChanged = false;
   let alertsCreated = 0;
 
@@ -169,17 +225,30 @@ async function createIssue(events, opensAt) {
   const dueGroups = new Map();
 
   for (const event of events) {
-    if (state.alerted[event.uuid]) continue;
-
     const opensAt = registrationOpenMs(event.startDatetime);
+    const opensAtIso = new Date(opensAt).toISOString();
+    const prior = state.alerted[event.uuid];
+
+    if (stateMatchesSchedule(prior, event, opensAt)) {
+      // Migrate older state entries so future reschedules can be distinguished.
+      if (!prior.startDatetime) {
+        prior.startDatetime = event.startDatetime;
+        prior.title = prior.title || event.title;
+        stateChanged = true;
+      }
+      continue;
+    }
+
     if (opensAt > now) continue;
 
-    // On the very first run, suppress a backlog of old openings. We still alert
-    // for anything that opened within the last 20 minutes.
-    if (!state.initialized && opensAt < now - initialGraceMs) {
+    // On the very first run only, suppress a backlog of old openings while
+    // retaining enough schedule detail to recognize a later reschedule.
+    if (!state.initialized && opensAt < now - INITIAL_GRACE_MS) {
       state.alerted[event.uuid] = {
         suppressedInitialBacklog: true,
-        registrationOpenedAt: new Date(opensAt).toISOString(),
+        registrationOpenedAt: opensAtIso,
+        title: event.title,
+        startDatetime: event.startDatetime,
       };
       stateChanged = true;
       continue;
@@ -190,14 +259,40 @@ async function createIssue(events, opensAt) {
     dueGroups.get(key).push(event);
   }
 
+  // GitHub Issues are the second idempotency layer. If an issue was created but
+  // the state-file commit/push failed, the marker prevents a duplicate alert on
+  // the next run and lets us reconstruct the missing state.
+  const existingMarkers = dueGroups.size ? await fetchRecentAlertMarkers() : new Map();
+
   for (const [opensAtText, group] of dueGroups.entries()) {
     const opensAt = Number(opensAtText);
-    await createIssue(group, opensAt);
-    const notifiedAt = new Date().toISOString();
+    const opensAtIso = new Date(opensAt).toISOString();
+    const needsIssue = [];
+
     for (const event of group) {
+      const existingCreatedAt = existingMarkers.get(scheduleKey(event));
+      if (existingCreatedAt !== undefined) {
+        state.alerted[event.uuid] = {
+          notifiedAt: existingCreatedAt || new Date().toISOString(),
+          registrationOpenedAt: opensAtIso,
+          title: event.title,
+          startDatetime: event.startDatetime,
+          recoveredFromIssue: true,
+        };
+        stateChanged = true;
+      } else {
+        needsIssue.push(event);
+      }
+    }
+
+    if (!needsIssue.length) continue;
+
+    const issue = await createIssue(needsIssue, opensAt);
+    const notifiedAt = issue.created_at || new Date().toISOString();
+    for (const event of needsIssue) {
       state.alerted[event.uuid] = {
         notifiedAt,
-        registrationOpenedAt: new Date(opensAt).toISOString(),
+        registrationOpenedAt: opensAtIso,
         title: event.title,
         startDatetime: event.startDatetime,
       };
@@ -211,8 +306,16 @@ async function createIssue(events, opensAt) {
     stateChanged = true;
   }
 
-  // Persist state only when something meaningful changed. This avoids creating
-  // a Git commit every five minutes just to update a last-checked timestamp.
+  // Keep the state file bounded over the long term. UUIDs older than 90 days
+  // no longer matter because the feed only contains current/future classes.
+  for (const [uuid, entry] of Object.entries(state.alerted)) {
+    const opened = Date.parse(entry?.registrationOpenedAt || '');
+    if (Number.isFinite(opened) && opened < now - STATE_RETENTION_MS) {
+      delete state.alerted[uuid];
+      stateChanged = true;
+    }
+  }
+
   if (stateChanged) {
     fs.mkdirSync(path.dirname(STATE_PATH), { recursive: true });
     fs.writeFileSync(STATE_PATH, JSON.stringify(state, null, 2) + '\n');

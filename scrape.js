@@ -63,9 +63,9 @@ async function fetchRange(page, token, startDate, endDate) {
     const response = await fetch(API_URL, {
       method: 'POST',
       headers: {
-        'accept': '*/*',
+        accept: '*/*',
         'content-type': 'application/json',
-        'authorization': token,
+        authorization: token,
       },
       body: JSON.stringify({
         operationName: 'GetPublicCalendarItems',
@@ -95,7 +95,11 @@ async function fetchRange(page, token, startDate, endDate) {
   const page = await context.newPage();
 
   try {
-    await page.goto(CALENDAR_URL, { waitUntil: 'networkidle', timeout: 60000 });
+    // PushPress keeps background connections open, so networkidle never settles.
+    // DOMContentLoaded is enough to establish the public browser session; then
+    // give the app a few seconds to finish its bootstrap work.
+    await page.goto(CALENDAR_URL, { waitUntil: 'domcontentloaded', timeout: 60000 });
+    await page.waitForTimeout(4000);
 
     const cookies = await context.cookies('https://7070athletics.pushpress.com');
     const publicToken = cookies.find(c => c.name === 'PUBLIC_TOKEN')?.value;

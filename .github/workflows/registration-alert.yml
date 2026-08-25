@@ -8,6 +8,7 @@ on:
   push:
     paths:
       - 'registration-alert.js'
+      - 'data/middle-school.json'
       - '.github/workflows/registration-alert.yml'
 
 permissions:

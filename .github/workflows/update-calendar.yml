@@ -3,8 +3,8 @@ name: Update 7070 calendar
 on:
   workflow_dispatch:
   schedule:
-    # Daily at 10:05 UTC (~4:05 AM MDT / 3:05 AM MST)
-    - cron: '5 10 * * *'
+    # Refresh the live PushPress calendar every 15 minutes, offset from alert checks.
+    - cron: '3,18,33,48 * * * *'
   push:
     branches: [main]
     paths:
@@ -16,7 +16,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: update-7070-calendar
+  # Shared with the registration checker so feed/state writes never overlap.
+  group: 7070-registration-monitor
   cancel-in-progress: false
 
 jobs:

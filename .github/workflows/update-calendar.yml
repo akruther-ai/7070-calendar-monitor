@@ -21,9 +21,10 @@ permissions:
   issues: write
 
 concurrency:
-  # Shared with the 5-minute checker to serialize issue/state writes.
-  group: 7070-registration-monitor
-  queue: max
+  # Calendar refreshes never write registration state, so they can run while a
+  # registration watcher is waiting for an exact opening time.
+  group: 7070-calendar-refresh
+  queue: single
 
 jobs:
   scrape:
@@ -34,7 +35,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          # Queued runs must include state committed by the preceding checker.
+          # Queued runs should start from the latest calendar snapshot.
           ref: main
 
       - name: Set up Node.js
@@ -52,33 +53,27 @@ jobs:
       - name: Run deterministic checks
         run: npm run check
 
-      # Check the last-known-good feed first. If the longer workflow runs
-      # before the lightweight checker, an already-due opening can still alert
-      # before any browser work begins.
-      - name: Check registration against last known good calendar
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: node registration-alert.js
-
       - name: Capture live calendar with system Chrome
         run: npm run scrape
 
-      - name: Check registration against fresh calendar
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: node registration-alert.js
-
-      - name: Commit updated calendar and alert state
+      - name: Commit updated calendar
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/calendar.json data/middle-school.json data/registration-alerted.json
+          git add data/calendar.json data/middle-school.json
           if git diff --cached --quiet; then
-            echo "No calendar or alert-state changes to commit."
+            echo "No calendar changes to commit."
           else
-            git commit -m "Update 7070 calendar/alert state"
-            git pull --rebase origin main
-            git push
+            git commit -m "Update 7070 calendar"
+            for attempt in 1 2 3; do
+              git pull --rebase origin main
+              if git push; then
+                exit 0
+              fi
+              echo "Calendar push raced another workflow; retrying ($attempt/3)."
+            done
+            echo "Calendar push failed after three attempts."
+            exit 1
           fi
 
   calendar-health:
@@ -101,7 +96,7 @@ jobs:
           if [ '${{ needs.scrape.result }}' != 'success' ]; then
             existing=$(echo "$issues" | sed -n '1p')
             if [ -z "$existing" ]; then
-              body=$'@akruther-ai **The 15-minute live 7070 calendar refresh failed or timed out.**\n\nThe 5-minute checker will continue using the last known good feed, but schedule changes or new classes may be stale until a refresh succeeds.\n\nFailed run: '"${run_url}"
+              body=$'@akruther-ai **The 15-minute live 7070 calendar refresh failed or timed out.**\n\nThe registration watcher will continue using the last known good feed, but schedule changes or new classes may be stale until a refresh succeeds.\n\nFailed run: '"${run_url}"
               gh issue create --repo "$GITHUB_REPOSITORY" --title "$title" --body "$body" --assignee akruther-ai
             else
               echo "Degraded-monitor issue #$existing is already open."

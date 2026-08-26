@@ -10,8 +10,10 @@ const {
   createAdvanceIssue,
   main,
   markerFor,
+  openingTimesWithin,
   stateMatchesSchedule,
   validateFeed,
+  watchMain,
 } = require('../registration-alert');
 const { registrationOpenMs } = require('../lib/registration-time');
 
@@ -40,6 +42,20 @@ test('schedule state and issue markers include UUID plus start time', () => {
   assert.equal(stateMatchesSchedule({ startDatetime: item.startDatetime }, item, opensAt), true);
   assert.equal(stateMatchesSchedule({ registrationOpenedAt: new Date(opensAt).toISOString() }, item, opensAt), true);
   assert.equal(stateMatchesSchedule({ startDatetime: '2026-09-02T16:30:00.000Z' }, item, opensAt), false);
+});
+
+test('watch-window openings are unique, ordered, and bounded', () => {
+  const first = event('a', '2026-09-01T16:30:00.000Z');
+  const sameTime = event('b', '2026-09-01T16:30:00.000Z');
+  const later = event('c', '2026-09-01T17:30:00.000Z');
+  const firstOpening = registrationOpenMs(first.startDatetime);
+  const laterOpening = registrationOpenMs(later.startDatetime);
+
+  assert.deepEqual(
+    openingTimesWithin([later, sameTime, first], firstOpening - 1, laterOpening),
+    [firstOpening, laterOpening],
+  );
+  assert.deepEqual(openingTimesWithin([first, later], firstOpening, laterOpening - 1), []);
 });
 
 test('ambiguous issue-creation failures are not retried immediately', async () => {
@@ -157,6 +173,79 @@ test('daily advance digest, issue recovery, live confirmation, and closure are i
     assert.equal(issues.filter(issue => issue.title.startsWith('LATE —')).length, 1);
     state = JSON.parse(fs.readFileSync(statePath, 'utf8'));
     assert.equal(Object.values(state.advanceAlerted).every(entry => entry.issueClosedAt), true);
+  } finally {
+    global.fetch = originalFetch;
+    console.log = originalLog;
+    fs.rmSync(tempDir, { recursive: true, force: true });
+  }
+});
+
+test('watcher sleeps to each distinct opening and confirms it immediately', async () => {
+  const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), '7070-watch-test-'));
+  const feedPath = path.join(tempDir, 'middle-school.json');
+  const statePath = path.join(tempDir, 'state.json');
+  const items = [
+    event('a', '2026-09-01T16:02:00.000Z'),
+    event('b', '2026-09-01T16:02:00.000Z'),
+    event('c', '2026-09-01T16:04:00.000Z'),
+  ];
+  fs.writeFileSync(feedPath, JSON.stringify({ count: items.length, items }));
+  fs.writeFileSync(statePath, JSON.stringify({ initialized: true, alerted: {}, advanceAlerted: {} }));
+
+  const originalFetch = global.fetch;
+  const originalLog = console.log;
+  const issues = [];
+  const waits = [];
+  let activeNow = Date.parse('2026-08-25T22:00:00.000Z');
+  let nextIssueNumber = 200;
+
+  global.fetch = async (url, options = {}) => {
+    const method = options.method || 'GET';
+    if (method === 'GET') {
+      return new Response(JSON.stringify(issues), { status: 200 });
+    }
+    if (method === 'POST') {
+      const created = {
+        ...JSON.parse(options.body),
+        number: nextIssueNumber++,
+        created_at: new Date(activeNow).toISOString(),
+        state: 'open',
+      };
+      issues.unshift(created);
+      return new Response(JSON.stringify(created), { status: 201 });
+    }
+    if (method === 'PATCH') {
+      const issueNumber = Number(String(url).split('/').pop());
+      const existing = issues.find(issue => issue.number === issueNumber);
+      if (existing) existing.state = 'closed';
+      return new Response(JSON.stringify(existing || { number: issueNumber }), { status: 200 });
+    }
+    return new Response('unsupported', { status: 500 });
+  };
+  console.log = () => {};
+
+  try {
+    const result = await watchMain({
+      repoFullName: 'owner/repo',
+      token: 'test-token',
+      feedPath,
+      statePath,
+      nowFn: () => activeNow,
+      sleepFn: async waitMs => {
+        waits.push(waitMs);
+        activeNow += waitMs;
+      },
+      watchHorizonMs: 5 * 60 * 1000,
+    });
+
+    assert.deepEqual(result, { advanceNoticesCreated: 1, alertsCreated: 2, stateChanged: true });
+    assert.deepEqual(waits, [121000, 120000]);
+    assert.equal(issues.filter(issue => issue.title.startsWith('7070 registration open:')).length, 2);
+    assert.equal(issues.some(issue => issue.title.includes('2 Middle School classes')), true);
+    assert.equal(issues.some(issue => issue.title.startsWith('LATE —')), false);
+
+    const state = JSON.parse(fs.readFileSync(statePath, 'utf8'));
+    assert.equal(Object.keys(state.alerted).length, 3);
   } finally {
     global.fetch = originalFetch;
     console.log = originalLog;

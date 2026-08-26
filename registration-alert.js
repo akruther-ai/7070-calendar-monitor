@@ -20,6 +20,8 @@ const ADVANCE_NOTICE_MS = 30 * 60 * 60 * 1000;
 const LATE_AFTER_MS = 15 * 60 * 1000;
 const ALERT_CLOSE_AFTER_MS = 24 * 60 * 60 * 1000;
 const STATE_RETENTION_MS = 90 * 24 * 60 * 60 * 1000;
+const WATCH_HORIZON_MS = (5 * 60 * 60 * 1000) + (15 * 60 * 1000);
+const WATCH_WAKE_SLOP_MS = 1000;
 const MAX_ISSUE_PAGES = 10;
 const MAX_GITHUB_ATTEMPTS = 3;
 
@@ -113,6 +115,13 @@ function stateMatchesSchedule(entry, event, opensAt) {
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function openingTimesWithin(events, afterMs, throughMs) {
+  return [...new Set(events
+    .map(event => registrationOpenMs(event.startDatetime))
+    .filter(opensAt => opensAt > afterMs && opensAt <= throughMs))]
+    .sort((a, b) => a - b);
 }
 
 async function githubRequest(url, options, description, token) {
@@ -579,8 +588,65 @@ async function main({
   return { advanceNoticesCreated, alertsCreated, stateChanged };
 }
 
+async function watchMain({
+  repoFullName = process.env.GITHUB_REPOSITORY,
+  token = process.env.GITHUB_TOKEN,
+  feedPath = FEED_PATH,
+  statePath = STATE_PATH,
+  nowFn = Date.now,
+  sleepFn = sleep,
+  watchHorizonMs = WATCH_HORIZON_MS,
+} = {}) {
+  if (!Number.isFinite(watchHorizonMs) || watchHorizonMs <= 0) {
+    throw new Error('Watch horizon must be a positive number of milliseconds.');
+  }
+
+  const startedAt = nowFn();
+  const watchThrough = startedAt + watchHorizonMs;
+  let checkedThrough = startedAt;
+  const totals = {
+    advanceNoticesCreated: 0,
+    alertsCreated: 0,
+    stateChanged: false,
+  };
+
+  const mergeResult = result => {
+    totals.advanceNoticesCreated += result.advanceNoticesCreated;
+    totals.alertsCreated += result.alertsCreated;
+    totals.stateChanged = totals.stateChanged || result.stateChanged;
+  };
+
+  mergeResult(await main({ repoFullName, token, nowMs: startedAt, feedPath, statePath }));
+
+  while (true) {
+    const feed = readRequiredJson(feedPath, 'Middle School feed');
+    const events = validateFeed(feed);
+    const [nextOpening] = openingTimesWithin(events, checkedThrough, watchThrough);
+    if (nextOpening === undefined) break;
+
+    const nowMs = nowFn();
+    const waitMs = Math.max(0, nextOpening - nowMs) + WATCH_WAKE_SLOP_MS;
+    console.log(
+      `Watcher armed for ${formatInstantLocal(nextOpening)}; waiting ${Math.ceil(waitMs / 60000)} minute(s).`,
+    );
+    await sleepFn(waitMs);
+
+    const checkNow = nowFn();
+    mergeResult(await main({ repoFullName, token, nowMs: checkNow, feedPath, statePath }));
+    // If a timer wakes early, leave the opening eligible for another pass.
+    checkedThrough = Math.max(checkedThrough, checkNow);
+  }
+
+  console.log(
+    `Registration watch complete through ${new Date(watchThrough).toISOString()}; ` +
+    `${totals.advanceNoticesCreated} advance digest(s), ${totals.alertsCreated} live alert issue(s).`,
+  );
+  return totals;
+}
+
 if (require.main === module) {
-  main().catch(err => {
+  const command = process.argv.includes('--watch') ? watchMain : main;
+  command().catch(err => {
     console.error(err);
     process.exit(1);
   });
@@ -591,6 +657,7 @@ module.exports = {
   ADVANCE_NOTICE_MS,
   INITIAL_GRACE_MS,
   LATE_AFTER_MS,
+  WATCH_HORIZON_MS,
   advanceMarkerFor,
   closeIssue,
   createAdvanceIssue,
@@ -598,7 +665,9 @@ module.exports = {
   fetchRecentAlertMarkers,
   main,
   markerFor,
+  openingTimesWithin,
   readState,
   stateMatchesSchedule,
   validateFeed,
+  watchMain,
 };

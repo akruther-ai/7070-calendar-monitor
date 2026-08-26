@@ -3,8 +3,9 @@ name: 7070 registration alerts
 on:
   workflow_dispatch:
   schedule:
-    # Every 5 minutes, offset from the top of the hour to reduce cron congestion.
-    - cron: '2,7,12,17,22,27,32,37,42,47,52,57 * * * *'
+    # GitHub cron is best-effort. Start redundant watchers twice per hour; once
+    # allocated, each watcher waits inside its runner for imminent openings.
+    - cron: '17,47 * * * *'
   push:
     branches: [main]
     paths:
@@ -21,14 +22,16 @@ permissions:
   issues: write
 
 concurrency:
-  group: 7070-registration-monitor
-  # Preserve scheduled checks instead of replacing an older pending run.
-  queue: max
+  group: 7070-registration-watcher
+  # Keep the active watch window and only the newest pending successor.
+  queue: single
 
 jobs:
   check_registration:
     runs-on: ubuntu-24.04
-    timeout-minutes: 5
+    # The script watches for at most 5h15m, leaving setup/commit headroom under
+    # GitHub's six-hour hosted-runner limit.
+    timeout-minutes: 330
 
     steps:
       - name: Check out repository
@@ -53,10 +56,10 @@ jobs:
       - name: Run deterministic checks
         run: npm run check
 
-      - name: Check advance and live registration windows
+      - name: Watch advance and live registration windows
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: node registration-alert.js
+        run: node registration-alert.js --watch
 
       - name: Save alert state if changed
         run: |
@@ -67,8 +70,15 @@ jobs:
             echo "No alert-state changes to commit."
           else
             git commit -m "Update 7070 registration alert state"
-            git pull --rebase origin main
-            git push
+            for attempt in 1 2 3; do
+              git pull --rebase origin main
+              if git push; then
+                exit 0
+              fi
+              echo "Alert-state push raced another workflow; retrying ($attempt/3)."
+            done
+            echo "Alert-state push failed after three attempts."
+            exit 1
           fi
 
   registration_health:
@@ -91,13 +101,13 @@ jobs:
           if [ '${{ needs.check_registration.result }}' != 'success' ]; then
             existing=$(echo "$issues" | sed -n '1p')
             if [ -z "$existing" ]; then
-              body=$'@akruther-ai **The 5-minute 7070 registration checker failed or timed out.**\n\nThe 15-minute fresh-calendar workflow remains a backup path, but the monitor is degraded until a later run succeeds.\n\nFailed run: '"${run_url}"
+              body=$'@akruther-ai **The GitHub-hosted 7070 registration watcher failed or timed out.**\n\nA later watcher will retry from the last known good feed, and issue markers protect against duplicate alerts, but the monitor is degraded until a run succeeds.\n\nFailed run: '"${run_url}"
               gh issue create --repo "$GITHUB_REPOSITORY" --title "$title" --body "$body" --assignee akruther-ai
             else
               echo "Degraded-monitor issue #$existing is already open."
             fi
           else
             for issue in $issues; do
-              gh issue close "$issue" --repo "$GITHUB_REPOSITORY" --reason completed --comment 'Automated recovery: the registration checker completed successfully.'
+              gh issue close "$issue" --repo "$GITHUB_REPOSITORY" --reason completed --comment 'Automated recovery: the registration watcher completed successfully.'
             done
           fi

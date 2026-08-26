@@ -27,13 +27,13 @@ The Middle School feed includes a current/future item when either its title or i
 
 ## Production architecture
 
-- The lightweight registration checker is scheduled every five minutes.
+- Registration watchers are scheduled twice per hour. If a known opening is within the next 5 hours 15 minutes, the allocated runner stays active and sleeps until each exact opening; otherwise it exits immediately.
 - Playwright refreshes 21 days of the live calendar every 15 minutes using the Chrome installation on GitHub's pinned `ubuntu-24.04` runner.
-- The refresh workflow checks registration both before and after scraping, so the last-known-good feed remains a second execution path.
-- Both workflows use one FIFO concurrency queue. This serializes issue/state writes without GitHub's default behavior of replacing an older pending run.
+- The watcher is the only workflow that writes registration state. Calendar refreshes have a separate single-pending concurrency queue, so a long-lived watcher cannot block fresh calendar snapshots and the two workflows cannot race on alert state.
+- While a watcher is active, new watcher starts share a single-pending queue. The running window is preserved and the newest pending run replaces an obsolete pending run.
 - Dependencies are lockfile-installed with `npm ci`, Actions are pinned to full commit SHAs, and weekly Dependabot checks cover npm and GitHub Actions.
 
-GitHub documents scheduled Actions as best-effort: scheduled runs can be delayed or dropped during high load. The advance daily digest reduces dependence on a single time-critical cron run, while the live issue still confirms when a checker executes at or after opening. Both paths remain in GitHub, so this repository does not claim an independent external delivery channel.
+GitHub documents scheduled Actions as best-effort: scheduled runs can be delayed or dropped during high load. The long-lived watch window removes the need for GitHub to start a workflow at the exact opening minute, while the advance daily digest provides the schedule well beforehand. Both paths remain in GitHub, so this repository does not claim an independent external delivery channel.
 
 ## Reliability protections
 
@@ -42,10 +42,10 @@ GitHub documents scheduled Actions as best-effort: scheduled runs can be delayed
 - If a class in an advance digest is rescheduled or removed before opening, the stale digest is closed and rebuilt from the current feed.
 - Alert state older than 90 days is pruned, and completed issues are automatically closed to keep searches bounded.
 - The scraper refuses to overwrite the last-known-good feed when coverage is empty, gapped, stalled, malformed, unexpectedly sparse, or below 50% of the prior population. It also rejects conflicting UUID reuse and validates current/future Middle School results.
-- Health reporting runs as a separate `always()` job, so a checker or scraper failure/timeout can create one assigned `7070 MONITOR DEGRADED` issue. A successful later run closes it.
-- The test suite covers normal timing, DST changes, leap/year boundaries, feed validation, daily digest grouping, lost-state recovery, live confirmation, issue closure, and scraper fail-closed checks.
+- Health reporting runs as a separate `always()` job, so a watcher or scraper failure/timeout can create one assigned `7070 MONITOR DEGRADED` issue. A successful later run closes it.
+- The test suite covers normal timing, DST changes, leap/year boundaries, feed validation, daily digest grouping, lost-state recovery, exact-time watcher wakeups, live confirmation, issue closure, and scraper fail-closed checks.
 
-GitHub's scheduler itself cannot report a run that was never started. The advance digest is the repository-only mitigation for that platform-level limitation.
+GitHub's scheduler itself cannot report a run that was never started. Redundant starts, the 5-hour-15-minute in-run watch window, and the advance digest are the repository-only mitigations for that platform-level limitation.
 
 ## Local verification
 

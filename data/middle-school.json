@@ -1,145 +1,15 @@
 {
   "source": "https://7070athletics.pushpress.com/landing/calendar?framed=1",
   "timeZone": "America/Denver",
-  "requestedFrom": "2026-08-25",
-  "targetThrough": "2026-09-15",
+  "requestedFrom": "2026-08-26",
+  "targetThrough": "2026-09-16",
   "dateRange": {
     "startDate": "2026-08-23",
     "endDate": "2026-09-19"
   },
   "filter": "current/future item where title or calendarItemType.name contains \"middle school\" (case-insensitive)",
-  "count": 81,
+  "count": 76,
   "items": [
-    {
-      "uuid": "cal-5ab6a9ad78c74ed6a7f3513a8657",
-      "title": "Middle School Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-08-25T16:30:00.000Z",
-      "endDatetime": "2026-08-25T17:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "ac130104cee48758d7145556887dac4f",
-        "firstName": "Keion",
-        "lastName": "Mitchem",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-831d4e92cf1043b19a86e6ddc499",
-      "title": "IPT Middle School ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-08-25T16:30:00.000Z",
-      "endDatetime": "2026-08-25T17:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_4b10a0d0fe07496ac60d",
-        "name": "I'M-Possible Training, Middle School",
-        "color": "#0fe61b",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "46451ec20cefbcb427869724171781e6",
-        "firstName": "Kyle",
-        "lastName": "Owens",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-4841d46c5dfb406cbeb656f0156e",
-      "title": "Middle School Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-08-25T17:30:00.000Z",
-      "endDatetime": "2026-08-25T18:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "ac130104cee48758d7145556887dac4f",
-        "firstName": "Keion",
-        "lastName": "Mitchem",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-f21d88f77f0b4f03a95cf871a862",
-      "title": "Middle School Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-08-25T18:30:00.000Z",
-      "endDatetime": "2026-08-25T19:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "usr_8d1673989c54e7",
-        "firstName": "Jonathan",
-        "lastName": "Scott",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-c6cb112a468b40fba0be2298fe8c",
-      "title": "Upper Middle School Skills ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-08-25T18:30:00.000Z",
-      "endDatetime": "2026-08-25T19:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_dcdbf6718aa911f19cca0affe13b3daf",
-        "name": "Middle School Skills Advanced",
-        "color": "#d3c876",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "ac130104cee48758d7145556887dac4f",
-        "firstName": "Keion",
-        "lastName": "Mitchem",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
     {
       "uuid": "cal-279f3816af15409694300fb6367b",
       "title": "Middle School Skills",

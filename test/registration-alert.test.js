@@ -8,6 +8,7 @@ const test = require('node:test');
 const {
   advanceMarkerFor,
   createAdvanceIssue,
+  dispatchSuccessor,
   main,
   markerFor,
   openingTimesWithin,
@@ -74,6 +75,29 @@ test('ambiguous issue-creation failures are not retried immediately', async () =
     assert.equal(calls, 1);
   } finally {
     global.fetch = originalFetch;
+  }
+});
+
+test('successor dispatch targets the registration workflow on main', async () => {
+  const originalFetch = global.fetch;
+  const originalLog = console.log;
+  let request;
+  global.fetch = async (url, options = {}) => {
+    request = { url, options };
+    return new Response(null, { status: 204 });
+  };
+  console.log = () => {};
+  try {
+    await dispatchSuccessor('owner/repo', 'test-token', 'main');
+    assert.equal(
+      request.url,
+      'https://api.github.com/repos/owner/repo/actions/workflows/registration-alert.yml/dispatches',
+    );
+    assert.equal(request.options.method, 'POST');
+    assert.deepEqual(JSON.parse(request.options.body), { ref: 'main' });
+  } finally {
+    global.fetch = originalFetch;
+    console.log = originalLog;
   }
 });
 
@@ -196,6 +220,7 @@ test('watcher sleeps to each distinct opening and confirms it immediately', asyn
   const originalLog = console.log;
   const issues = [];
   const waits = [];
+  let successorDispatches = 0;
   let activeNow = Date.parse('2026-08-25T22:00:00.000Z');
   let nextIssueNumber = 200;
 
@@ -235,11 +260,15 @@ test('watcher sleeps to each distinct opening and confirms it immediately', asyn
         waits.push(waitMs);
         activeNow += waitMs;
       },
+      dispatchFn: async () => {
+        successorDispatches++;
+      },
       watchHorizonMs: 5 * 60 * 1000,
     });
 
     assert.deepEqual(result, { advanceNoticesCreated: 1, alertsCreated: 2, stateChanged: true });
     assert.deepEqual(waits, [121000, 120000]);
+    assert.equal(successorDispatches, 1);
     assert.equal(issues.filter(issue => issue.title.startsWith('7070 registration open:')).length, 2);
     assert.equal(issues.some(issue => issue.title.includes('2 Middle School classes')), true);
     assert.equal(issues.some(issue => issue.title.startsWith('LATE —')), false);

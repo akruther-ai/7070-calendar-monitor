@@ -12,6 +12,7 @@ const {
 } = require('./lib/registration-time');
 
 const CALENDAR_URL = 'https://7070athletics.pushpress.com/landing/calendar?framed=1';
+const WORKFLOW_FILE = 'registration-alert.yml';
 const FEED_PATH = path.join(__dirname, 'data', 'middle-school.json');
 const STATE_PATH = path.join(__dirname, 'data', 'registration-alerted.json');
 const ASSIGNEE = 'akruther-ai';
@@ -207,6 +208,20 @@ async function fetchRecentAlertMarkers(repoFullName, token) {
     if (issues.length < 100) break;
   }
   return found;
+}
+
+async function dispatchSuccessor(repoFullName, token, ref = process.env.GITHUB_REF_NAME || 'main') {
+  const [owner, repo] = repoFullName.split('/');
+  await githubRequest(
+    `https://api.github.com/repos/${owner}/${repo}/actions/workflows/${WORKFLOW_FILE}/dispatches`,
+    {
+      method: 'POST',
+      body: JSON.stringify({ ref }),
+    },
+    'GitHub successor-watcher dispatch',
+    token,
+  );
+  console.log('Queued one successor registration watcher before sleeping.');
 }
 
 async function createIssue(events, opensAt, repoFullName, token, nowMs = Date.now()) {
@@ -595,6 +610,7 @@ async function watchMain({
   statePath = STATE_PATH,
   nowFn = Date.now,
   sleepFn = sleep,
+  dispatchFn = dispatchSuccessor,
   watchHorizonMs = WATCH_HORIZON_MS,
 } = {}) {
   if (!Number.isFinite(watchHorizonMs) || watchHorizonMs <= 0) {
@@ -609,6 +625,7 @@ async function watchMain({
     alertsCreated: 0,
     stateChanged: false,
   };
+  let successorDispatched = false;
 
   const mergeResult = result => {
     totals.advanceNoticesCreated += result.advanceNoticesCreated;
@@ -626,6 +643,16 @@ async function watchMain({
 
     const nowMs = nowFn();
     const waitMs = Math.max(0, nextOpening - nowMs) + WATCH_WAKE_SLOP_MS;
+    if (!successorDispatched) {
+      try {
+        await dispatchFn(repoFullName, token);
+        successorDispatched = true;
+      } catch (err) {
+        // Scheduled runs remain a fallback. Do not sacrifice the active exact-
+        // time watch merely because the redundant successor could not queue.
+        console.warn(`Could not queue a successor watcher: ${err.message}`);
+      }
+    }
     console.log(
       `Watcher armed for ${formatInstantLocal(nextOpening)}; waiting ${Math.ceil(waitMs / 60000)} minute(s).`,
     );
@@ -662,6 +689,7 @@ module.exports = {
   closeIssue,
   createAdvanceIssue,
   createIssue,
+  dispatchSuccessor,
   fetchRecentAlertMarkers,
   main,
   markerFor,

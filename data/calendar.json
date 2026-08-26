@@ -7,7 +7,7 @@
     "startDate": "2026-08-23",
     "endDate": "2026-09-19"
   },
-  "count": 356,
+  "count": 355,
   "items": [
     {
       "uuid": "cal-0c378805da9c4c3eb66ea4286d80",
@@ -710,7 +710,7 @@
       "calendarItemType": {
         "uuid": "calitemtype_93a97d2626c2c552666a",
         "name": "Sports Performance Training - High School",
-        "color": "#f5a623",
+        "color": "#f0c989",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -867,32 +867,6 @@
         "userUuid": "usr_8d1673989c54e7",
         "firstName": "Jonathan",
         "lastName": "Scott",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-c0bb3c471613480496e05af4afe3",
-      "title": "IPT HS Upperclassman ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-08-25T18:30:00.000Z",
-      "endDatetime": "2026-08-25T19:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_7a8ffd0d880a9c585521",
-        "name": "I'M-Possible Training, HS Upperclassmen",
-        "color": "#f8e71c",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "46451ec20cefbcb427869724171781e6",
-        "firstName": "Kyle",
-        "lastName": "Owens",
         "__typename": "Profile"
       },
       "assistantCoach": null,
@@ -1122,7 +1096,7 @@
       "calendarItemType": {
         "uuid": "calitemtype_93a97d2626c2c552666a",
         "name": "Sports Performance Training - High School",
-        "color": "#f5a623",
+        "color": "#f0c989",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -2642,7 +2616,7 @@
       "calendarItemType": {
         "uuid": "calitemtype_93a97d2626c2c552666a",
         "name": "Sports Performance Training - High School",
-        "color": "#f5a623",
+        "color": "#f0c989",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -2952,7 +2926,7 @@
       "calendarItemType": {
         "uuid": "calitemtype_93a97d2626c2c552666a",
         "name": "Sports Performance Training - High School",
-        "color": "#f5a623",
+        "color": "#f0c989",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -3570,7 +3544,7 @@
       "calendarItemType": {
         "uuid": "calitemtype_93a97d2626c2c552666a",
         "name": "Sports Performance Training - High School",
-        "color": "#f5a623",
+        "color": "#f0c989",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -3664,7 +3638,7 @@
       "calendarItemType": {
         "uuid": "calitemtype_93a97d2626c2c552666a",
         "name": "Sports Performance Training - High School",
-        "color": "#f5a623",
+        "color": "#f0c989",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -4948,7 +4922,7 @@
       "calendarItemType": {
         "uuid": "calitemtype_93a97d2626c2c552666a",
         "name": "Sports Performance Training - High School",
-        "color": "#f5a623",
+        "color": "#f0c989",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -5228,7 +5202,7 @@
       "calendarItemType": {
         "uuid": "calitemtype_93a97d2626c2c552666a",
         "name": "Sports Performance Training - High School",
-        "color": "#f5a623",
+        "color": "#f0c989",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -5824,7 +5798,7 @@
       "calendarItemType": {
         "uuid": "calitemtype_93a97d2626c2c552666a",
         "name": "Sports Performance Training - High School",
-        "color": "#f5a623",
+        "color": "#f0c989",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -5913,7 +5887,7 @@
       "calendarItemType": {
         "uuid": "calitemtype_93a97d2626c2c552666a",
         "name": "Sports Performance Training - High School",
-        "color": "#f5a623",
+        "color": "#f0c989",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -6952,7 +6926,7 @@
       "calendarItemType": {
         "uuid": "calitemtype_93a97d2626c2c552666a",
         "name": "Sports Performance Training - High School",
-        "color": "#f5a623",
+        "color": "#f0c989",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -7232,7 +7206,7 @@
       "calendarItemType": {
         "uuid": "calitemtype_93a97d2626c2c552666a",
         "name": "Sports Performance Training - High School",
-        "color": "#f5a623",
+        "color": "#f0c989",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -7828,7 +7802,7 @@
       "calendarItemType": {
         "uuid": "calitemtype_93a97d2626c2c552666a",
         "name": "Sports Performance Training - High School",
-        "color": "#f5a623",
+        "color": "#f0c989",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -7917,7 +7891,7 @@
       "calendarItemType": {
         "uuid": "calitemtype_93a97d2626c2c552666a",
         "name": "Sports Performance Training - High School",
-        "color": "#f5a623",
+        "color": "#f0c989",
         "__typename": "CalendarItemType"
       },
       "location": {

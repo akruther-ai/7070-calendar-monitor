@@ -2,6 +2,11 @@ name: 7070 registration alerts
 
 on:
   workflow_dispatch:
+    inputs:
+      guard_lead_hours:
+        description: Guard-chain lead time propagated to successor runs
+        required: false
+        default: '12'
   schedule:
     # GitHub cron is best-effort. Offer twelve off-peak seed times per hour; a
     # run within 12 hours of an opening maintains an active-plus-pending chain.
@@ -62,6 +67,9 @@ jobs:
         id: watch
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # A human/code push bootstraps the next full day after a scheduler
+          # incident. Scheduled seeds use 12 hours; successors inherit either.
+          WATCH_GUARD_LEAD_HOURS: ${{ github.event_name == 'push' && '24' || inputs.guard_lead_hours || '12' }}
         run: node registration-alert.js --watch
 
       - name: Save alert state if changed

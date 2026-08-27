@@ -31,6 +31,15 @@ const SUCCESSOR_RETRY_MS = 5 * 60 * 1000;
 const MAX_ISSUE_PAGES = 10;
 const MAX_GITHUB_ATTEMPTS = 3;
 
+function guardLeadMsFromHours(value = process.env.WATCH_GUARD_LEAD_HOURS) {
+  if (value === undefined || value === '') return WATCH_GUARD_LEAD_MS;
+  const hours = Number(value);
+  if (!Number.isFinite(hours) || hours <= 0) {
+    throw new Error('WATCH_GUARD_LEAD_HOURS must be a positive number.');
+  }
+  return hours * 60 * 60 * 1000;
+}
+
 function readRequiredJson(file, description) {
   let text;
   try {
@@ -218,13 +227,21 @@ async function fetchRecentAlertMarkers(repoFullName, token) {
   return found;
 }
 
-async function dispatchSuccessor(repoFullName, token, ref = process.env.GITHUB_REF_NAME || 'main') {
+async function dispatchSuccessor(
+  repoFullName,
+  token,
+  ref = process.env.GITHUB_REF_NAME || 'main',
+  guardLeadHours = process.env.WATCH_GUARD_LEAD_HOURS || '12',
+) {
   const [owner, repo] = repoFullName.split('/');
   await githubRequest(
     `https://api.github.com/repos/${owner}/${repo}/actions/workflows/${WORKFLOW_FILE}/dispatches`,
     {
       method: 'POST',
-      body: JSON.stringify({ ref }),
+      body: JSON.stringify({
+        ref,
+        inputs: { guard_lead_hours: String(guardLeadHours) },
+      }),
     },
     'GitHub successor-watcher dispatch',
     token,
@@ -248,15 +265,15 @@ async function ensureRecoveryNotification(issueNumber, events, repoFullName, tok
   }
   if (comments.some(comment => String(comment.body || '').includes(marker))) return false;
 
-  const classSummary = events.length > 1
-    ? `${events.length} classes represented by this alert`
-    : String(events[0]?.title || 'the represented class').trim();
+  const statusLine = events.length > 1
+    ? `Registration is open for the ${events.length} classes represented by this alert.`
+    : `Registration is open for ${String(events[0]?.title || 'the represented class').trim()}.`;
   await githubRequest(
     `https://api.github.com/repos/${owner}/${repo}/issues/${issueNumber}/comments`,
     {
       method: 'POST',
       body: JSON.stringify({
-        body: `@${ASSIGNEE} **Automated recovery confirmation:** ${classSummary} is open for registration. Check availability now.\n\n${marker}`,
+        body: `@${ASSIGNEE} **Automated recovery confirmation:** ${statusLine} Check availability now.\n\n${marker}`,
       }),
     },
     `GitHub recovery notification for issue #${issueNumber}`,
@@ -672,7 +689,7 @@ async function watchMain({
   sleepFn = sleep,
   dispatchFn = dispatchSuccessor,
   watchHorizonMs = WATCH_HORIZON_MS,
-  guardLeadMs = WATCH_GUARD_LEAD_MS,
+  guardLeadMs = guardLeadMsFromHours(),
   successorRetryMs = SUCCESSOR_RETRY_MS,
 } = {}) {
   if (!Number.isFinite(watchHorizonMs) || watchHorizonMs <= 0) {
@@ -716,7 +733,12 @@ async function watchMain({
 
     if (!successorDispatched) {
       try {
-        await dispatchFn(repoFullName, token);
+        await dispatchFn(
+          repoFullName,
+          token,
+          process.env.GITHUB_REF_NAME || 'main',
+          String(guardLeadMs / (60 * 60 * 1000)),
+        );
         successorDispatched = true;
       } catch (err) {
         // Keep the already-running guard alive and retry during transient
@@ -787,6 +809,7 @@ module.exports = {
   dispatchSuccessor,
   ensureRecoveryNotification,
   fetchRecentAlertMarkers,
+  guardLeadMsFromHours,
   main,
   markerFor,
   openingTimesWithin,

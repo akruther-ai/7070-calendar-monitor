@@ -28,6 +28,7 @@ The Middle School feed includes a current/future item when either its title or i
 ## Production architecture
 
 - Registration watchers are offered twelve redundant, off-peak seed times per hour. If a known opening is within the next 12 hours, the allocated runner immediately queues one successor and stays active for up to 5 hours 15 minutes. Successors repeat that guard until the opening is inside a runner window, then sleep to each exact opening.
+- A human/code push uses a one-time 24-hour lead and propagates it to successors. This bootstraps the next day's guard immediately after deploying an incident fix instead of waiting for the damaged scheduler to resume; ordinary scheduled seeds retain the lower 12-hour lead.
 - Playwright refreshes 21 days of the live calendar every 15 minutes using the Chrome installation on GitHub's pinned `ubuntu-24.04` runner.
 - The watcher is the only workflow that writes registration state. Calendar refreshes have a separate single-pending concurrency queue, so a long-lived watcher cannot block fresh calendar snapshots and the two workflows cannot race on alert state.
 - While a watcher is active, new watcher starts share a single-pending queue. The running window is preserved and the newest pending run replaces an obsolete pending run.

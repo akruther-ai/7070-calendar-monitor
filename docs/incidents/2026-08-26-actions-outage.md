@@ -31,6 +31,7 @@ The external trigger failure was compounded by four repository design limitation
 ## Corrective actions
 
 - Increase off-peak scheduler seed opportunities from four to twelve per hour and activate an active-plus-pending guard chain whenever a known opening is within 12 hours.
+- Give human/code pushes a propagated 24-hour bootstrap lead so an incident deployment immediately protects the next day's openings even before scheduled triggers are observed recovering.
 - Keep each guard runner alive for up to 5 hours 15 minutes even when the opening is beyond that runner's own horizon; its pre-queued successor continues the chain.
 - Retry workflow-dispatch POSTs safely. The single-pending concurrency group collapses ambiguous duplicate dispatches.
 - Retry an unavailable successor every five minutes while the guard is active and fail the watcher if the guard ends without one.

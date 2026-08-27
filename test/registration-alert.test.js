@@ -10,6 +10,7 @@ const {
   createAdvanceIssue,
   dispatchSuccessor,
   ensureRecoveryNotification,
+  guardLeadMsFromHours,
   main,
   markerFor,
   openingTimesWithin,
@@ -95,11 +96,20 @@ test('successor dispatch targets the registration workflow on main', async () =>
       'https://api.github.com/repos/owner/repo/actions/workflows/registration-alert.yml/dispatches',
     );
     assert.equal(request.options.method, 'POST');
-    assert.deepEqual(JSON.parse(request.options.body), { ref: 'main' });
+    assert.deepEqual(JSON.parse(request.options.body), {
+      ref: 'main',
+      inputs: { guard_lead_hours: '12' },
+    });
   } finally {
     global.fetch = originalFetch;
     console.log = originalLog;
   }
+});
+
+test('guard lead accepts propagated workflow hours and rejects invalid values', () => {
+  assert.equal(guardLeadMsFromHours('24'), 24 * 60 * 60 * 1000);
+  assert.throws(() => guardLeadMsFromHours('0'), /positive number/);
+  assert.throws(() => guardLeadMsFromHours('invalid'), /positive number/);
 });
 
 test('successor dispatch retries transient POST failures', async () => {
@@ -146,6 +156,7 @@ test('manual catch-up recovery notification is marker-idempotent', async () => {
     assert.equal(await ensureRecoveryNotification(12, [item], 'owner/repo', 'token'), false);
     assert.equal(posts, 1);
     assert.match(comments[0].body, /@akruther-ai/);
+    assert.match(comments[0].body, /Registration is open for Middle School Skills/);
     assert.match(comments[0].body, /7070-recovery-notification/);
   } finally {
     global.fetch = originalFetch;

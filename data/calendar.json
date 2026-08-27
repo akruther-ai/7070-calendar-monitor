@@ -7,7 +7,7 @@
     "startDate": "2026-08-23",
     "endDate": "2026-09-19"
   },
-  "count": 355,
+  "count": 356,
   "items": [
     {
       "uuid": "cal-0c378805da9c4c3eb66ea4286d80",
@@ -1281,9 +1281,9 @@
         "__typename": "CalendarItemLocation"
       },
       "mainCoach": {
-        "userUuid": "usr_354c5c2551abc4",
-        "firstName": "Anna",
-        "lastName": "Poe",
+        "userUuid": "ac130104cee48758d7145556887dac4f",
+        "firstName": "Keion",
+        "lastName": "Mitchem",
         "__typename": "Profile"
       },
       "assistantCoach": null,
@@ -1895,6 +1895,27 @@
         "__typename": "CalendarItemType"
       },
       "location": null,
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-5de58d62ab6e41cdb351f39c4611",
+      "title": "Middle Schools 3v3",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-08-28T19:30:00.000Z",
+      "endDatetime": "2026-08-28T20:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "b4456f95064b95d92044360a4ece1b35",
+        "name": "Middle School",
+        "color": "#9B00FF",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
       "mainCoach": null,
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
@@ -2614,9 +2635,9 @@
       "startDatetime": "2026-09-01T17:30:00.000Z",
       "endDatetime": "2026-09-01T18:30:00.000Z",
       "calendarItemType": {
-        "uuid": "calitemtype_93a97d2626c2c552666a",
-        "name": "Sports Performance Training - High School",
-        "color": "#f0c989",
+        "uuid": "calitemtype_7956062fa0cc11f19cca0affe13b3daf",
+        "name": "Sports Performance Training - Elementary/MS",
+        "color": "#e2b5eb",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -3542,9 +3563,9 @@
       "startDatetime": "2026-09-04T16:30:00.000Z",
       "endDatetime": "2026-09-04T17:30:00.000Z",
       "calendarItemType": {
-        "uuid": "calitemtype_93a97d2626c2c552666a",
-        "name": "Sports Performance Training - High School",
-        "color": "#f0c989",
+        "uuid": "calitemtype_7956062fa0cc11f19cca0affe13b3daf",
+        "name": "Sports Performance Training - Elementary/MS",
+        "color": "#e2b5eb",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -4920,9 +4941,9 @@
       "startDatetime": "2026-09-08T17:30:00.000Z",
       "endDatetime": "2026-09-08T18:30:00.000Z",
       "calendarItemType": {
-        "uuid": "calitemtype_93a97d2626c2c552666a",
-        "name": "Sports Performance Training - High School",
-        "color": "#f0c989",
+        "uuid": "calitemtype_7956062fa0cc11f19cca0affe13b3daf",
+        "name": "Sports Performance Training - Elementary/MS",
+        "color": "#e2b5eb",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -5796,9 +5817,9 @@
       "startDatetime": "2026-09-11T16:30:00.000Z",
       "endDatetime": "2026-09-11T17:30:00.000Z",
       "calendarItemType": {
-        "uuid": "calitemtype_93a97d2626c2c552666a",
-        "name": "Sports Performance Training - High School",
-        "color": "#f0c989",
+        "uuid": "calitemtype_7956062fa0cc11f19cca0affe13b3daf",
+        "name": "Sports Performance Training - Elementary/MS",
+        "color": "#e2b5eb",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -6924,9 +6945,9 @@
       "startDatetime": "2026-09-15T17:30:00.000Z",
       "endDatetime": "2026-09-15T18:30:00.000Z",
       "calendarItemType": {
-        "uuid": "calitemtype_93a97d2626c2c552666a",
-        "name": "Sports Performance Training - High School",
-        "color": "#f0c989",
+        "uuid": "calitemtype_7956062fa0cc11f19cca0affe13b3daf",
+        "name": "Sports Performance Training - Elementary/MS",
+        "color": "#e2b5eb",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -7800,9 +7821,9 @@
       "startDatetime": "2026-09-18T16:30:00.000Z",
       "endDatetime": "2026-09-18T17:30:00.000Z",
       "calendarItemType": {
-        "uuid": "calitemtype_93a97d2626c2c552666a",
-        "name": "Sports Performance Training - High School",
-        "color": "#f0c989",
+        "uuid": "calitemtype_7956062fa0cc11f19cca0affe13b3daf",
+        "name": "Sports Performance Training - Elementary/MS",
+        "color": "#e2b5eb",
         "__typename": "CalendarItemType"
       },
       "location": {

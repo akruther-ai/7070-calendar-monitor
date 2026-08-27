@@ -8,7 +8,7 @@
     "endDate": "2026-09-19"
   },
   "filter": "current/future item where title or calendarItemType.name contains \"middle school\" (case-insensitive)",
-  "count": 76,
+  "count": 77,
   "items": [
     {
       "uuid": "cal-279f3816af15409694300fb6367b",
@@ -293,6 +293,27 @@
         "lastName": "Mitchem",
         "__typename": "Profile"
       },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-5de58d62ab6e41cdb351f39c4611",
+      "title": "Middle Schools 3v3",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-08-28T19:30:00.000Z",
+      "endDatetime": "2026-08-28T20:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "b4456f95064b95d92044360a4ece1b35",
+        "name": "Middle School",
+        "color": "#9B00FF",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },

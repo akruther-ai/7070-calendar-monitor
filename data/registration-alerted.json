@@ -247,6 +247,20 @@
       "title": "Middle Schools 3v3",
       "startDatetime": "2026-08-28T19:30:00.000Z",
       "issueNumber": 16
+    },
+    "cal-fc07343695a447039cf174667fca": {
+      "notifiedAt": "2026-08-27T22:30:04Z",
+      "registrationOpenedAt": "2026-08-27T22:30:00.000Z",
+      "title": "Middle School Skills",
+      "startDatetime": "2026-09-03T16:30:00.000Z",
+      "issueNumber": 18
+    },
+    "cal-1f144514e2574abbaf28cb921a45": {
+      "notifiedAt": "2026-08-27T22:30:04Z",
+      "registrationOpenedAt": "2026-08-27T22:30:00.000Z",
+      "title": "Middle School Skills ",
+      "startDatetime": "2026-09-03T16:30:00.000Z",
+      "issueNumber": 18
     }
   },
   "advanceAlerted": {
@@ -348,6 +362,20 @@
       "title": "Upper Middle School Skills ",
       "startDatetime": "2026-09-03T18:30:00.000Z",
       "issueNumber": 15
+    },
+    "cal-0f6c4c3b80f349178beececaf0a5": {
+      "notifiedAt": "2026-08-27T22:30:03Z",
+      "registrationOpenedAt": "2026-08-29T00:30:00.000Z",
+      "title": "Middle School Skills",
+      "startDatetime": "2026-09-04T18:30:00.000Z",
+      "issueNumber": 17
+    },
+    "cal-3666e4181af64ed2afabb0859693": {
+      "notifiedAt": "2026-08-27T22:30:03Z",
+      "registrationOpenedAt": "2026-08-29T01:30:00.000Z",
+      "title": "Middle Schools 5v5 Runs",
+      "startDatetime": "2026-09-04T19:30:00.000Z",
+      "issueNumber": 17
     }
   }
 }

@@ -3,9 +3,9 @@ name: 7070 registration alerts
 on:
   workflow_dispatch:
   schedule:
-    # GitHub cron is best-effort. Offer four redundant starts per hour; once
-    # allocated, each watcher waits inside its runner for imminent openings.
-    - cron: '7,22,37,52 * * * *'
+    # GitHub cron is best-effort. Offer twelve off-peak seed times per hour; a
+    # run within 12 hours of an opening maintains an active-plus-pending chain.
+    - cron: '2-59/5 * * * *'
   push:
     branches: [main]
     paths:
@@ -36,6 +36,7 @@ jobs:
 
     steps:
       - name: Check out repository
+        id: checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           # Queued runs must start from state committed by the preceding run,
@@ -58,11 +59,15 @@ jobs:
         run: npm run check
 
       - name: Watch advance and live registration windows
+        id: watch
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node registration-alert.js --watch
 
       - name: Save alert state if changed
+        # Preserve marker-recovery state even if the watcher later reports
+        # that it could not maintain its redundant successor chain.
+        if: ${{ always() && steps.checkout.outcome == 'success' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

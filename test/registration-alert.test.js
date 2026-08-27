@@ -9,6 +9,7 @@ const {
   advanceMarkerFor,
   createAdvanceIssue,
   dispatchSuccessor,
+  ensureRecoveryNotification,
   main,
   markerFor,
   openingTimesWithin,
@@ -95,6 +96,57 @@ test('successor dispatch targets the registration workflow on main', async () =>
     );
     assert.equal(request.options.method, 'POST');
     assert.deepEqual(JSON.parse(request.options.body), { ref: 'main' });
+  } finally {
+    global.fetch = originalFetch;
+    console.log = originalLog;
+  }
+});
+
+test('successor dispatch retries transient POST failures', async () => {
+  const originalFetch = global.fetch;
+  const originalWarn = console.warn;
+  const originalLog = console.log;
+  let calls = 0;
+  global.fetch = async () => {
+    calls++;
+    return calls === 1
+      ? new Response('temporary outage', { status: 503 })
+      : new Response(null, { status: 204 });
+  };
+  console.warn = () => {};
+  console.log = () => {};
+  try {
+    await dispatchSuccessor('owner/repo', 'test-token', 'main');
+    assert.equal(calls, 2);
+  } finally {
+    global.fetch = originalFetch;
+    console.warn = originalWarn;
+    console.log = originalLog;
+  }
+});
+
+test('manual catch-up recovery notification is marker-idempotent', async () => {
+  const originalFetch = global.fetch;
+  const originalLog = console.log;
+  const comments = [];
+  let posts = 0;
+  global.fetch = async (url, options = {}) => {
+    if ((options.method || 'GET') === 'GET') {
+      return new Response(JSON.stringify(comments), { status: 200 });
+    }
+    posts++;
+    const comment = { body: JSON.parse(options.body).body };
+    comments.push(comment);
+    return new Response(JSON.stringify(comment), { status: 201 });
+  };
+  console.log = () => {};
+  try {
+    const item = event('abc', '2026-09-02T16:30:00.000Z');
+    assert.equal(await ensureRecoveryNotification(12, [item], 'owner/repo', 'token'), true);
+    assert.equal(await ensureRecoveryNotification(12, [item], 'owner/repo', 'token'), false);
+    assert.equal(posts, 1);
+    assert.match(comments[0].body, /@akruther-ai/);
+    assert.match(comments[0].body, /7070-recovery-notification/);
   } finally {
     global.fetch = originalFetch;
     console.log = originalLog;
@@ -277,6 +329,135 @@ test('watcher sleeps to each distinct opening and confirms it immediately', asyn
     assert.equal(Object.keys(state.alerted).length, 3);
   } finally {
     global.fetch = originalFetch;
+    console.log = originalLog;
+    fs.rmSync(tempDir, { recursive: true, force: true });
+  }
+});
+
+test('guard chain holds through its horizon when the opening is beyond one runner', async () => {
+  const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), '7070-guard-test-'));
+  const feedPath = path.join(tempDir, 'middle-school.json');
+  const statePath = path.join(tempDir, 'state.json');
+  const item = event('guarded', '2026-09-01T16:08:00.000Z');
+  fs.writeFileSync(feedPath, JSON.stringify({ count: 1, items: [item] }));
+  fs.writeFileSync(statePath, JSON.stringify({ initialized: true, alerted: {}, advanceAlerted: {} }));
+
+  const originalFetch = global.fetch;
+  const originalLog = console.log;
+  const issues = [];
+  const waits = [];
+  let activeNow = Date.parse('2026-08-25T22:00:00.000Z');
+  let successorDispatches = 0;
+  let nextIssueNumber = 300;
+
+  global.fetch = async (url, options = {}) => {
+    const method = options.method || 'GET';
+    if (method === 'GET') return new Response(JSON.stringify(issues), { status: 200 });
+    if (method === 'POST') {
+      const created = {
+        ...JSON.parse(options.body),
+        number: nextIssueNumber++,
+        created_at: new Date(activeNow).toISOString(),
+        state: 'open',
+        user: { login: 'github-actions[bot]' },
+      };
+      issues.unshift(created);
+      return new Response(JSON.stringify(created), { status: 201 });
+    }
+    return new Response('{}', { status: 200 });
+  };
+  console.log = () => {};
+
+  const options = {
+    repoFullName: 'owner/repo',
+    token: 'test-token',
+    feedPath,
+    statePath,
+    nowFn: () => activeNow,
+    sleepFn: async waitMs => {
+      waits.push(waitMs);
+      activeNow += waitMs;
+    },
+    dispatchFn: async () => {
+      successorDispatches++;
+    },
+    watchHorizonMs: 5 * 60 * 1000,
+    guardLeadMs: 10 * 60 * 1000,
+    successorRetryMs: 60 * 1000,
+  };
+
+  try {
+    const first = await watchMain(options);
+    assert.deepEqual(first, { advanceNoticesCreated: 1, alertsCreated: 0, stateChanged: true });
+    assert.deepEqual(waits, [5 * 60 * 1000]);
+    assert.equal(successorDispatches, 1);
+
+    const second = await watchMain(options);
+    assert.deepEqual(second, { advanceNoticesCreated: 0, alertsCreated: 1, stateChanged: true });
+    assert.deepEqual(waits, [5 * 60 * 1000, (3 * 60 * 1000) + 1000]);
+    assert.equal(successorDispatches, 2);
+    assert.equal(issues.some(issue => issue.title.startsWith('7070 registration open:')), true);
+  } finally {
+    global.fetch = originalFetch;
+    console.log = originalLog;
+    fs.rmSync(tempDir, { recursive: true, force: true });
+  }
+});
+
+test('guard retries a missing successor and fails visibly at the horizon', async () => {
+  const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), '7070-guard-failure-test-'));
+  const feedPath = path.join(tempDir, 'middle-school.json');
+  const statePath = path.join(tempDir, 'state.json');
+  const item = event('guard-failure', '2026-09-01T16:04:00.000Z');
+  const opensAt = registrationOpenMs(item.startDatetime);
+  fs.writeFileSync(feedPath, JSON.stringify({ count: 1, items: [item] }));
+  fs.writeFileSync(statePath, JSON.stringify({
+    initialized: true,
+    alerted: {},
+    advanceAlerted: {
+      [item.uuid]: {
+        registrationOpenedAt: new Date(opensAt).toISOString(),
+        startDatetime: item.startDatetime,
+        title: item.title,
+        issueNumber: 1,
+      },
+    },
+  }));
+
+  const originalWarn = console.warn;
+  const originalLog = console.log;
+  const waits = [];
+  let activeNow = Date.parse('2026-08-25T22:00:00.000Z');
+  let dispatchAttempts = 0;
+  console.warn = () => {};
+  console.log = () => {};
+
+  try {
+    await assert.rejects(
+      watchMain({
+        repoFullName: 'owner/repo',
+        token: 'test-token',
+        feedPath,
+        statePath,
+        nowFn: () => activeNow,
+        sleepFn: async waitMs => {
+          waits.push(waitMs);
+          activeNow += waitMs;
+        },
+        dispatchFn: async () => {
+          dispatchAttempts++;
+          throw new Error('Actions API unavailable');
+        },
+        watchHorizonMs: 3 * 60 * 1000,
+        guardLeadMs: 5 * 60 * 1000,
+        successorRetryMs: 60 * 1000,
+      }),
+      /ended without a queued successor/,
+    );
+    assert.deepEqual(waits, [60 * 1000, 60 * 1000, 60 * 1000]);
+    assert.equal(dispatchAttempts, 3);
+  } finally {
+    console.warn = originalWarn;
     console.log = originalLog;
     fs.rmSync(tempDir, { recursive: true, force: true });
   }

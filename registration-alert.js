@@ -22,7 +22,12 @@ const LATE_AFTER_MS = 15 * 60 * 1000;
 const ALERT_CLOSE_AFTER_MS = 24 * 60 * 60 * 1000;
 const STATE_RETENTION_MS = 90 * 24 * 60 * 60 * 1000;
 const WATCH_HORIZON_MS = (5 * 60 * 60 * 1000) + (15 * 60 * 1000);
+// Begin a self-sustaining guard chain well before the first known opening.
+// This lets one already-created workflow survive a later scheduler outage by
+// keeping an active watcher and one pending successor across the alert window.
+const WATCH_GUARD_LEAD_MS = 12 * 60 * 60 * 1000;
 const WATCH_WAKE_SLOP_MS = 1000;
+const SUCCESSOR_RETRY_MS = 5 * 60 * 1000;
 const MAX_ISSUE_PAGES = 10;
 const MAX_GITHUB_ATTEMPTS = 3;
 
@@ -125,12 +130,14 @@ function openingTimesWithin(events, afterMs, throughMs) {
     .sort((a, b) => a - b);
 }
 
-async function githubRequest(url, options, description, token) {
+async function githubRequest(url, options, description, token, { retryPost = false } = {}) {
   const method = String(options?.method || 'GET').toUpperCase();
   // POST issue creation is intentionally not retried. A lost response is
   // ambiguous: GitHub may have created the issue. The next scheduled run will
-  // recover its marker, avoiding an immediate duplicate POST.
-  const canRetry = method !== 'POST';
+  // recover its marker, avoiding an immediate duplicate POST. Workflow
+  // dispatch is safe to retry because the concurrency group retains one
+  // pending successor even if an ambiguous response creates two runs.
+  const canRetry = method !== 'POST' || retryPost;
   let lastError;
   for (let attempt = 1; attempt <= MAX_GITHUB_ATTEMPTS; attempt++) {
     try {
@@ -200,6 +207,7 @@ async function fetchRecentAlertMarkers(repoFullName, token) {
             target.set(match[1], {
               createdAt: issue.created_at || null,
               issueNumber: issue.number || null,
+              creatorLogin: issue.user?.login || null,
             });
           }
         }
@@ -220,8 +228,42 @@ async function dispatchSuccessor(repoFullName, token, ref = process.env.GITHUB_R
     },
     'GitHub successor-watcher dispatch',
     token,
+    { retryPost: true },
   );
   console.log('Queued one successor registration watcher before sleeping.');
+}
+
+async function ensureRecoveryNotification(issueNumber, events, repoFullName, token) {
+  const [owner, repo] = repoFullName.split('/');
+  const marker = '<!-- 7070-recovery-notification -->';
+  const commentsResult = await githubRequest(
+    `https://api.github.com/repos/${owner}/${repo}/issues/${issueNumber}/comments?per_page=100`,
+    {},
+    `GitHub recovery-comment lookup for issue #${issueNumber}`,
+    token,
+  );
+  const comments = commentsResult.data;
+  if (!Array.isArray(comments)) {
+    throw new Error(`GitHub recovery-comment lookup for issue #${issueNumber} returned a non-array response.`);
+  }
+  if (comments.some(comment => String(comment.body || '').includes(marker))) return false;
+
+  const classSummary = events.length > 1
+    ? `${events.length} classes represented by this alert`
+    : String(events[0]?.title || 'the represented class').trim();
+  await githubRequest(
+    `https://api.github.com/repos/${owner}/${repo}/issues/${issueNumber}/comments`,
+    {
+      method: 'POST',
+      body: JSON.stringify({
+        body: `@${ASSIGNEE} **Automated recovery confirmation:** ${classSummary} is open for registration. Check availability now.\n\n${marker}`,
+      }),
+    },
+    `GitHub recovery notification for issue #${issueNumber}`,
+    token,
+  );
+  console.log(`Added bot recovery notification to manually created issue #${issueNumber}.`);
+  return true;
 }
 
 async function createIssue(events, opensAt, repoFullName, token, nowMs = Date.now()) {
@@ -482,6 +524,7 @@ async function main({
     const opensAt = Number(opensAtText);
     const opensAtIso = new Date(opensAt).toISOString();
     const needsIssue = [];
+    const manualRecoveryIssues = new Map();
 
     for (const event of group) {
       const existing = existingMarkers.live.get(scheduleKey(event));
@@ -494,10 +537,27 @@ async function main({
           issueNumber: existing.issueNumber,
           recoveredFromIssue: true,
         };
+        if (
+          Number.isInteger(existing.issueNumber) &&
+          existing.creatorLogin &&
+          existing.creatorLogin !== 'github-actions[bot]'
+        ) {
+          if (!manualRecoveryIssues.has(existing.issueNumber)) {
+            manualRecoveryIssues.set(existing.issueNumber, []);
+          }
+          manualRecoveryIssues.get(existing.issueNumber).push(event);
+        }
         stateChanged = true;
       } else {
         needsIssue.push(event);
       }
+    }
+
+    // Manually created catch-up issues do not reliably notify their own
+    // creator. A marker-backed bot comment restores the actual notification
+    // path and is idempotent if the state push is lost.
+    for (const [issueNumber, recoveredEvents] of manualRecoveryIssues) {
+      await ensureRecoveryNotification(issueNumber, recoveredEvents, repoFullName, token);
     }
 
     if (!needsIssue.length) continue;
@@ -612,9 +672,17 @@ async function watchMain({
   sleepFn = sleep,
   dispatchFn = dispatchSuccessor,
   watchHorizonMs = WATCH_HORIZON_MS,
+  guardLeadMs = WATCH_GUARD_LEAD_MS,
+  successorRetryMs = SUCCESSOR_RETRY_MS,
 } = {}) {
   if (!Number.isFinite(watchHorizonMs) || watchHorizonMs <= 0) {
     throw new Error('Watch horizon must be a positive number of milliseconds.');
+  }
+  if (!Number.isFinite(guardLeadMs) || guardLeadMs < watchHorizonMs) {
+    throw new Error('Guard lead must be finite and at least as long as the watch horizon.');
+  }
+  if (!Number.isFinite(successorRetryMs) || successorRetryMs <= 0) {
+    throw new Error('Successor retry interval must be a positive number of milliseconds.');
   }
 
   const startedAt = nowFn();
@@ -626,6 +694,7 @@ async function watchMain({
     stateChanged: false,
   };
   let successorDispatched = false;
+  let guardActivated = false;
 
   const mergeResult = result => {
     totals.advanceNoticesCreated += result.advanceNoticesCreated;
@@ -636,32 +705,56 @@ async function watchMain({
   mergeResult(await main({ repoFullName, token, nowMs: startedAt, feedPath, statePath }));
 
   while (true) {
+    const nowMs = nowFn();
+    if (nowMs >= watchThrough) break;
+
     const feed = readRequiredJson(feedPath, 'Middle School feed');
     const events = validateFeed(feed);
-    const [nextOpening] = openingTimesWithin(events, checkedThrough, watchThrough);
-    if (nextOpening === undefined) break;
+    const [guardOpening] = openingTimesWithin(events, checkedThrough, nowMs + guardLeadMs);
+    if (guardOpening === undefined) break;
+    guardActivated = true;
 
-    const nowMs = nowFn();
-    const waitMs = Math.max(0, nextOpening - nowMs) + WATCH_WAKE_SLOP_MS;
     if (!successorDispatched) {
       try {
         await dispatchFn(repoFullName, token);
         successorDispatched = true;
       } catch (err) {
-        // Scheduled runs remain a fallback. Do not sacrifice the active exact-
-        // time watch merely because the redundant successor could not queue.
-        console.warn(`Could not queue a successor watcher: ${err.message}`);
+        // Keep the already-running guard alive and retry during transient
+        // Actions/API incidents instead of silently losing the chain.
+        console.warn(`Could not queue a successor watcher; will retry: ${err.message}`);
       }
     }
-    console.log(
-      `Watcher armed for ${formatInstantLocal(nextOpening)}; waiting ${Math.ceil(waitMs / 60000)} minute(s).`,
-    );
+
+    const [nextOpening] = openingTimesWithin(events, checkedThrough, watchThrough);
+    const openingWaitMs = nextOpening === undefined
+      ? watchThrough - nowMs
+      : Math.max(0, nextOpening - nowMs) + WATCH_WAKE_SLOP_MS;
+    const waitMs = successorDispatched
+      ? openingWaitMs
+      : Math.min(openingWaitMs, successorRetryMs);
+
+    if (nextOpening === undefined) {
+      console.log(
+        `Registration guard active for ${formatInstantLocal(guardOpening)}; ` +
+        `holding this runner for ${Math.ceil(waitMs / 60000)} minute(s).`,
+      );
+    } else {
+      console.log(
+        `Watcher armed for ${formatInstantLocal(nextOpening)}; waiting ${Math.ceil(waitMs / 60000)} minute(s).`,
+      );
+    }
     await sleepFn(waitMs);
 
-    const checkNow = nowFn();
-    mergeResult(await main({ repoFullName, token, nowMs: checkNow, feedPath, statePath }));
-    // If a timer wakes early, leave the opening eligible for another pass.
-    checkedThrough = Math.max(checkedThrough, checkNow);
+    if (nextOpening !== undefined && nowFn() >= nextOpening) {
+      const checkNow = nowFn();
+      mergeResult(await main({ repoFullName, token, nowMs: checkNow, feedPath, statePath }));
+      // If a timer wakes early, leave the opening eligible for another pass.
+      checkedThrough = Math.max(checkedThrough, checkNow);
+    }
+  }
+
+  if (guardActivated && !successorDispatched) {
+    throw new Error('Registration guard ended without a queued successor watcher.');
   }
 
   console.log(
@@ -684,12 +777,15 @@ module.exports = {
   ADVANCE_NOTICE_MS,
   INITIAL_GRACE_MS,
   LATE_AFTER_MS,
+  SUCCESSOR_RETRY_MS,
+  WATCH_GUARD_LEAD_MS,
   WATCH_HORIZON_MS,
   advanceMarkerFor,
   closeIssue,
   createAdvanceIssue,
   createIssue,
   dispatchSuccessor,
+  ensureRecoveryNotification,
   fetchRecentAlertMarkers,
   main,
   markerFor,

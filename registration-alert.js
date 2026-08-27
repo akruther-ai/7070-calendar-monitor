@@ -19,6 +19,12 @@ const ASSIGNEE = 'akruther-ai';
 const INITIAL_GRACE_MS = 20 * 60 * 1000;
 const ADVANCE_NOTICE_MS = 30 * 60 * 60 * 1000;
 const LATE_AFTER_MS = 15 * 60 * 1000;
+// Once a nominal opening is more than a day old, an issue created now is no
+// longer a useful live-timing confirmation. It represents a class that the
+// monitor has only just discovered (or rediscovered) after registration may
+// already have opened, so describe it that way instead of reporting thousands
+// of misleading "minutes late."
+const NEWLY_DISCOVERED_AFTER_MS = 24 * 60 * 60 * 1000;
 const ALERT_CLOSE_AFTER_MS = 24 * 60 * 60 * 1000;
 const STATE_RETENTION_MS = 90 * 24 * 60 * 60 * 1000;
 const WATCH_HORIZON_MS = (5 * 60 * 60 * 1000) + (15 * 60 * 1000);
@@ -289,9 +295,12 @@ async function createIssue(events, opensAt, repoFullName, token, nowMs = Date.no
   const markers = events.map(markerFor);
   const delayMinutes = Math.max(0, Math.floor((nowMs - opensAt) / 60000));
   const isLate = nowMs - opensAt > LATE_AFTER_MS;
-  const statusLine = isLate
-    ? `@${ASSIGNEE} **LATE ALERT: registration opened about ${delayMinutes} minutes ago. Check availability now.**`
-    : `@${ASSIGNEE} **Registration is open now.**`;
+  const isNewlyDiscovered = nowMs - opensAt > NEWLY_DISCOVERED_AFTER_MS;
+  const statusLine = isNewlyDiscovered
+    ? `@${ASSIGNEE} **NEWLY DISCOVERED CLASS: its calculated registration opening was ${formatInstantLocal(opensAt)}. Registration may already be open; check availability now.**`
+    : isLate
+      ? `@${ASSIGNEE} **LATE ALERT: registration opened about ${delayMinutes} minutes ago. Check availability now.**`
+      : `@${ASSIGNEE} **Registration is open now.**`;
 
   const lines = [statusLine, ''];
   for (const event of events) {
@@ -309,7 +318,11 @@ async function createIssue(events, opensAt, repoFullName, token, nowMs = Date.no
   const basePrefix = events.length > 1
     ? `7070 registration open: ${events.length} Middle School classes`
     : `7070 registration open: ${String(first.title || '').trim()}`;
-  const titlePrefix = isLate ? `LATE — ${basePrefix}` : basePrefix;
+  const titlePrefix = isNewlyDiscovered
+    ? `NEWLY DISCOVERED — ${basePrefix.replace('registration open:', 'registration may be open:')}`
+    : isLate
+      ? `LATE — ${basePrefix}`
+      : basePrefix;
 
   const result = await githubRequest(
     `https://api.github.com/repos/${owner}/${repo}/issues`,
@@ -799,6 +812,7 @@ module.exports = {
   ADVANCE_NOTICE_MS,
   INITIAL_GRACE_MS,
   LATE_AFTER_MS,
+  NEWLY_DISCOVERED_AFTER_MS,
   SUCCESSOR_RETRY_MS,
   WATCH_GUARD_LEAD_MS,
   WATCH_HORIZON_MS,

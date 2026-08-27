@@ -7,7 +7,10 @@ Monitors the public 7070 Athletics PushPress calendar and sends GitHub issue not
 - About 30 hours before the first registration opening on a local `America/Denver` day, the monitor creates one `UPCOMING` issue containing every known opening on that day.
 - When each registration window is actually due to open, the monitor creates a separate live confirmation issue.
 - Classes opening at the same instant are grouped into one live issue.
-- A live check more than 15 minutes late is clearly labeled `LATE`.
+- A live check more than 15 minutes late is clearly labeled `LATE`. If a class
+  first appears after its calculated opening is already more than a day old,
+  it is labeled `NEWLY DISCOVERED` and says registration may already be open
+  instead of presenting a misleading multi-day delay in minutes.
 - Issues are assigned to and @mention `akruther-ai`. Notification delivery therefore follows that account's GitHub and GitHub Mobile notification settings.
 - A daily advance issue remains open until all of its represented windows have live confirmations. Completed live issues close after 24 hours.
 

@@ -8,6 +8,7 @@ const test = require('node:test');
 const {
   advanceMarkerFor,
   createAdvanceIssue,
+  createIssue,
   dispatchSuccessor,
   ensureRecoveryNotification,
   guardLeadMsFromHours,
@@ -77,6 +78,36 @@ test('ambiguous issue-creation failures are not retried immediately', async () =
     assert.equal(calls, 1);
   } finally {
     global.fetch = originalFetch;
+  }
+});
+
+test('old newly discovered classes avoid misleading minute-late wording', async () => {
+  const originalFetch = global.fetch;
+  const originalLog = console.log;
+  const payloads = [];
+  global.fetch = async (_url, options = {}) => {
+    const payload = JSON.parse(options.body);
+    payloads.push(payload);
+    return new Response(JSON.stringify({ ...payload, number: 88 }), { status: 201 });
+  };
+  console.log = () => {};
+
+  try {
+    const item = event('late-addition', '2026-08-28T19:30:00.000Z', 'Middle Schools 3v3');
+    const opensAt = registrationOpenMs(item.startDatetime);
+
+    await createIssue([item], opensAt, 'owner/repo', 'token', opensAt + (80 * 60 * 1000));
+    assert.match(payloads[0].title, /^LATE —/);
+    assert.match(payloads[0].body, /80 minutes ago/);
+
+    await createIssue([item], opensAt, 'owner/repo', 'token', opensAt + (5 * 24 * 60 * 60 * 1000));
+    assert.match(payloads[1].title, /^NEWLY DISCOVERED — 7070 registration may be open:/);
+    assert.match(payloads[1].body, /NEWLY DISCOVERED CLASS/);
+    assert.match(payloads[1].body, /Friday, Aug 21, 2026, 7:30 PM MDT/);
+    assert.doesNotMatch(payloads[1].body, /minutes ago/);
+  } finally {
+    global.fetch = originalFetch;
+    console.log = originalLog;
   }
 });
 

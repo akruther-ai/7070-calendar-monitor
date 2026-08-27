@@ -239,6 +239,13 @@
       "startDatetime": "2026-09-02T18:30:00.000Z",
       "issueNumber": 14,
       "recoveredFromIssue": true
+    },
+    "cal-5de58d62ab6e41cdb351f39c4611": {
+      "notifiedAt": "2026-08-27T01:41:00Z",
+      "registrationOpenedAt": "2026-08-22T01:30:00.000Z",
+      "title": "Middle Schools 3v3",
+      "startDatetime": "2026-08-28T19:30:00.000Z",
+      "issueNumber": 16
     }
   },
   "advanceAlerted": {

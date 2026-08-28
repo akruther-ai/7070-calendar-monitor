@@ -1,13 +1,13 @@
 {
   "source": "https://7070athletics.pushpress.com/landing/calendar?framed=1",
   "timeZone": "America/Denver",
-  "requestedFrom": "2026-08-27",
-  "targetThrough": "2026-09-17",
+  "requestedFrom": "2026-08-28",
+  "targetThrough": "2026-09-18",
   "dateRange": {
     "startDate": "2026-08-23",
     "endDate": "2026-09-19"
   },
-  "count": 356,
+  "count": 354,
   "items": [
     {
       "uuid": "cal-0c378805da9c4c3eb66ea4286d80",
@@ -5946,27 +5946,6 @@
       "__typename": "PublicCalendarItem"
     },
     {
-      "uuid": "cal-e8576584f1a749c199021e33f855",
-      "title": "Shooting Machine",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-11T18:30:00.000Z",
-      "endDatetime": "2026-09-11T19:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
       "uuid": "cal-2caa37f3d86b41089fde1f0237b1",
       "title": "Middle School Skills",
       "type": "Class",
@@ -5977,27 +5956,6 @@
         "uuid": "b4456f95064b95d92044360a4ece1b35",
         "name": "Middle School",
         "color": "#9B00FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-a92d76ff11bd47a7acc479a9dc2e",
-      "title": "Shooting Machine",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-11T19:00:00.000Z",
-      "endDatetime": "2026-09-11T19:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
         "__typename": "CalendarItemType"
       },
       "location": {

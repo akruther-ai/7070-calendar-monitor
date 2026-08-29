@@ -3211,10 +3211,7 @@
         "color": "#1A90D8",
         "__typename": "CalendarItemType"
       },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
+      "location": null,
       "mainCoach": {
         "userUuid": "usr_88e7810f7504876b7c6b0c9bc4a2cc16",
         "firstName": "Cody",
@@ -6274,10 +6271,7 @@
         "color": "#61BAFC",
         "__typename": "CalendarItemType"
       },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
+      "location": null,
       "mainCoach": null,
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"

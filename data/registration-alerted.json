@@ -338,14 +338,23 @@
       "registrationOpenedAt": "2026-08-30T18:00:00.000Z",
       "title": "IPT Middle School",
       "startDatetime": "2026-09-06T12:00:00.000Z",
-      "issueNumber": 29
+      "issueNumber": 29,
+      "issueClosedAt": "2026-08-31T22:03:48.300Z"
     },
     "cal-62e396e5a6f448fd806780e4a6cd": {
       "notifiedAt": "2026-08-30T19:00:01Z",
       "registrationOpenedAt": "2026-08-30T19:00:00.000Z",
       "title": "Middle School Skills ",
       "startDatetime": "2026-09-06T13:00:00.000Z",
-      "issueNumber": 30
+      "issueNumber": 30,
+      "issueClosedAt": "2026-08-31T22:03:48.300Z"
+    },
+    "cal-26a50723eb324af298d61c11d51c": {
+      "notifiedAt": "2026-08-31T23:30:03Z",
+      "registrationOpenedAt": "2026-08-31T23:30:00.000Z",
+      "title": "Middle School Skills",
+      "startDatetime": "2026-09-07T17:30:00.000Z",
+      "issueNumber": 32
     }
   },
   "advanceAlerted": {
@@ -514,7 +523,8 @@
       "registrationOpenedAt": "2026-08-31T23:30:00.000Z",
       "title": "Middle School Skills",
       "startDatetime": "2026-09-07T17:30:00.000Z",
-      "issueNumber": 28
+      "issueNumber": 28,
+      "issueClosedAt": "2026-08-31T23:30:02.244Z"
     },
     "cal-fe07ec3bdce24ef0830a706a1df4": {
       "notifiedAt": "2026-08-31T16:48:25Z",

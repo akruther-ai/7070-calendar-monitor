@@ -7,7 +7,7 @@
     "startDate": "2026-08-30",
     "endDate": "2026-09-26"
   },
-  "count": 355,
+  "count": 353,
   "items": [
     {
       "uuid": "cal-574091da1ed949ef8670421855ea",
@@ -1944,27 +1944,6 @@
       "__typename": "PublicCalendarItem"
     },
     {
-      "uuid": "cal-94570c8780414462a9eb7c959949",
-      "title": "Shooting Machine",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-05T12:00:00.000Z",
-      "endDatetime": "2026-09-05T12:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
       "uuid": "cal-ef34d53d92a643d099b45bbc3d84",
       "title": "High School Skills",
       "type": "Class",
@@ -2013,27 +1992,6 @@
         "lastName": "Owens",
         "__typename": "Profile"
       },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-15911e13891943babb5be9677903",
-      "title": "Shooting Machine",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-05T12:30:00.000Z",
-      "endDatetime": "2026-09-05T13:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },

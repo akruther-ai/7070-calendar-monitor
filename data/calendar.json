@@ -7,7 +7,7 @@
     "startDate": "2026-08-30",
     "endDate": "2026-09-26"
   },
-  "count": 353,
+  "count": 349,
   "items": [
     {
       "uuid": "cal-574091da1ed949ef8670421855ea",
@@ -4229,32 +4229,6 @@
       "__typename": "PublicCalendarItem"
     },
     {
-      "uuid": "cal-77b20a36dd784120af5a9cd0d59a",
-      "title": "IPT Middle School ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-12T15:00:00.000Z",
-      "endDatetime": "2026-09-12T16:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_4b10a0d0fe07496ac60d",
-        "name": "I'M-Possible Training, Middle School",
-        "color": "#0fe61b",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "46451ec20cefbcb427869724171781e6",
-        "firstName": "Kyle",
-        "lastName": "Owens",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
       "uuid": "cal-a5c667db3cd4460c9e0279e284b1",
       "title": "Shooting Machine",
       "type": "Class",
@@ -4272,6 +4246,32 @@
         "__typename": "CalendarItemLocation"
       },
       "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-77b20a36dd784120af5a9cd0d59a",
+      "title": "IPT Middle School ",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-09-12T15:30:00.000Z",
+      "endDatetime": "2026-09-12T16:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_4b10a0d0fe07496ac60d",
+        "name": "I'M-Possible Training, Middle School",
+        "color": "#0fe61b",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "46451ec20cefbcb427869724171781e6",
+        "firstName": "Kyle",
+        "lastName": "Owens",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -4297,32 +4297,6 @@
       "__typename": "PublicCalendarItem"
     },
     {
-      "uuid": "cal-09068b62e6074711ae76e5420b69",
-      "title": "IPT HS Underclassman",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-12T16:00:00.000Z",
-      "endDatetime": "2026-09-12T17:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_5065014b3c347fa10a21",
-        "name": "I'M-Possible Training, HS Underclassmen",
-        "color": "#d0021b",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "46451ec20cefbcb427869724171781e6",
-        "firstName": "Kyle",
-        "lastName": "Owens",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
       "uuid": "cal-5909e72ebc244a80bae51fb4be8b",
       "title": "Shooting Machine",
       "type": "Class",
@@ -4340,6 +4314,32 @@
         "__typename": "CalendarItemLocation"
       },
       "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-09068b62e6074711ae76e5420b69",
+      "title": "IPT HS Underclassman",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-09-12T16:30:00.000Z",
+      "endDatetime": "2026-09-12T17:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_5065014b3c347fa10a21",
+        "name": "I'M-Possible Training, HS Underclassmen",
+        "color": "#d0021b",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "46451ec20cefbcb427869724171781e6",
+        "firstName": "Kyle",
+        "lastName": "Owens",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -4369,8 +4369,8 @@
       "title": "IPT HS Upperclassman",
       "type": "Class",
       "isAllDay": false,
-      "startDatetime": "2026-09-12T17:00:00.000Z",
-      "endDatetime": "2026-09-12T18:00:00.000Z",
+      "startDatetime": "2026-09-12T17:30:00.000Z",
+      "endDatetime": "2026-09-12T18:30:00.000Z",
       "calendarItemType": {
         "uuid": "calitemtype_7a8ffd0d880a9c585521",
         "name": "I'M-Possible Training, HS Upperclassmen",
@@ -4674,48 +4674,6 @@
       "isAllDay": false,
       "startDatetime": "2026-09-13T15:30:00.000Z",
       "endDatetime": "2026-09-13T16:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-71acf75f616947f698e80cb754d9",
-      "title": "Shooting Machine ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-13T17:00:00.000Z",
-      "endDatetime": "2026-09-13T17:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-8f123b3a6393492f99e3b49cea9e",
-      "title": "Shooting Machine ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-13T17:30:00.000Z",
-      "endDatetime": "2026-09-13T18:00:00.000Z",
       "calendarItemType": {
         "uuid": "a0ed7304a452376769ab4c4666cdf828",
         "name": "Shooting Machine Access",
@@ -6227,27 +6185,6 @@
       "__typename": "PublicCalendarItem"
     },
     {
-      "uuid": "cal-c468f907845b4e1a854804a5174b",
-      "title": "IPT Middle School ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-19T15:00:00.000Z",
-      "endDatetime": "2026-09-19T16:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_4b10a0d0fe07496ac60d",
-        "name": "I'M-Possible Training, Middle School",
-        "color": "#0fe61b",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
       "uuid": "cal-3c6bcd3690ee40b69a79b89c385c",
       "title": "Shooting Machine",
       "type": "Class",
@@ -6269,6 +6206,32 @@
       "__typename": "PublicCalendarItem"
     },
     {
+      "uuid": "cal-c468f907845b4e1a854804a5174b",
+      "title": "IPT Middle School ",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-09-19T15:30:00.000Z",
+      "endDatetime": "2026-09-19T16:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_4b10a0d0fe07496ac60d",
+        "name": "I'M-Possible Training, Middle School",
+        "color": "#0fe61b",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "46451ec20cefbcb427869724171781e6",
+        "firstName": "Kyle",
+        "lastName": "Owens",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
       "uuid": "cal-0c0422c827304668838e294fa0b1",
       "title": "Shooting Machine",
       "type": "Class",
@@ -6279,27 +6242,6 @@
         "uuid": "a0ed7304a452376769ab4c4666cdf828",
         "name": "Shooting Machine Access",
         "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-4e2bd3453752433790840637dd28",
-      "title": "IPT HS Underclassman",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-19T16:00:00.000Z",
-      "endDatetime": "2026-09-19T17:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_5065014b3c347fa10a21",
-        "name": "I'M-Possible Training, HS Underclassmen",
-        "color": "#d0021b",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -6332,6 +6274,32 @@
       "__typename": "PublicCalendarItem"
     },
     {
+      "uuid": "cal-4e2bd3453752433790840637dd28",
+      "title": "IPT HS Underclassman",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-09-19T16:30:00.000Z",
+      "endDatetime": "2026-09-19T17:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_5065014b3c347fa10a21",
+        "name": "I'M-Possible Training, HS Underclassmen",
+        "color": "#d0021b",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "46451ec20cefbcb427869724171781e6",
+        "firstName": "Kyle",
+        "lastName": "Owens",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
       "uuid": "cal-4b77568d742543faa058b02ccc34",
       "title": "Shooting Machine",
       "type": "Class",
@@ -6357,8 +6325,8 @@
       "title": "IPT HS Upperclassman",
       "type": "Class",
       "isAllDay": false,
-      "startDatetime": "2026-09-19T17:00:00.000Z",
-      "endDatetime": "2026-09-19T18:00:00.000Z",
+      "startDatetime": "2026-09-19T17:30:00.000Z",
+      "endDatetime": "2026-09-19T18:30:00.000Z",
       "calendarItemType": {
         "uuid": "calitemtype_7a8ffd0d880a9c585521",
         "name": "I'M-Possible Training, HS Upperclassmen",
@@ -6369,7 +6337,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "46451ec20cefbcb427869724171781e6",
+        "firstName": "Kyle",
+        "lastName": "Owens",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -6657,48 +6630,6 @@
       "isAllDay": false,
       "startDatetime": "2026-09-20T15:30:00.000Z",
       "endDatetime": "2026-09-20T16:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-6298e6b957524d14b562cfbaaf40",
-      "title": "Shooting Machine ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-20T17:00:00.000Z",
-      "endDatetime": "2026-09-20T17:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-76decca2778a471592b4095931e5",
-      "title": "Shooting Machine ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-20T17:30:00.000Z",
-      "endDatetime": "2026-09-20T18:00:00.000Z",
       "calendarItemType": {
         "uuid": "a0ed7304a452376769ab4c4666cdf828",
         "name": "Shooting Machine Access",
@@ -8189,27 +8120,6 @@
       "__typename": "PublicCalendarItem"
     },
     {
-      "uuid": "cal-a191a93383294bf381af38f98cd0",
-      "title": "IPT Middle School ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-26T15:00:00.000Z",
-      "endDatetime": "2026-09-26T16:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_4b10a0d0fe07496ac60d",
-        "name": "I'M-Possible Training, Middle School",
-        "color": "#0fe61b",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
       "uuid": "cal-a8ce8154b54c4babb103a7db09c6",
       "title": "Shooting Machine",
       "type": "Class",
@@ -8231,6 +8141,32 @@
       "__typename": "PublicCalendarItem"
     },
     {
+      "uuid": "cal-a191a93383294bf381af38f98cd0",
+      "title": "IPT Middle School ",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-09-26T15:30:00.000Z",
+      "endDatetime": "2026-09-26T16:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_4b10a0d0fe07496ac60d",
+        "name": "I'M-Possible Training, Middle School",
+        "color": "#0fe61b",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "46451ec20cefbcb427869724171781e6",
+        "firstName": "Kyle",
+        "lastName": "Owens",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
       "uuid": "cal-4a797a321181426ea429be01d533",
       "title": "Shooting Machine",
       "type": "Class",
@@ -8241,27 +8177,6 @@
         "uuid": "a0ed7304a452376769ab4c4666cdf828",
         "name": "Shooting Machine Access",
         "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-24a0b8a90e244206816ea6f5fa43",
-      "title": "IPT HS Underclassman",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-26T16:00:00.000Z",
-      "endDatetime": "2026-09-26T17:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_5065014b3c347fa10a21",
-        "name": "I'M-Possible Training, HS Underclassmen",
-        "color": "#d0021b",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -8294,6 +8209,32 @@
       "__typename": "PublicCalendarItem"
     },
     {
+      "uuid": "cal-24a0b8a90e244206816ea6f5fa43",
+      "title": "IPT HS Underclassman",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-09-26T16:30:00.000Z",
+      "endDatetime": "2026-09-26T17:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_5065014b3c347fa10a21",
+        "name": "I'M-Possible Training, HS Underclassmen",
+        "color": "#d0021b",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "46451ec20cefbcb427869724171781e6",
+        "firstName": "Kyle",
+        "lastName": "Owens",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
       "uuid": "cal-12d189a0d7d044d4a64798abc4f5",
       "title": "Shooting Machine",
       "type": "Class",
@@ -8319,8 +8260,8 @@
       "title": "IPT HS Upperclassman",
       "type": "Class",
       "isAllDay": false,
-      "startDatetime": "2026-09-26T17:00:00.000Z",
-      "endDatetime": "2026-09-26T18:00:00.000Z",
+      "startDatetime": "2026-09-26T17:30:00.000Z",
+      "endDatetime": "2026-09-26T18:30:00.000Z",
       "calendarItemType": {
         "uuid": "calitemtype_7a8ffd0d880a9c585521",
         "name": "I'M-Possible Training, HS Upperclassmen",
@@ -8331,7 +8272,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "46451ec20cefbcb427869724171781e6",
+        "firstName": "Kyle",
+        "lastName": "Owens",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     }

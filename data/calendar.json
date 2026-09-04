@@ -1714,7 +1714,10 @@
         "color": "#61BAFC",
         "__typename": "CalendarItemType"
       },
-      "location": null,
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
       "mainCoach": null,
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
@@ -3978,7 +3981,10 @@
         "color": "#61BAFC",
         "__typename": "CalendarItemType"
       },
-      "location": null,
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
       "mainCoach": null,
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
@@ -5965,7 +5971,10 @@
         "color": "#61BAFC",
         "__typename": "CalendarItemType"
       },
-      "location": null,
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
       "mainCoach": null,
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
@@ -7900,7 +7909,10 @@
         "color": "#61BAFC",
         "__typename": "CalendarItemType"
       },
-      "location": null,
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
       "mainCoach": null,
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"

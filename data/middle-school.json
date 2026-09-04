@@ -33,7 +33,10 @@
         "lastName": "Scott",
         "__typename": "Profile"
       },
-      "assistantCoach": null,
+      "assistantCoach": {
+        "userUuid": "ac130104cee48758d7145556887dac4f",
+        "__typename": "Profile"
+      },
       "__typename": "PublicCalendarItem"
     },
     {

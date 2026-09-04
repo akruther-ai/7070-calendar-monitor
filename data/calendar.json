@@ -7,7 +7,7 @@
     "startDate": "2026-08-30",
     "endDate": "2026-09-26"
   },
-  "count": 349,
+  "count": 348,
   "items": [
     {
       "uuid": "cal-574091da1ed949ef8670421855ea",
@@ -1620,35 +1620,9 @@
         "__typename": "CalendarItemLocation"
       },
       "mainCoach": {
-        "userUuid": "ac130104cee48758d7145556887dac4f",
-        "firstName": "Keion",
-        "lastName": "Mitchem",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-85cbc0f0f74f43a1ae50271947f9",
-      "title": "HS - Speed & Agility",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-04T17:30:00.000Z",
-      "endDatetime": "2026-09-04T18:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_93a97d2626c2c552666a",
-        "name": "Sports Performance Training - High School",
-        "color": "#f0c989",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "687ae36e7b3788d40f42ba41748a5f70",
-        "firstName": "Johnson",
-        "lastName": "Sports Performance",
+        "userUuid": "46451ec20cefbcb427869724171781e6",
+        "firstName": "Kyle",
+        "lastName": "Owens",
         "__typename": "Profile"
       },
       "assistantCoach": null,
@@ -1698,7 +1672,10 @@
         "lastName": "Scott",
         "__typename": "Profile"
       },
-      "assistantCoach": null,
+      "assistantCoach": {
+        "userUuid": "ac130104cee48758d7145556887dac4f",
+        "__typename": "Profile"
+      },
       "__typename": "PublicCalendarItem"
     },
     {

@@ -1,70 +1,15 @@
 {
   "source": "https://7070athletics.pushpress.com/landing/calendar?framed=1",
   "timeZone": "America/Denver",
-  "requestedFrom": "2026-09-04",
-  "targetThrough": "2026-09-25",
+  "requestedFrom": "2026-09-05",
+  "targetThrough": "2026-09-26",
   "dateRange": {
     "startDate": "2026-08-30",
     "endDate": "2026-09-26"
   },
   "filter": "current/future item where title or calendarItemType.name contains \"middle school\" (case-insensitive)",
-  "count": 67,
+  "count": 65,
   "items": [
-    {
-      "uuid": "cal-0f6c4c3b80f349178beececaf0a5",
-      "title": "Middle School Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-04T18:30:00.000Z",
-      "endDatetime": "2026-09-04T19:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "usr_8d1673989c54e7",
-        "firstName": "Jonathan",
-        "lastName": "Scott",
-        "__typename": "Profile"
-      },
-      "assistantCoach": {
-        "userUuid": "ac130104cee48758d7145556887dac4f",
-        "__typename": "Profile"
-      },
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-3666e4181af64ed2afabb0859693",
-      "title": "Middle Schools 5v5 Runs",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-04T19:30:00.000Z",
-      "endDatetime": "2026-09-04T20:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "usr_8d1673989c54e7",
-        "firstName": "Jonathan",
-        "lastName": "Scott",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
     {
       "uuid": "cal-9ba0cb2d48494de9a62b0e617a55",
       "title": "Shot Doctor - Middle School (Grades 7-8)",

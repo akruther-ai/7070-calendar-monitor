@@ -498,7 +498,8 @@
       "registrationOpenedAt": "2026-09-05T21:30:00.000Z",
       "title": "IPT Middle School ",
       "startDatetime": "2026-09-12T15:30:00.000Z",
-      "issueNumber": 51
+      "issueNumber": 51,
+      "issueClosedAt": "2026-09-06T21:36:10.318Z"
     },
     "cal-24f04bee81ec417fbb5dfc562fbe": {
       "notifiedAt": "2026-09-06T18:00:03Z",

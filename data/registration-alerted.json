@@ -466,7 +466,8 @@
       "registrationOpenedAt": "2026-09-05T00:30:00.000Z",
       "title": "Middle School Skills",
       "startDatetime": "2026-09-11T18:30:00.000Z",
-      "issueNumber": 46
+      "issueNumber": 46,
+      "issueClosedAt": "2026-09-06T00:33:49.823Z"
     },
     "cal-69330706b02a4aafba987d8fd4b8": {
       "notifiedAt": "2026-09-05T01:30:01Z",

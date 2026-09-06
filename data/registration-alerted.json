@@ -482,14 +482,16 @@
       "registrationOpenedAt": "2026-09-05T16:00:00.000Z",
       "title": "Shot Doctor - Middle School (Grades 7-8)",
       "startDatetime": "2026-09-12T10:00:00.000Z",
-      "issueNumber": 49
+      "issueNumber": 49,
+      "issueClosedAt": "2026-09-06T16:52:21.280Z"
     },
     "cal-42ca124649b445fea8ea61d48f5e": {
       "notifiedAt": "2026-09-05T17:00:03Z",
       "registrationOpenedAt": "2026-09-05T17:00:00.000Z",
       "title": "Middle School Skills",
       "startDatetime": "2026-09-12T11:00:00.000Z",
-      "issueNumber": 50
+      "issueNumber": 50,
+      "issueClosedAt": "2026-09-06T18:00:02.189Z"
     },
     "cal-77b20a36dd784120af5a9cd0d59a": {
       "notifiedAt": "2026-09-05T21:30:03Z",
@@ -497,6 +499,20 @@
       "title": "IPT Middle School ",
       "startDatetime": "2026-09-12T15:30:00.000Z",
       "issueNumber": 51
+    },
+    "cal-24f04bee81ec417fbb5dfc562fbe": {
+      "notifiedAt": "2026-09-06T18:00:03Z",
+      "registrationOpenedAt": "2026-09-06T18:00:00.000Z",
+      "title": "IPT Middle School",
+      "startDatetime": "2026-09-13T12:00:00.000Z",
+      "issueNumber": 52
+    },
+    "cal-6db955353b2541598be89640c890": {
+      "notifiedAt": "2026-09-06T19:00:04Z",
+      "registrationOpenedAt": "2026-09-06T19:00:00.000Z",
+      "title": "Middle School Skills ",
+      "startDatetime": "2026-09-13T13:00:00.000Z",
+      "issueNumber": 54
     }
   },
   "advanceAlerted": {
@@ -817,14 +833,23 @@
       "registrationOpenedAt": "2026-09-06T18:00:00.000Z",
       "title": "IPT Middle School",
       "startDatetime": "2026-09-13T12:00:00.000Z",
-      "issueNumber": 48
+      "issueNumber": 48,
+      "issueClosedAt": "2026-09-06T19:00:01.131Z"
     },
     "cal-6db955353b2541598be89640c890": {
       "notifiedAt": "2026-09-05T14:35:00Z",
       "registrationOpenedAt": "2026-09-06T19:00:00.000Z",
       "title": "Middle School Skills ",
       "startDatetime": "2026-09-13T13:00:00.000Z",
-      "issueNumber": 48
+      "issueNumber": 48,
+      "issueClosedAt": "2026-09-06T19:00:01.131Z"
+    },
+    "cal-c7d069244630447aada57b8d58a6": {
+      "notifiedAt": "2026-09-06T19:00:02Z",
+      "registrationOpenedAt": "2026-09-08T00:45:00.000Z",
+      "title": "Middle School 6 WEEK FIBA 3v3 League",
+      "startDatetime": "2026-09-14T18:45:00.000Z",
+      "issueNumber": 53
     }
   }
 }

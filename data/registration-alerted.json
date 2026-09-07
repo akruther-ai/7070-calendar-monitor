@@ -506,7 +506,8 @@
       "registrationOpenedAt": "2026-09-06T18:00:00.000Z",
       "title": "IPT Middle School",
       "startDatetime": "2026-09-13T12:00:00.000Z",
-      "issueNumber": 52
+      "issueNumber": 52,
+      "issueClosedAt": "2026-09-07T18:06:09.513Z"
     },
     "cal-6db955353b2541598be89640c890": {
       "notifiedAt": "2026-09-06T19:00:04Z",
@@ -851,6 +852,34 @@
       "title": "Middle School 6 WEEK FIBA 3v3 League",
       "startDatetime": "2026-09-14T18:45:00.000Z",
       "issueNumber": 53
+    },
+    "cal-2a627856d1f548e49f6aaf898e06": {
+      "notifiedAt": "2026-09-07T18:06:10Z",
+      "registrationOpenedAt": "2026-09-08T22:30:00.000Z",
+      "title": "Middle School Skills",
+      "startDatetime": "2026-09-15T16:30:00.000Z",
+      "issueNumber": 55
+    },
+    "cal-b9947f1fcfa840d284f9e29a1bb4": {
+      "notifiedAt": "2026-09-07T18:06:10Z",
+      "registrationOpenedAt": "2026-09-08T22:30:00.000Z",
+      "title": "IPT Middle School ",
+      "startDatetime": "2026-09-15T16:30:00.000Z",
+      "issueNumber": 55
+    },
+    "cal-fc9abc62b9c84a61a449c6073ead": {
+      "notifiedAt": "2026-09-07T18:06:10Z",
+      "registrationOpenedAt": "2026-09-08T23:30:00.000Z",
+      "title": "Middle School Skills",
+      "startDatetime": "2026-09-15T17:30:00.000Z",
+      "issueNumber": 55
+    },
+    "cal-a681f4969d7a4433b6f8878ccbcc": {
+      "notifiedAt": "2026-09-07T18:06:10Z",
+      "registrationOpenedAt": "2026-09-09T00:30:00.000Z",
+      "title": "Middle School Skills",
+      "startDatetime": "2026-09-15T18:30:00.000Z",
+      "issueNumber": 55
     }
   }
 }

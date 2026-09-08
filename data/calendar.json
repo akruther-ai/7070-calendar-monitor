@@ -2079,7 +2079,7 @@
       "type": "Event",
       "isAllDay": false,
       "startDatetime": "2026-09-12T12:00:00.000Z",
-      "endDatetime": "2026-10-17T14:30:00.000Z",
+      "endDatetime": "2026-10-17T15:30:00.000Z",
       "calendarItemType": {
         "uuid": "cit_00000000000000",
         "name": "General",

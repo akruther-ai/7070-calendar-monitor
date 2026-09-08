@@ -514,7 +514,15 @@
       "registrationOpenedAt": "2026-09-06T19:00:00.000Z",
       "title": "Middle School Skills ",
       "startDatetime": "2026-09-13T13:00:00.000Z",
-      "issueNumber": 54
+      "issueNumber": 54,
+      "issueClosedAt": "2026-09-07T23:21:46.643Z"
+    },
+    "cal-c7d069244630447aada57b8d58a6": {
+      "notifiedAt": "2026-09-08T00:45:03Z",
+      "registrationOpenedAt": "2026-09-08T00:45:00.000Z",
+      "title": "Middle School 6 WEEK FIBA 3v3 League",
+      "startDatetime": "2026-09-14T18:45:00.000Z",
+      "issueNumber": 56
     }
   },
   "advanceAlerted": {
@@ -851,7 +859,8 @@
       "registrationOpenedAt": "2026-09-08T00:45:00.000Z",
       "title": "Middle School 6 WEEK FIBA 3v3 League",
       "startDatetime": "2026-09-14T18:45:00.000Z",
-      "issueNumber": 53
+      "issueNumber": 53,
+      "issueClosedAt": "2026-09-08T00:45:02.656Z"
     },
     "cal-2a627856d1f548e49f6aaf898e06": {
       "notifiedAt": "2026-09-07T18:06:10Z",

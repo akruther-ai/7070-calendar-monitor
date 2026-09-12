@@ -7,7 +7,7 @@
     "startDate": "2026-09-06",
     "endDate": "2026-10-03"
   },
-  "count": 344,
+  "count": 343,
   "items": [
     {
       "uuid": "cal-613eb0af43ba426d87a847d13e7c",
@@ -2227,32 +2227,6 @@
         "__typename": "CalendarItemLocation"
       },
       "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-23956ad9ba764e56abde186468b4",
-      "title": "IPT HS Upperclassman",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-12T17:30:00.000Z",
-      "endDatetime": "2026-09-12T18:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_7a8ffd0d880a9c585521",
-        "name": "I'M-Possible Training, HS Upperclassmen",
-        "color": "#f8e71c",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "46451ec20cefbcb427869724171781e6",
-        "firstName": "Kyle",
-        "lastName": "Owens",
-        "__typename": "Profile"
-      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },

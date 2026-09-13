@@ -650,14 +650,16 @@
       "registrationOpenedAt": "2026-09-12T16:00:00.000Z",
       "title": "Shot Doctor - Middle School (Grades 7-8)",
       "startDatetime": "2026-09-19T10:00:00.000Z",
-      "issueNumber": 74
+      "issueNumber": 74,
+      "issueClosedAt": "2026-09-13T16:44:55.789Z"
     },
     "cal-1afcce2aaa8b410ba9ec97d1b768": {
       "notifiedAt": "2026-09-12T17:00:02Z",
       "registrationOpenedAt": "2026-09-12T17:00:00.000Z",
       "title": "Middle School Skills",
       "startDatetime": "2026-09-19T11:00:00.000Z",
-      "issueNumber": 75
+      "issueNumber": 75,
+      "issueClosedAt": "2026-09-13T18:00:02.240Z"
     },
     "cal-c468f907845b4e1a854804a5174b": {
       "notifiedAt": "2026-09-12T21:30:03Z",
@@ -665,6 +667,20 @@
       "title": "IPT Middle School ",
       "startDatetime": "2026-09-19T15:30:00.000Z",
       "issueNumber": 76
+    },
+    "cal-f24348ee4743484385fa80e13881": {
+      "notifiedAt": "2026-09-13T18:00:03Z",
+      "registrationOpenedAt": "2026-09-13T18:00:00.000Z",
+      "title": "IPT Middle School",
+      "startDatetime": "2026-09-20T12:00:00.000Z",
+      "issueNumber": 78
+    },
+    "cal-013fb57517534e22877e1ba5ad9d": {
+      "notifiedAt": "2026-09-13T19:00:02Z",
+      "registrationOpenedAt": "2026-09-13T19:00:00.000Z",
+      "title": "Middle School Skills ",
+      "startDatetime": "2026-09-20T13:00:00.000Z",
+      "issueNumber": 79
     }
   },
   "advanceAlerted": {
@@ -1153,14 +1169,16 @@
       "registrationOpenedAt": "2026-09-13T18:00:00.000Z",
       "title": "IPT Middle School",
       "startDatetime": "2026-09-20T12:00:00.000Z",
-      "issueNumber": 73
+      "issueNumber": 73,
+      "issueClosedAt": "2026-09-13T19:00:01.123Z"
     },
     "cal-013fb57517534e22877e1ba5ad9d": {
       "notifiedAt": "2026-09-12T14:47:14Z",
       "registrationOpenedAt": "2026-09-13T19:00:00.000Z",
       "title": "Middle School Skills ",
       "startDatetime": "2026-09-20T13:00:00.000Z",
-      "issueNumber": 73
+      "issueNumber": 73,
+      "issueClosedAt": "2026-09-13T19:00:01.123Z"
     }
   }
 }

@@ -7101,10 +7101,7 @@
         "color": "#417505",
         "__typename": "CalendarItemType"
       },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
+      "location": null,
       "mainCoach": {
         "userUuid": "usr_8d1673989c54e7",
         "firstName": "Jonathan",

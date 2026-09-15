@@ -5204,15 +5204,15 @@
     },
     {
       "uuid": "cal-2d3b2f6b94954c7cba88426aa758",
-      "title": "Upper Middle School Skills ",
+      "title": "Middle School Club Team Skills",
       "type": "Class",
       "isAllDay": false,
       "startDatetime": "2026-10-01T18:30:00.000Z",
       "endDatetime": "2026-10-01T19:30:00.000Z",
       "calendarItemType": {
-        "uuid": "calitemtype_dcdbf6718aa911f19cca0affe13b3daf",
-        "name": "Middle School Skills Advanced",
-        "color": "#d3c876",
+        "uuid": "calitemtype_c6f4df2473f12d3afa6f",
+        "name": "Middle School Club",
+        "color": "#82e9e8",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -5572,27 +5572,6 @@
       "__typename": "PublicCalendarItem"
     },
     {
-      "uuid": "cal-858fa2402067469384ba1c56db90",
-      "title": "Shooting Machine ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-10-02T19:30:00.000Z",
-      "endDatetime": "2026-10-02T20:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
       "uuid": "cal-7de3383d13eb4566aeb381f5b6dd",
       "title": "Middle Schools 5v5 Runs",
       "type": "Class",
@@ -5603,27 +5582,6 @@
         "uuid": "b4456f95064b95d92044360a4ece1b35",
         "name": "Middle School",
         "color": "#9B00FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-516e5c536c744e138e67fd01cd3b",
-      "title": "Shooting Machine ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-10-02T20:00:00.000Z",
-      "endDatetime": "2026-10-02T20:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -6267,6 +6225,27 @@
       "__typename": "PublicCalendarItem"
     },
     {
+      "uuid": "cal-d8fd7f73dc7844e999c1cebb10ba",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-05T16:30:00.000Z",
+      "endDatetime": "2026-10-05T17:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
       "uuid": "cal-c49d3aa27130451b888729204e17",
       "title": "Elementary Skills",
       "type": "Class",
@@ -6288,6 +6267,48 @@
       "__typename": "PublicCalendarItem"
     },
     {
+      "uuid": "cal-fdc8af7817314a29b4637ffcceba",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-05T17:00:00.000Z",
+      "endDatetime": "2026-10-05T17:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-048f8850810a486b969a4a196da2",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-05T17:30:00.000Z",
+      "endDatetime": "2026-10-05T18:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
       "uuid": "cal-cde96de6f46d47aa9fcf5a25dbec",
       "title": "High School Skills",
       "type": "Class",
@@ -6298,6 +6319,27 @@
         "uuid": "9ec2846f3e28b042afbea41b5873f9b9",
         "name": "High School",
         "color": "#AFAFAF",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-f7cc6492c4f34ff49965f5af7dd4",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-05T18:00:00.000Z",
+      "endDatetime": "2026-10-05T18:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -7142,15 +7184,15 @@
     },
     {
       "uuid": "cal-e76dedb9f8ee4fd69bb0870e5b87",
-      "title": "Upper Middle School Skills ",
+      "title": "Middle School Club Team Skills",
       "type": "Class",
       "isAllDay": false,
       "startDatetime": "2026-10-08T18:30:00.000Z",
       "endDatetime": "2026-10-08T19:30:00.000Z",
       "calendarItemType": {
-        "uuid": "calitemtype_dcdbf6718aa911f19cca0affe13b3daf",
-        "name": "Middle School Skills Advanced",
-        "color": "#d3c876",
+        "uuid": "calitemtype_c6f4df2473f12d3afa6f",
+        "name": "Middle School Club",
+        "color": "#82e9e8",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -7510,27 +7552,6 @@
       "__typename": "PublicCalendarItem"
     },
     {
-      "uuid": "cal-449bc9f415d542c291f433af41d4",
-      "title": "Shooting Machine ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-10-09T19:30:00.000Z",
-      "endDatetime": "2026-10-09T20:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
       "uuid": "cal-3781ce8918504537a28cdd9db45e",
       "title": "Middle Schools 5v5 Runs",
       "type": "Class",
@@ -7541,27 +7562,6 @@
         "uuid": "b4456f95064b95d92044360a4ece1b35",
         "name": "Middle School",
         "color": "#9B00FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-fdccbc6406e54f33b59de4cf0a59",
-      "title": "Shooting Machine ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-10-09T20:00:00.000Z",
-      "endDatetime": "2026-10-09T20:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
         "__typename": "CalendarItemType"
       },
       "location": {

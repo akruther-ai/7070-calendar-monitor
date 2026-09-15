@@ -1,36 +1,15 @@
 {
   "source": "https://7070athletics.pushpress.com/landing/calendar?framed=1",
   "timeZone": "America/Denver",
-  "requestedFrom": "2026-09-14",
-  "targetThrough": "2026-10-05",
+  "requestedFrom": "2026-09-15",
+  "targetThrough": "2026-10-06",
   "dateRange": {
     "startDate": "2026-09-13",
     "endDate": "2026-10-10"
   },
   "filter": "current/future item where title or calendarItemType.name contains \"middle school\" (case-insensitive)",
-  "count": 79,
+  "count": 78,
   "items": [
-    {
-      "uuid": "cal-c7d069244630447aada57b8d58a6",
-      "title": "Middle School 6 WEEK FIBA 3v3 League",
-      "type": "Event",
-      "isAllDay": false,
-      "startDatetime": "2026-09-14T18:45:00.000Z",
-      "endDatetime": "2026-10-19T20:45:00.000Z",
-      "calendarItemType": {
-        "uuid": "cit_00000000000000",
-        "name": "General",
-        "color": "#1A90D8",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
     {
       "uuid": "cal-2a627856d1f548e49f6aaf898e06",
       "title": "Middle School Skills",

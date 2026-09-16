@@ -3394,15 +3394,12 @@
         "__typename": "CalendarItemLocation"
       },
       "mainCoach": {
-        "userUuid": "usr_88e7810f7504876b7c6b0c9bc4a2cc16",
-        "firstName": "Cody",
-        "lastName": "Bernbeck",
-        "__typename": "Profile"
-      },
-      "assistantCoach": {
         "userUuid": "usr_354c5c2551abc4",
+        "firstName": "Anna",
+        "lastName": "Poe",
         "__typename": "Profile"
       },
+      "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
     {
@@ -4775,10 +4772,7 @@
         "lastName": "Mitchem",
         "__typename": "Profile"
       },
-      "assistantCoach": {
-        "userUuid": "usr_88e7810f7504876b7c6b0c9bc4a2cc16",
-        "__typename": "Profile"
-      },
+      "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
     {

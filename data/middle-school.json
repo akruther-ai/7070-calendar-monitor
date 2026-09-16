@@ -1222,15 +1222,15 @@
     },
     {
       "uuid": "cal-002fdfe91a7a482188becaf2247d",
-      "title": "Middle School Skills ",
+      "title": "Middle School Club Team Skills ",
       "type": "Class",
       "isAllDay": false,
       "startDatetime": "2026-10-01T16:30:00.000Z",
       "endDatetime": "2026-10-01T17:30:00.000Z",
       "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
+        "uuid": "calitemtype_c6f4df2473f12d3afa6f",
+        "name": "Middle School Club",
+        "color": "#82e9e8",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -1295,15 +1295,15 @@
     },
     {
       "uuid": "cal-2d3b2f6b94954c7cba88426aa758",
-      "title": "Middle School Club Team Skills",
+      "title": "Middle School Skills",
       "type": "Class",
       "isAllDay": false,
       "startDatetime": "2026-10-01T18:30:00.000Z",
       "endDatetime": "2026-10-01T19:30:00.000Z",
       "calendarItemType": {
-        "uuid": "calitemtype_c6f4df2473f12d3afa6f",
-        "name": "Middle School Club",
-        "color": "#82e9e8",
+        "uuid": "b4456f95064b95d92044360a4ece1b35",
+        "name": "Middle School",
+        "color": "#9B00FF",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -1687,15 +1687,15 @@
     },
     {
       "uuid": "cal-d00d443e81ab43c9b3730fb02e67",
-      "title": "Middle School Skills ",
+      "title": "Middle School Club Team Skills ",
       "type": "Class",
       "isAllDay": false,
       "startDatetime": "2026-10-08T16:30:00.000Z",
       "endDatetime": "2026-10-08T17:30:00.000Z",
       "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
+        "uuid": "calitemtype_c6f4df2473f12d3afa6f",
+        "name": "Middle School Club",
+        "color": "#82e9e8",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -1760,15 +1760,15 @@
     },
     {
       "uuid": "cal-e76dedb9f8ee4fd69bb0870e5b87",
-      "title": "Middle School Club Team Skills",
+      "title": "Middle School Skills",
       "type": "Class",
       "isAllDay": false,
       "startDatetime": "2026-10-08T18:30:00.000Z",
       "endDatetime": "2026-10-08T19:30:00.000Z",
       "calendarItemType": {
-        "uuid": "calitemtype_c6f4df2473f12d3afa6f",
-        "name": "Middle School Club",
-        "color": "#82e9e8",
+        "uuid": "b4456f95064b95d92044360a4ece1b35",
+        "name": "Middle School",
+        "color": "#9B00FF",
         "__typename": "CalendarItemType"
       },
       "location": {

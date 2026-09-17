@@ -7,7 +7,7 @@
     "startDate": "2026-09-13",
     "endDate": "2026-10-10"
   },
-  "count": 330,
+  "count": 331,
   "items": [
     {
       "uuid": "cal-1e48901f9d5c4ab89fda8b5e2ff6",
@@ -6637,6 +6637,32 @@
         "uuid": "calitemtype_7956062fa0cc11f19cca0affe13b3daf",
         "name": "Sports Performance Training - Elementary/MS",
         "color": "#e2b5eb",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "687ae36e7b3788d40f42ba41748a5f70",
+        "firstName": "Johnson",
+        "lastName": "Sports Performance",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-9f029c4823a84d3d8657fdc9a22b",
+      "title": "HS - Speed & Agility",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-06T17:30:00.000Z",
+      "endDatetime": "2026-10-06T18:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_93a97d2626c2c552666a",
+        "name": "Sports Performance Training - High School",
+        "color": "#f0c989",
         "__typename": "CalendarItemType"
       },
       "location": {

@@ -1,148 +1,15 @@
 {
   "source": "https://7070athletics.pushpress.com/landing/calendar?framed=1",
   "timeZone": "America/Denver",
-  "requestedFrom": "2026-09-17",
-  "targetThrough": "2026-10-08",
+  "requestedFrom": "2026-09-18",
+  "targetThrough": "2026-10-09",
   "dateRange": {
     "startDate": "2026-09-13",
     "endDate": "2026-10-10"
   },
   "filter": "current/future item where title or calendarItemType.name contains \"middle school\" (case-insensitive)",
-  "count": 70,
+  "count": 65,
   "items": [
-    {
-      "uuid": "cal-33556e74cfde49e7b1dc62c2e62a",
-      "title": "Middle School Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-17T16:30:00.000Z",
-      "endDatetime": "2026-09-17T17:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "ac130104cee48758d7145556887dac4f",
-        "firstName": "Keion",
-        "lastName": "Mitchem",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-42588b2f54b24231bbe4c91a480c",
-      "title": "Middle School Skills ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-17T16:30:00.000Z",
-      "endDatetime": "2026-09-17T17:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "usr_8d1673989c54e7",
-        "firstName": "Jonathan",
-        "lastName": "Scott",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-552375ac340043c3a365c53a9158",
-      "title": "Middle School Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-17T17:30:00.000Z",
-      "endDatetime": "2026-09-17T18:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "ac130104cee48758d7145556887dac4f",
-        "firstName": "Keion",
-        "lastName": "Mitchem",
-        "__typename": "Profile"
-      },
-      "assistantCoach": {
-        "userUuid": "usr_354c5c2551abc4",
-        "__typename": "Profile"
-      },
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-5e975854921d4a398b20362c50bf",
-      "title": "Shot Doctor - Middle School (Grades 7-8)",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-17T18:30:00.000Z",
-      "endDatetime": "2026-09-17T19:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_ccfc37b0501835516a66",
-        "name": "Shot Doctor - Middle School Grades 7-8",
-        "color": "#417505",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "usr_8d1673989c54e7",
-        "firstName": "Jonathan",
-        "lastName": "Scott",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-b0afd80caa404a0bbd6cbe9d9923",
-      "title": "Upper Middle School Skills ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-17T18:30:00.000Z",
-      "endDatetime": "2026-09-17T19:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_dcdbf6718aa911f19cca0affe13b3daf",
-        "name": "Middle School Skills Advanced",
-        "color": "#d3c876",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "usr_354c5c2551abc4",
-        "firstName": "Anna",
-        "lastName": "Poe",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
     {
       "uuid": "cal-d702f4d56fbb4faa80cd2a88d7d1",
       "title": "Middle School Skills",

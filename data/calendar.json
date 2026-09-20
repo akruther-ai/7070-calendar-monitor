@@ -1,13 +1,13 @@
 {
   "source": "https://7070athletics.pushpress.com/landing/calendar?framed=1",
   "timeZone": "America/Denver",
-  "requestedFrom": "2026-09-19",
-  "targetThrough": "2026-10-10",
+  "requestedFrom": "2026-09-20",
+  "targetThrough": "2026-10-11",
   "dateRange": {
-    "startDate": "2026-09-13",
-    "endDate": "2026-10-10"
+    "startDate": "2026-09-20",
+    "endDate": "2026-10-17"
   },
-  "count": 328,
+  "count": 335,
   "items": [
     {
       "uuid": "cal-1e48901f9d5c4ab89fda8b5e2ff6",
@@ -31,341 +31,6 @@
       "__typename": "PublicCalendarItem"
     },
     {
-      "uuid": "cal-4979b2b18a5841918249cfac4da6",
-      "title": "Shooting Machine",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-13T12:00:00.000Z",
-      "endDatetime": "2026-09-13T12:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-24f04bee81ec417fbb5dfc562fbe",
-      "title": "IPT Middle School",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-13T12:00:00.000Z",
-      "endDatetime": "2026-09-13T13:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_4b10a0d0fe07496ac60d",
-        "name": "I'M-Possible Training, Middle School",
-        "color": "#0fe61b",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "46451ec20cefbcb427869724171781e6",
-        "firstName": "Kyle",
-        "lastName": "Owens",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-f7a59abd8af942e597e8b1826e0b",
-      "title": "Shooting Machine",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-13T12:30:00.000Z",
-      "endDatetime": "2026-09-13T13:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-76879f3603cb4640bc39711ab3ba",
-      "title": "Shooting Machine",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-13T13:00:00.000Z",
-      "endDatetime": "2026-09-13T13:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-09833d49144644319553a16cf1dc",
-      "title": "IPT HS Underclassmen",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-13T13:00:00.000Z",
-      "endDatetime": "2026-09-13T14:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_5065014b3c347fa10a21",
-        "name": "I'M-Possible Training, HS Underclassmen",
-        "color": "#d0021b",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "46451ec20cefbcb427869724171781e6",
-        "firstName": "Kyle",
-        "lastName": "Owens",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-6db955353b2541598be89640c890",
-      "title": "Middle School Skills ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-13T13:00:00.000Z",
-      "endDatetime": "2026-09-13T14:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "usr_354c5c2551abc4",
-        "firstName": "Anna",
-        "lastName": "Poe",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-35bc718aef9f484db66eb06136d3",
-      "title": "Shooting Machine",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-13T13:30:00.000Z",
-      "endDatetime": "2026-09-13T14:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-65f7187f16e44b4e88d746eb614b",
-      "title": "Shooting Machine",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-13T14:00:00.000Z",
-      "endDatetime": "2026-09-13T14:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-e4772a2e3b11476e866d6aba8333",
-      "title": "IPT HS Upperclassmen",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-13T14:00:00.000Z",
-      "endDatetime": "2026-09-13T15:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_7a8ffd0d880a9c585521",
-        "name": "I'M-Possible Training, HS Upperclassmen",
-        "color": "#f8e71c",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "46451ec20cefbcb427869724171781e6",
-        "firstName": "Kyle",
-        "lastName": "Owens",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-3057d6f1befc4d4a9acfaa5dbd43",
-      "title": "High School skills ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-13T14:00:00.000Z",
-      "endDatetime": "2026-09-13T15:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "9ec2846f3e28b042afbea41b5873f9b9",
-        "name": "High School",
-        "color": "#AFAFAF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "usr_354c5c2551abc4",
-        "firstName": "Anna",
-        "lastName": "Poe",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-4da1da684e07411aa9c9c869c991",
-      "title": "Shooting Machine",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-13T15:00:00.000Z",
-      "endDatetime": "2026-09-13T15:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-736927a9e6724f1daeed019f39d6",
-      "title": "Shooting Machine ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-13T15:30:00.000Z",
-      "endDatetime": "2026-09-13T16:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-d9e9b7a8a2db499db6c42f0285a4",
-      "title": "Elementary Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-14T16:30:00.000Z",
-      "endDatetime": "2026-09-14T17:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "45ff8456d12ace7a2329917072409344",
-        "name": "Elementary 3rd/4th & 5th/6th Grade",
-        "color": "#1A90D8",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "46451ec20cefbcb427869724171781e6",
-        "firstName": "Kyle",
-        "lastName": "Owens",
-        "__typename": "Profile"
-      },
-      "assistantCoach": {
-        "userUuid": "usr_88e7810f7504876b7c6b0c9bc4a2cc16",
-        "__typename": "Profile"
-      },
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-cd9943c13b1546009f98a53e455b",
-      "title": "High School Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-14T17:30:00.000Z",
-      "endDatetime": "2026-09-14T18:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "9ec2846f3e28b042afbea41b5873f9b9",
-        "name": "High School",
-        "color": "#AFAFAF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "46451ec20cefbcb427869724171781e6",
-        "firstName": "Kyle",
-        "lastName": "Owens",
-        "__typename": "Profile"
-      },
-      "assistantCoach": {
-        "userUuid": "usr_88e7810f7504876b7c6b0c9bc4a2cc16",
-        "__typename": "Profile"
-      },
-      "__typename": "PublicCalendarItem"
-    },
-    {
       "uuid": "cal-c7d069244630447aada57b8d58a6",
       "title": "Middle School 6 WEEK FIBA 3v3 League",
       "type": "Event",
@@ -383,1589 +48,6 @@
         "__typename": "CalendarItemLocation"
       },
       "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-2a627856d1f548e49f6aaf898e06",
-      "title": "Middle School Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-15T16:30:00.000Z",
-      "endDatetime": "2026-09-15T17:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "ac130104cee48758d7145556887dac4f",
-        "firstName": "Keion",
-        "lastName": "Mitchem",
-        "__typename": "Profile"
-      },
-      "assistantCoach": {
-        "userUuid": "usr_8d1673989c54e7",
-        "__typename": "Profile"
-      },
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-18ab242ccf644cd481294d9c5603",
-      "title": "Elementary School Skills ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-15T16:30:00.000Z",
-      "endDatetime": "2026-09-15T17:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "45ff8456d12ace7a2329917072409344",
-        "name": "Elementary 3rd/4th & 5th/6th Grade",
-        "color": "#1A90D8",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "usr_88e7810f7504876b7c6b0c9bc4a2cc16",
-        "firstName": "Cody",
-        "lastName": "Bernbeck",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-b9947f1fcfa840d284f9e29a1bb4",
-      "title": "IPT Middle School ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-15T16:30:00.000Z",
-      "endDatetime": "2026-09-15T17:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_4b10a0d0fe07496ac60d",
-        "name": "I'M-Possible Training, Middle School",
-        "color": "#0fe61b",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "46451ec20cefbcb427869724171781e6",
-        "firstName": "Kyle",
-        "lastName": "Owens",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-a84b866919914d29a66f4f0c48a6",
-      "title": "Elementary Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-15T17:30:00.000Z",
-      "endDatetime": "2026-09-15T18:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "45ff8456d12ace7a2329917072409344",
-        "name": "Elementary 3rd/4th & 5th/6th Grade",
-        "color": "#1A90D8",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "usr_88e7810f7504876b7c6b0c9bc4a2cc16",
-        "firstName": "Cody",
-        "lastName": "Bernbeck",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-fc9abc62b9c84a61a449c6073ead",
-      "title": "Middle School Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-15T17:30:00.000Z",
-      "endDatetime": "2026-09-15T18:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "usr_8d1673989c54e7",
-        "firstName": "Jonathan",
-        "lastName": "Scott",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-f789109db0a24ac5b47da6bc6392",
-      "title": "IPT HS Underclassman ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-15T17:30:00.000Z",
-      "endDatetime": "2026-09-15T18:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_5065014b3c347fa10a21",
-        "name": "I'M-Possible Training, HS Underclassmen",
-        "color": "#d0021b",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "46451ec20cefbcb427869724171781e6",
-        "firstName": "Kyle",
-        "lastName": "Owens",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-3dd091ba98c849c9ad5887540afb",
-      "title": "Elementary/MS - Speed & Agility",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-15T17:30:00.000Z",
-      "endDatetime": "2026-09-15T18:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_7956062fa0cc11f19cca0affe13b3daf",
-        "name": "Sports Performance Training - Elementary/MS",
-        "color": "#e2b5eb",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "687ae36e7b3788d40f42ba41748a5f70",
-        "firstName": "Johnson",
-        "lastName": "Sports Performance",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-a681f4969d7a4433b6f8878ccbcc",
-      "title": "Middle School Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-15T18:30:00.000Z",
-      "endDatetime": "2026-09-15T19:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "ac130104cee48758d7145556887dac4f",
-        "firstName": "Keion",
-        "lastName": "Mitchem",
-        "__typename": "Profile"
-      },
-      "assistantCoach": {
-        "userUuid": "usr_88e7810f7504876b7c6b0c9bc4a2cc16",
-        "__typename": "Profile"
-      },
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-87097ed11f124778a67d78007414",
-      "title": "IPT HS Upperclassman ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-15T18:30:00.000Z",
-      "endDatetime": "2026-09-15T19:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_7a8ffd0d880a9c585521",
-        "name": "I'M-Possible Training, HS Upperclassmen",
-        "color": "#f8e71c",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "46451ec20cefbcb427869724171781e6",
-        "firstName": "Kyle",
-        "lastName": "Owens",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-09102ef6dcad4eaaad1ea320df5a",
-      "title": "High School Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-15T18:30:00.000Z",
-      "endDatetime": "2026-09-15T19:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "9ec2846f3e28b042afbea41b5873f9b9",
-        "name": "High School",
-        "color": "#AFAFAF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "usr_8d1673989c54e7",
-        "firstName": "Jonathan",
-        "lastName": "Scott",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-012ba4e45d2b4d639c3abf558def",
-      "title": "High School Skills ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-15T19:30:00.000Z",
-      "endDatetime": "2026-09-15T20:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "9ec2846f3e28b042afbea41b5873f9b9",
-        "name": "High School",
-        "color": "#AFAFAF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "ac130104cee48758d7145556887dac4f",
-        "firstName": "Keion",
-        "lastName": "Mitchem",
-        "__typename": "Profile"
-      },
-      "assistantCoach": {
-        "userUuid": "usr_88e7810f7504876b7c6b0c9bc4a2cc16",
-        "__typename": "Profile"
-      },
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-340532625de14d629df7ed4f3676",
-      "title": "HS Upper/Varsity",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-15T19:30:00.000Z",
-      "endDatetime": "2026-09-15T20:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_d8d680d48aa611f19cca0affe13b3daf",
-        "name": "High School Skills Varsity",
-        "color": "#8b572a",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "usr_8d1673989c54e7",
-        "firstName": "Jonathan",
-        "lastName": "Scott",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-91e17e09313f4be7b2adf1da6b1f",
-      "title": "Shooting Machine ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-15T20:30:00.000Z",
-      "endDatetime": "2026-09-15T21:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-0c88f2e6556043b597ac51075b8d",
-      "title": "Elementary Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-16T16:30:00.000Z",
-      "endDatetime": "2026-09-16T17:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "45ff8456d12ace7a2329917072409344",
-        "name": "Elementary 3rd/4th & 5th/6th Grade",
-        "color": "#1A90D8",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "usr_354c5c2551abc4",
-        "firstName": "Anna",
-        "lastName": "Poe",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-3a2a125f81bd426a9b8a0205839e",
-      "title": "Middle School Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-16T16:30:00.000Z",
-      "endDatetime": "2026-09-16T17:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "ac130104cee48758d7145556887dac4f",
-        "firstName": "Keion",
-        "lastName": "Mitchem",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-7e7077ff187f4045aa683d6cda30",
-      "title": "Middle School Skills ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-16T16:30:00.000Z",
-      "endDatetime": "2026-09-16T17:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "46451ec20cefbcb427869724171781e6",
-        "firstName": "Kyle",
-        "lastName": "Owens",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-41c7acf09d774b6091ed3c393e10",
-      "title": "Elementary Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-16T17:30:00.000Z",
-      "endDatetime": "2026-09-16T18:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "45ff8456d12ace7a2329917072409344",
-        "name": "Elementary 3rd/4th & 5th/6th Grade",
-        "color": "#1A90D8",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "usr_354c5c2551abc4",
-        "firstName": "Anna",
-        "lastName": "Poe",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-d435b27af34646c8a0a46bf90250",
-      "title": "Middle School Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-16T17:30:00.000Z",
-      "endDatetime": "2026-09-16T18:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "ac130104cee48758d7145556887dac4f",
-        "firstName": "Keion",
-        "lastName": "Mitchem",
-        "__typename": "Profile"
-      },
-      "assistantCoach": {
-        "userUuid": "46451ec20cefbcb427869724171781e6",
-        "__typename": "Profile"
-      },
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-7ff82b6729754eb7b24f8ee05e87",
-      "title": "HS - Speed & Agility",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-16T17:30:00.000Z",
-      "endDatetime": "2026-09-16T18:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_93a97d2626c2c552666a",
-        "name": "Sports Performance Training - High School",
-        "color": "#f0c989",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "687ae36e7b3788d40f42ba41748a5f70",
-        "firstName": "Johnson",
-        "lastName": "Sports Performance",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-f5d51a2e67ad49438c7facac89e4",
-      "title": "Shooting Machine",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-16T18:30:00.000Z",
-      "endDatetime": "2026-09-16T19:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-da5c35d8d39448ed90480a27244c",
-      "title": "High School Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-16T18:30:00.000Z",
-      "endDatetime": "2026-09-16T19:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "9ec2846f3e28b042afbea41b5873f9b9",
-        "name": "High School",
-        "color": "#AFAFAF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "ac130104cee48758d7145556887dac4f",
-        "firstName": "Keion",
-        "lastName": "Mitchem",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-ee1060d741d246ae944b360188ae",
-      "title": "Upper Middle School Skills ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-16T18:30:00.000Z",
-      "endDatetime": "2026-09-16T19:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_dcdbf6718aa911f19cca0affe13b3daf",
-        "name": "Middle School Skills Advanced",
-        "color": "#d3c876",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "usr_354c5c2551abc4",
-        "firstName": "Anna",
-        "lastName": "Poe",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-ce81f940bccd4046a2d35ef2489c",
-      "title": "Shooting Machine",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-16T19:30:00.000Z",
-      "endDatetime": "2026-09-16T20:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-a20753f0d8194128b28f5be38f8b",
-      "title": "High School Skills ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-16T19:30:00.000Z",
-      "endDatetime": "2026-09-16T20:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "9ec2846f3e28b042afbea41b5873f9b9",
-        "name": "High School",
-        "color": "#AFAFAF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "usr_354c5c2551abc4",
-        "firstName": "Anna",
-        "lastName": "Poe",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-f8600277fdf54e0d924d67a25c1e",
-      "title": "HS Upper/Varsity",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-16T19:30:00.000Z",
-      "endDatetime": "2026-09-16T20:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_d8d680d48aa611f19cca0affe13b3daf",
-        "name": "High School Skills Varsity",
-        "color": "#8b572a",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "ac130104cee48758d7145556887dac4f",
-        "firstName": "Keion",
-        "lastName": "Mitchem",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-aae10a73c81b4391afa5b57e4ff4",
-      "title": "Shooting Machine",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-16T20:00:00.000Z",
-      "endDatetime": "2026-09-16T20:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-347c0332f1d24e6a957085d22d7b",
-      "title": "Shooting Machine",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-16T20:30:00.000Z",
-      "endDatetime": "2026-09-16T21:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-33556e74cfde49e7b1dc62c2e62a",
-      "title": "Middle School Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-17T16:30:00.000Z",
-      "endDatetime": "2026-09-17T17:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "ac130104cee48758d7145556887dac4f",
-        "firstName": "Keion",
-        "lastName": "Mitchem",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-05036adb4f8c4cf4a7c3636adfeb",
-      "title": "Elementary School Skills ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-17T16:30:00.000Z",
-      "endDatetime": "2026-09-17T17:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "45ff8456d12ace7a2329917072409344",
-        "name": "Elementary 3rd/4th & 5th/6th Grade",
-        "color": "#1A90D8",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "usr_354c5c2551abc4",
-        "firstName": "Anna",
-        "lastName": "Poe",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-42588b2f54b24231bbe4c91a480c",
-      "title": "Middle School Skills ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-17T16:30:00.000Z",
-      "endDatetime": "2026-09-17T17:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "usr_8d1673989c54e7",
-        "firstName": "Jonathan",
-        "lastName": "Scott",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-552375ac340043c3a365c53a9158",
-      "title": "Middle School Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-17T17:30:00.000Z",
-      "endDatetime": "2026-09-17T18:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "ac130104cee48758d7145556887dac4f",
-        "firstName": "Keion",
-        "lastName": "Mitchem",
-        "__typename": "Profile"
-      },
-      "assistantCoach": {
-        "userUuid": "usr_354c5c2551abc4",
-        "__typename": "Profile"
-      },
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-169407fddada42e79357c3d0c94c",
-      "title": "Elementary Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-17T17:30:00.000Z",
-      "endDatetime": "2026-09-17T18:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "45ff8456d12ace7a2329917072409344",
-        "name": "Elementary 3rd/4th & 5th/6th Grade",
-        "color": "#1A90D8",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "usr_354c5c2551abc4",
-        "firstName": "Anna",
-        "lastName": "Poe",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-5e975854921d4a398b20362c50bf",
-      "title": "Shot Doctor - Middle School (Grades 7-8)",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-17T18:30:00.000Z",
-      "endDatetime": "2026-09-17T19:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_ccfc37b0501835516a66",
-        "name": "Shot Doctor - Middle School Grades 7-8",
-        "color": "#417505",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "usr_8d1673989c54e7",
-        "firstName": "Jonathan",
-        "lastName": "Scott",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-44b3d4fc42e04b37b3d5fc105311",
-      "title": "High School Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-17T18:30:00.000Z",
-      "endDatetime": "2026-09-17T19:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "9ec2846f3e28b042afbea41b5873f9b9",
-        "name": "High School",
-        "color": "#AFAFAF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "ac130104cee48758d7145556887dac4f",
-        "firstName": "Keion",
-        "lastName": "Mitchem",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-b0afd80caa404a0bbd6cbe9d9923",
-      "title": "Upper Middle School Skills ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-17T18:30:00.000Z",
-      "endDatetime": "2026-09-17T19:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_dcdbf6718aa911f19cca0affe13b3daf",
-        "name": "Middle School Skills Advanced",
-        "color": "#d3c876",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "usr_354c5c2551abc4",
-        "firstName": "Anna",
-        "lastName": "Poe",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-caf6fc5a15b64f31ac10cedc701f",
-      "title": "Shot Doctor - High School",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-17T19:30:00.000Z",
-      "endDatetime": "2026-09-17T20:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_2f875fae17bd0db3cdf7",
-        "name": "Shot Doctor - High School",
-        "color": "#dc5c20",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "usr_8d1673989c54e7",
-        "firstName": "Jonathan",
-        "lastName": "Scott",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-9297e90b51864e858f9097cca38b",
-      "title": "High School Skills ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-17T19:30:00.000Z",
-      "endDatetime": "2026-09-17T20:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "9ec2846f3e28b042afbea41b5873f9b9",
-        "name": "High School",
-        "color": "#AFAFAF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "usr_354c5c2551abc4",
-        "firstName": "Anna",
-        "lastName": "Poe",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-234f6514e81c431eaca090726399",
-      "title": "HS Upper/Varsity",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-17T19:30:00.000Z",
-      "endDatetime": "2026-09-17T20:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_d8d680d48aa611f19cca0affe13b3daf",
-        "name": "High School Skills Varsity",
-        "color": "#8b572a",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "ac130104cee48758d7145556887dac4f",
-        "firstName": "Keion",
-        "lastName": "Mitchem",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-c714941476984d1c852f713ad0da",
-      "title": "Shooting Machine",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-17T20:30:00.000Z",
-      "endDatetime": "2026-09-17T21:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-6aa01d30a9814a00bd34f3a82a15",
-      "title": "Shooting Machine",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-18T16:30:00.000Z",
-      "endDatetime": "2026-09-18T17:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-a98eaf8c1dd24a1099e00ddd1e37",
-      "title": "High School Skills ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-18T16:30:00.000Z",
-      "endDatetime": "2026-09-18T17:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "9ec2846f3e28b042afbea41b5873f9b9",
-        "name": "High School",
-        "color": "#AFAFAF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "46451ec20cefbcb427869724171781e6",
-        "firstName": "Kyle",
-        "lastName": "Owens",
-        "__typename": "Profile"
-      },
-      "assistantCoach": {
-        "userUuid": "ac130104cee48758d7145556887dac4f",
-        "__typename": "Profile"
-      },
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-1dc19ee196c54f40b8fde870997a",
-      "title": "Elementary/MS - Speed & Agility",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-18T16:30:00.000Z",
-      "endDatetime": "2026-09-18T17:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_7956062fa0cc11f19cca0affe13b3daf",
-        "name": "Sports Performance Training - Elementary/MS",
-        "color": "#e2b5eb",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "687ae36e7b3788d40f42ba41748a5f70",
-        "firstName": "Johnson",
-        "lastName": "Sports Performance",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-7200b3ecf56845fcae67d15ab3e6",
-      "title": "Shooting Machine",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-18T17:00:00.000Z",
-      "endDatetime": "2026-09-18T17:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-bf7283027f914c49aa6547c41d95",
-      "title": "Shooting Machine",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-18T17:30:00.000Z",
-      "endDatetime": "2026-09-18T18:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-104b7492237a40cfaddbedf4617b",
-      "title": "Elementary Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-18T17:30:00.000Z",
-      "endDatetime": "2026-09-18T18:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "45ff8456d12ace7a2329917072409344",
-        "name": "Elementary 3rd/4th & 5th/6th Grade",
-        "color": "#1A90D8",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "46451ec20cefbcb427869724171781e6",
-        "firstName": "Kyle",
-        "lastName": "Owens",
-        "__typename": "Profile"
-      },
-      "assistantCoach": {
-        "userUuid": "ac130104cee48758d7145556887dac4f",
-        "__typename": "Profile"
-      },
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-2aaec3d754104a0c822a4bbbf13b",
-      "title": "HS - Speed & Agility",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-18T17:30:00.000Z",
-      "endDatetime": "2026-09-18T18:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_93a97d2626c2c552666a",
-        "name": "Sports Performance Training - High School",
-        "color": "#f0c989",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "687ae36e7b3788d40f42ba41748a5f70",
-        "firstName": "Johnson",
-        "lastName": "Sports Performance",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-dd04c0fe0b274c238c23d027691d",
-      "title": "Shooting Machine",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-18T18:00:00.000Z",
-      "endDatetime": "2026-09-18T18:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-d702f4d56fbb4faa80cd2a88d7d1",
-      "title": "Middle School Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-18T18:30:00.000Z",
-      "endDatetime": "2026-09-18T19:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "46451ec20cefbcb427869724171781e6",
-        "firstName": "Kyle",
-        "lastName": "Owens",
-        "__typename": "Profile"
-      },
-      "assistantCoach": {
-        "userUuid": "usr_8d1673989c54e7",
-        "__typename": "Profile"
-      },
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-0fbaedd817b14de7a9c9f98ec851",
-      "title": "Shooting Machine ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-18T19:30:00.000Z",
-      "endDatetime": "2026-09-18T20:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-64e762e61c08404b97be3d09aa35",
-      "title": "Middle Schools 5v5 Runs",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-18T19:30:00.000Z",
-      "endDatetime": "2026-09-18T20:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "46451ec20cefbcb427869724171781e6",
-        "firstName": "Kyle",
-        "lastName": "Owens",
-        "__typename": "Profile"
-      },
-      "assistantCoach": {
-        "userUuid": "usr_8d1673989c54e7",
-        "__typename": "Profile"
-      },
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-9d8cb128a5eb4c9da2430204a24b",
-      "title": "Shooting Machine ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-18T20:00:00.000Z",
-      "endDatetime": "2026-09-18T20:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-13f123f161704a559cee390bfee7",
-      "title": "Shooting Machine ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-18T20:30:00.000Z",
-      "endDatetime": "2026-09-18T21:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-651d0819a02d451dbc07a734a1bd",
-      "title": "Lil Dribblers",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-19T09:00:00.000Z",
-      "endDatetime": "2026-09-19T10:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "3c5ddd9f76ada82d0ef78fd567659f37",
-        "name": "Lil Dribblers",
-        "color": "#333333",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "usr_354c5c2551abc4",
-        "firstName": "Anna",
-        "lastName": "Poe",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-bcee39679e1f41a498a912edb46b",
-      "title": "Shot Doctor - Elementary (Grades 4-6)",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-19T09:00:00.000Z",
-      "endDatetime": "2026-09-19T10:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_03f4b6b824d956d7e572",
-        "name": "Shot Doctor - Elementary Grades 4-6",
-        "color": "#f5a623",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "usr_8d1673989c54e7",
-        "firstName": "Jonathan",
-        "lastName": "Scott",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-b415e72026d847908e0fbdcdb5ce",
-      "title": "Elementary School Skills ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-19T10:00:00.000Z",
-      "endDatetime": "2026-09-19T11:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "45ff8456d12ace7a2329917072409344",
-        "name": "Elementary 3rd/4th & 5th/6th Grade",
-        "color": "#1A90D8",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "usr_354c5c2551abc4",
-        "firstName": "Anna",
-        "lastName": "Poe",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-1afcce2aaa8b410ba9ec97d1b768",
-      "title": "Middle School Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-19T11:00:00.000Z",
-      "endDatetime": "2026-09-19T12:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "ac130104cee48758d7145556887dac4f",
-        "firstName": "Keion",
-        "lastName": "Mitchem",
-        "__typename": "Profile"
-      },
-      "assistantCoach": {
-        "userUuid": "usr_354c5c2551abc4",
-        "__typename": "Profile"
-      },
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-3c6bcd3690ee40b69a79b89c385c",
-      "title": "Shooting Machine",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-19T15:30:00.000Z",
-      "endDatetime": "2026-09-19T16:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-c468f907845b4e1a854804a5174b",
-      "title": "IPT Middle School ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-19T15:30:00.000Z",
-      "endDatetime": "2026-09-19T16:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_4b10a0d0fe07496ac60d",
-        "name": "I'M-Possible Training, Middle School",
-        "color": "#0fe61b",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "46451ec20cefbcb427869724171781e6",
-        "firstName": "Kyle",
-        "lastName": "Owens",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-0c0422c827304668838e294fa0b1",
-      "title": "Shooting Machine",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-19T16:00:00.000Z",
-      "endDatetime": "2026-09-19T16:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-aa1413a19f7e4bcb93bcb1481e6f",
-      "title": "Shooting Machine",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-19T16:30:00.000Z",
-      "endDatetime": "2026-09-19T17:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-4e2bd3453752433790840637dd28",
-      "title": "IPT HS Underclassman",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-19T16:30:00.000Z",
-      "endDatetime": "2026-09-19T17:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_5065014b3c347fa10a21",
-        "name": "I'M-Possible Training, HS Underclassmen",
-        "color": "#d0021b",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "46451ec20cefbcb427869724171781e6",
-        "firstName": "Kyle",
-        "lastName": "Owens",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-4b77568d742543faa058b02ccc34",
-      "title": "Shooting Machine",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-19T17:00:00.000Z",
-      "endDatetime": "2026-09-19T17:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-4ca678ed33ee44aa81b9cb7dd13b",
-      "title": "IPT HS Upperclassman",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-19T17:30:00.000Z",
-      "endDatetime": "2026-09-19T18:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_7a8ffd0d880a9c585521",
-        "name": "I'M-Possible Training, HS Upperclassmen",
-        "color": "#f8e71c",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "46451ec20cefbcb427869724171781e6",
-        "firstName": "Kyle",
-        "lastName": "Owens",
-        "__typename": "Profile"
-      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -7907,6 +5989,1934 @@
       "isAllDay": false,
       "startDatetime": "2026-10-10T17:30:00.000Z",
       "endDatetime": "2026-10-10T18:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_7a8ffd0d880a9c585521",
+        "name": "I'M-Possible Training, HS Upperclassmen",
+        "color": "#f8e71c",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "46451ec20cefbcb427869724171781e6",
+        "firstName": "Kyle",
+        "lastName": "Owens",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-25d6c2fbde884c5e982f06278508",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-11T12:00:00.000Z",
+      "endDatetime": "2026-10-11T12:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-55cb59c49d164799826d43a5a899",
+      "title": "IPT Middle School",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-11T12:00:00.000Z",
+      "endDatetime": "2026-10-11T13:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_4b10a0d0fe07496ac60d",
+        "name": "I'M-Possible Training, Middle School",
+        "color": "#0fe61b",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "46451ec20cefbcb427869724171781e6",
+        "firstName": "Kyle",
+        "lastName": "Owens",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-690cbece6bf44b8e85c04d283291",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-11T12:30:00.000Z",
+      "endDatetime": "2026-10-11T13:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-f4d55b5ddc8d451c99583ad7b60b",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-11T13:00:00.000Z",
+      "endDatetime": "2026-10-11T13:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-32c58f16c2b045f5afe990a9d47e",
+      "title": "IPT HS Underclassmen",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-11T13:00:00.000Z",
+      "endDatetime": "2026-10-11T14:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_5065014b3c347fa10a21",
+        "name": "I'M-Possible Training, HS Underclassmen",
+        "color": "#d0021b",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "46451ec20cefbcb427869724171781e6",
+        "firstName": "Kyle",
+        "lastName": "Owens",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-38f50aa1ee084262bc9e99dbe3b0",
+      "title": "Middle School Skills ",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-11T13:00:00.000Z",
+      "endDatetime": "2026-10-11T14:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "b4456f95064b95d92044360a4ece1b35",
+        "name": "Middle School",
+        "color": "#9B00FF",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "a7c3d9b61017ec286d6b7b55edd40e94",
+        "firstName": "Noah",
+        "lastName": "Baca",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-fabf000592f444f88b9b676936f8",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-11T13:30:00.000Z",
+      "endDatetime": "2026-10-11T14:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-525f2a78de6d48f891d3650cf973",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-11T14:00:00.000Z",
+      "endDatetime": "2026-10-11T14:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-1be9753b9f174a68beaccfe84dd7",
+      "title": "IPT HS Upperclassmen",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-11T14:00:00.000Z",
+      "endDatetime": "2026-10-11T15:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_7a8ffd0d880a9c585521",
+        "name": "I'M-Possible Training, HS Upperclassmen",
+        "color": "#f8e71c",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "46451ec20cefbcb427869724171781e6",
+        "firstName": "Kyle",
+        "lastName": "Owens",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-158bc154c8214386bf70296f5ad8",
+      "title": "High School skills ",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-11T14:00:00.000Z",
+      "endDatetime": "2026-10-11T15:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "9ec2846f3e28b042afbea41b5873f9b9",
+        "name": "High School",
+        "color": "#AFAFAF",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "a7c3d9b61017ec286d6b7b55edd40e94",
+        "firstName": "Noah",
+        "lastName": "Baca",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-4f8324a9b33b45e1b07ed8920861",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-11T14:30:00.000Z",
+      "endDatetime": "2026-10-11T15:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-ddfa9334900b44fbbeb821711a32",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-11T15:00:00.000Z",
+      "endDatetime": "2026-10-11T15:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-a7a459d605a2430eb8514d7e18f2",
+      "title": "Shooting Machine ",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-11T15:30:00.000Z",
+      "endDatetime": "2026-10-11T16:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-dff749b8492a43f798cd7dfe287a",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-12T16:30:00.000Z",
+      "endDatetime": "2026-10-12T17:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-4272dda0cc494401aaa381868ab9",
+      "title": "Elementary Skills",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-12T16:30:00.000Z",
+      "endDatetime": "2026-10-12T17:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "45ff8456d12ace7a2329917072409344",
+        "name": "Elementary 3rd/4th & 5th/6th Grade",
+        "color": "#1A90D8",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-db42b822cfe8446fbf622b4effe9",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-12T17:00:00.000Z",
+      "endDatetime": "2026-10-12T17:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-b203d636062a4be7bf54158d49b3",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-12T17:30:00.000Z",
+      "endDatetime": "2026-10-12T18:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-8f886a2e0a594c88a0955f1623f0",
+      "title": "High School Skills",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-12T17:30:00.000Z",
+      "endDatetime": "2026-10-12T18:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "9ec2846f3e28b042afbea41b5873f9b9",
+        "name": "High School",
+        "color": "#AFAFAF",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-73d0e1d93d984d82b34f23993b7d",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-12T18:00:00.000Z",
+      "endDatetime": "2026-10-12T18:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-af728be1fa974481b851256068cd",
+      "title": "Middle School Skills",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-13T16:30:00.000Z",
+      "endDatetime": "2026-10-13T17:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "b4456f95064b95d92044360a4ece1b35",
+        "name": "Middle School",
+        "color": "#9B00FF",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-0c04c328b0e143bbaed00a2a3f2d",
+      "title": "Elementary School Skills ",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-13T16:30:00.000Z",
+      "endDatetime": "2026-10-13T17:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "45ff8456d12ace7a2329917072409344",
+        "name": "Elementary 3rd/4th & 5th/6th Grade",
+        "color": "#1A90D8",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-2b2aac30ab554f0f84d913bd46f0",
+      "title": "IPT Middle School ",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-13T16:30:00.000Z",
+      "endDatetime": "2026-10-13T17:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_4b10a0d0fe07496ac60d",
+        "name": "I'M-Possible Training, Middle School",
+        "color": "#0fe61b",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-6da6669297284cf89c618b03a39b",
+      "title": "Elementary Skills",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-13T17:30:00.000Z",
+      "endDatetime": "2026-10-13T18:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "45ff8456d12ace7a2329917072409344",
+        "name": "Elementary 3rd/4th & 5th/6th Grade",
+        "color": "#1A90D8",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-11725850af63447e939aaba7ec78",
+      "title": "Middle School Skills",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-13T17:30:00.000Z",
+      "endDatetime": "2026-10-13T18:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "b4456f95064b95d92044360a4ece1b35",
+        "name": "Middle School",
+        "color": "#9B00FF",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-a2b9c5e225434f73a0b96e67163c",
+      "title": "IPT HS Underclassman ",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-13T17:30:00.000Z",
+      "endDatetime": "2026-10-13T18:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_5065014b3c347fa10a21",
+        "name": "I'M-Possible Training, HS Underclassmen",
+        "color": "#d0021b",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-52a43fde350342bea79ce7969128",
+      "title": "Elementary/MS - Speed & Agility",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-13T17:30:00.000Z",
+      "endDatetime": "2026-10-13T18:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_7956062fa0cc11f19cca0affe13b3daf",
+        "name": "Sports Performance Training - Elementary/MS",
+        "color": "#e2b5eb",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "687ae36e7b3788d40f42ba41748a5f70",
+        "firstName": "Johnson",
+        "lastName": "Sports Performance",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-ad8d569eb3d849769e76d50c74ca",
+      "title": "Middle School Skills",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-13T18:30:00.000Z",
+      "endDatetime": "2026-10-13T19:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "b4456f95064b95d92044360a4ece1b35",
+        "name": "Middle School",
+        "color": "#9B00FF",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-4481dee5226b4f59a71bd34f0dcc",
+      "title": "IPT HS Upperclassman ",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-13T18:30:00.000Z",
+      "endDatetime": "2026-10-13T19:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_7a8ffd0d880a9c585521",
+        "name": "I'M-Possible Training, HS Upperclassmen",
+        "color": "#f8e71c",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "46451ec20cefbcb427869724171781e6",
+        "firstName": "Kyle",
+        "lastName": "Owens",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-3ff5d3b9af1c430d92864392edc0",
+      "title": "High School Skills",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-13T18:30:00.000Z",
+      "endDatetime": "2026-10-13T19:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "9ec2846f3e28b042afbea41b5873f9b9",
+        "name": "High School",
+        "color": "#AFAFAF",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-1dfe4d1d30ea4b608cd95272d95e",
+      "title": "High School Skills ",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-13T19:30:00.000Z",
+      "endDatetime": "2026-10-13T20:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "9ec2846f3e28b042afbea41b5873f9b9",
+        "name": "High School",
+        "color": "#AFAFAF",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "usr_88e7810f7504876b7c6b0c9bc4a2cc16",
+        "firstName": "Cody",
+        "lastName": "Bernbeck",
+        "__typename": "Profile"
+      },
+      "assistantCoach": {
+        "userUuid": "usr_354c5c2551abc4",
+        "__typename": "Profile"
+      },
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-e07f0f2a7adf4ee28633c3a77454",
+      "title": "HS Upper/Varsity",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-13T19:30:00.000Z",
+      "endDatetime": "2026-10-13T20:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_d8d680d48aa611f19cca0affe13b3daf",
+        "name": "High School Skills Varsity",
+        "color": "#8b572a",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "46451ec20cefbcb427869724171781e6",
+        "firstName": "Kyle",
+        "lastName": "Owens",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-d8421399319f460ba25b4775fa6a",
+      "title": "Shooting Machine ",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-13T20:30:00.000Z",
+      "endDatetime": "2026-10-13T21:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-9ac8e9d845cb4c918e60b70653f6",
+      "title": "Elementary Skills",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-14T16:30:00.000Z",
+      "endDatetime": "2026-10-14T17:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "45ff8456d12ace7a2329917072409344",
+        "name": "Elementary 3rd/4th & 5th/6th Grade",
+        "color": "#1A90D8",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-6bf54896f45642198949e5133c84",
+      "title": "Middle School Skills",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-14T16:30:00.000Z",
+      "endDatetime": "2026-10-14T17:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "b4456f95064b95d92044360a4ece1b35",
+        "name": "Middle School",
+        "color": "#9B00FF",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-bc8912d8ad1f4d2fb537895783e9",
+      "title": "Middle School Skills ",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-14T16:30:00.000Z",
+      "endDatetime": "2026-10-14T17:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "b4456f95064b95d92044360a4ece1b35",
+        "name": "Middle School",
+        "color": "#9B00FF",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "usr_8d1673989c54e7",
+        "firstName": "Jonathan",
+        "lastName": "Scott",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-e597cd1fa97745f6bd09b468174a",
+      "title": "Elementary Skills",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-14T17:30:00.000Z",
+      "endDatetime": "2026-10-14T18:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "45ff8456d12ace7a2329917072409344",
+        "name": "Elementary 3rd/4th & 5th/6th Grade",
+        "color": "#1A90D8",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-139cc38c42ce4c26967b6353070b",
+      "title": "Middle School Skills",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-14T17:30:00.000Z",
+      "endDatetime": "2026-10-14T18:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "b4456f95064b95d92044360a4ece1b35",
+        "name": "Middle School",
+        "color": "#9B00FF",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-a8654bff45ae4ff0b36d72e0f3b1",
+      "title": "HS - Speed & Agility",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-14T17:30:00.000Z",
+      "endDatetime": "2026-10-14T18:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_93a97d2626c2c552666a",
+        "name": "Sports Performance Training - High School",
+        "color": "#f0c989",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "687ae36e7b3788d40f42ba41748a5f70",
+        "firstName": "Johnson",
+        "lastName": "Sports Performance",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-2c745f87a5fa4072921b06437826",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-14T18:30:00.000Z",
+      "endDatetime": "2026-10-14T19:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-9341a37b1df14d549b8975007b26",
+      "title": "Middle School Club Team Skills",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-14T18:30:00.000Z",
+      "endDatetime": "2026-10-14T19:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_c6f4df2473f12d3afa6f",
+        "name": "Middle School Club",
+        "color": "#82e9e8",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "usr_88e7810f7504876b7c6b0c9bc4a2cc16",
+        "firstName": "Cody",
+        "lastName": "Bernbeck",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-034247b386ec485ea5f3386a664c",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-14T19:00:00.000Z",
+      "endDatetime": "2026-10-14T19:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-62f2311b2ddf43aca874f5da62a0",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-14T19:30:00.000Z",
+      "endDatetime": "2026-10-14T20:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-4de148b06aa9456d88ff540ad9c7",
+      "title": "High School Skills ",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-14T19:30:00.000Z",
+      "endDatetime": "2026-10-14T20:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "9ec2846f3e28b042afbea41b5873f9b9",
+        "name": "High School",
+        "color": "#AFAFAF",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "usr_88e7810f7504876b7c6b0c9bc4a2cc16",
+        "firstName": "Cody",
+        "lastName": "Bernbeck",
+        "__typename": "Profile"
+      },
+      "assistantCoach": {
+        "userUuid": "usr_354c5c2551abc4",
+        "__typename": "Profile"
+      },
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-45fa87c49e53421d848df8eadff3",
+      "title": "HS Upper/Varsity",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-14T19:30:00.000Z",
+      "endDatetime": "2026-10-14T20:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_d8d680d48aa611f19cca0affe13b3daf",
+        "name": "High School Skills Varsity",
+        "color": "#8b572a",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "46451ec20cefbcb427869724171781e6",
+        "firstName": "Kyle",
+        "lastName": "Owens",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-ccfe5a7242474095b7702aa6c7aa",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-14T20:00:00.000Z",
+      "endDatetime": "2026-10-14T20:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-dfaf2f80f7e444138f0676290aab",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-14T20:30:00.000Z",
+      "endDatetime": "2026-10-14T21:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-d28b11f6569b403083bc2094f7f2",
+      "title": "Middle School Skills",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-15T16:30:00.000Z",
+      "endDatetime": "2026-10-15T17:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "b4456f95064b95d92044360a4ece1b35",
+        "name": "Middle School",
+        "color": "#9B00FF",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-28e9a98fd7fa435b89e85dcf0203",
+      "title": "Elementary School Skills ",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-15T16:30:00.000Z",
+      "endDatetime": "2026-10-15T17:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "45ff8456d12ace7a2329917072409344",
+        "name": "Elementary 3rd/4th & 5th/6th Grade",
+        "color": "#1A90D8",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-6ab7441f1b344438baf5171b3ed1",
+      "title": "Middle School Club Team Skills ",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-15T16:30:00.000Z",
+      "endDatetime": "2026-10-15T17:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_c6f4df2473f12d3afa6f",
+        "name": "Middle School Club",
+        "color": "#82e9e8",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "usr_8d1673989c54e7",
+        "firstName": "Jonathan",
+        "lastName": "Scott",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-f8e4794c3eaf4213ada357048ff5",
+      "title": "Elementary Skills",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-15T17:30:00.000Z",
+      "endDatetime": "2026-10-15T18:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "45ff8456d12ace7a2329917072409344",
+        "name": "Elementary 3rd/4th & 5th/6th Grade",
+        "color": "#1A90D8",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-6c76c2f40e0243cca9b543989c8f",
+      "title": "Middle School Skills",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-15T17:30:00.000Z",
+      "endDatetime": "2026-10-15T18:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "b4456f95064b95d92044360a4ece1b35",
+        "name": "Middle School",
+        "color": "#9B00FF",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-f46747051e044ca7aec154d02a26",
+      "title": "Shot Doctor - Elementary (Grades 4-6)",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-15T17:30:00.000Z",
+      "endDatetime": "2026-10-15T18:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_03f4b6b824d956d7e572",
+        "name": "Shot Doctor - Elementary Grades 4-6",
+        "color": "#f5a623",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "usr_8d1673989c54e7",
+        "firstName": "Jonathan",
+        "lastName": "Scott",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-4d22abd2de3b41cfb492b675fbc9",
+      "title": "Shot Doctor - Middle School (Grades 7-8)",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-15T18:30:00.000Z",
+      "endDatetime": "2026-10-15T19:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_ccfc37b0501835516a66",
+        "name": "Shot Doctor - Middle School Grades 7-8",
+        "color": "#417505",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "usr_8d1673989c54e7",
+        "firstName": "Jonathan",
+        "lastName": "Scott",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-52d07e9fd1eb4f1fb7adec468496",
+      "title": "Middle School Skills",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-15T18:30:00.000Z",
+      "endDatetime": "2026-10-15T19:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "b4456f95064b95d92044360a4ece1b35",
+        "name": "Middle School",
+        "color": "#9B00FF",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "usr_88e7810f7504876b7c6b0c9bc4a2cc16",
+        "firstName": "Cody",
+        "lastName": "Bernbeck",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-8333b2f54dca4fab93df05b6b27c",
+      "title": "HS Upper/Varsity",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-15T18:30:00.000Z",
+      "endDatetime": "2026-10-15T19:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_d8d680d48aa611f19cca0affe13b3daf",
+        "name": "High School Skills Varsity",
+        "color": "#8b572a",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "46451ec20cefbcb427869724171781e6",
+        "firstName": "Kyle",
+        "lastName": "Owens",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-e7ddc59ae67b45f588d4755e2302",
+      "title": "Shot Doctor - High School",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-15T19:30:00.000Z",
+      "endDatetime": "2026-10-15T20:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_2f875fae17bd0db3cdf7",
+        "name": "Shot Doctor - High School",
+        "color": "#dc5c20",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "usr_8d1673989c54e7",
+        "firstName": "Jonathan",
+        "lastName": "Scott",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-7a2e07cef8d34a0fbfd1f381a1dd",
+      "title": "High School Skills ",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-15T19:30:00.000Z",
+      "endDatetime": "2026-10-15T20:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "9ec2846f3e28b042afbea41b5873f9b9",
+        "name": "High School",
+        "color": "#AFAFAF",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "usr_88e7810f7504876b7c6b0c9bc4a2cc16",
+        "firstName": "Cody",
+        "lastName": "Bernbeck",
+        "__typename": "Profile"
+      },
+      "assistantCoach": {
+        "userUuid": "usr_354c5c2551abc4",
+        "__typename": "Profile"
+      },
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-4fd2bb3ead2444b092126a0229b0",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-15T20:30:00.000Z",
+      "endDatetime": "2026-10-15T21:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-e6ccf403b81445e9afb747cea378",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-16T16:30:00.000Z",
+      "endDatetime": "2026-10-16T17:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-0029c920ecf6493eade184241c1d",
+      "title": "High School Skills ",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-16T16:30:00.000Z",
+      "endDatetime": "2026-10-16T17:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "9ec2846f3e28b042afbea41b5873f9b9",
+        "name": "High School",
+        "color": "#AFAFAF",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-cda5b9a17aa1478f8538983a2f8d",
+      "title": "Elementary/MS - Speed & Agility",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-16T16:30:00.000Z",
+      "endDatetime": "2026-10-16T17:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_7956062fa0cc11f19cca0affe13b3daf",
+        "name": "Sports Performance Training - Elementary/MS",
+        "color": "#e2b5eb",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "687ae36e7b3788d40f42ba41748a5f70",
+        "firstName": "Johnson",
+        "lastName": "Sports Performance",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-bfc4051969ed4deebbb5faf976ad",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-16T17:00:00.000Z",
+      "endDatetime": "2026-10-16T17:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-f575e40ddb6f4de2a77ff8a778c6",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-16T17:30:00.000Z",
+      "endDatetime": "2026-10-16T18:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-bfbedd4f252a4685acbf74c59e6d",
+      "title": "Elementary Skills",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-16T17:30:00.000Z",
+      "endDatetime": "2026-10-16T18:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "45ff8456d12ace7a2329917072409344",
+        "name": "Elementary 3rd/4th & 5th/6th Grade",
+        "color": "#1A90D8",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-ebd9a919bd8f428293e925540d86",
+      "title": "HS - Speed & Agility",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-16T17:30:00.000Z",
+      "endDatetime": "2026-10-16T18:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_93a97d2626c2c552666a",
+        "name": "Sports Performance Training - High School",
+        "color": "#f0c989",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "687ae36e7b3788d40f42ba41748a5f70",
+        "firstName": "Johnson",
+        "lastName": "Sports Performance",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-971d972309f74629aa9dbd9b066d",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-16T18:00:00.000Z",
+      "endDatetime": "2026-10-16T18:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-26ed232366e24a6f9c4cea52e416",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-16T18:30:00.000Z",
+      "endDatetime": "2026-10-16T19:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-8231d4c37b0b45dbaae4baf5bb7a",
+      "title": "Middle School Skills",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-16T18:30:00.000Z",
+      "endDatetime": "2026-10-16T19:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "b4456f95064b95d92044360a4ece1b35",
+        "name": "Middle School",
+        "color": "#9B00FF",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-87ccbb10178a465ca32cb00fd624",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-16T19:00:00.000Z",
+      "endDatetime": "2026-10-16T19:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-e4bec7801bfb42559e13f518438f",
+      "title": "Middle Schools 5v5 Runs",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-16T19:30:00.000Z",
+      "endDatetime": "2026-10-16T20:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "b4456f95064b95d92044360a4ece1b35",
+        "name": "Middle School",
+        "color": "#9B00FF",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-0c0b5a492cd94ed28c61e544c9e3",
+      "title": "Shooting Machine ",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-16T20:30:00.000Z",
+      "endDatetime": "2026-10-16T21:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-510b359f66f843a88ad52c90305a",
+      "title": "Lil Dribblers",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-17T09:00:00.000Z",
+      "endDatetime": "2026-10-17T10:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "3c5ddd9f76ada82d0ef78fd567659f37",
+        "name": "Lil Dribblers",
+        "color": "#333333",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "usr_354c5c2551abc4",
+        "firstName": "Anna",
+        "lastName": "Poe",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-cdacadafeac142f9aa7179fc87b1",
+      "title": "Shot Doctor - Elementary (Grades 4-6)",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-17T09:00:00.000Z",
+      "endDatetime": "2026-10-17T10:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_03f4b6b824d956d7e572",
+        "name": "Shot Doctor - Elementary Grades 4-6",
+        "color": "#f5a623",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "usr_8d1673989c54e7",
+        "firstName": "Jonathan",
+        "lastName": "Scott",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-d6b84b12f24c49edb798aac4aae3",
+      "title": "Elementary School Skills ",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-17T10:00:00.000Z",
+      "endDatetime": "2026-10-17T11:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "45ff8456d12ace7a2329917072409344",
+        "name": "Elementary 3rd/4th & 5th/6th Grade",
+        "color": "#1A90D8",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "usr_354c5c2551abc4",
+        "firstName": "Anna",
+        "lastName": "Poe",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-c792c85f0a9d403dbd4ef4434b83",
+      "title": "Shot Doctor - Middle School (Grades 7-8)",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-17T10:00:00.000Z",
+      "endDatetime": "2026-10-17T11:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_ccfc37b0501835516a66",
+        "name": "Shot Doctor - Middle School Grades 7-8",
+        "color": "#417505",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "usr_8d1673989c54e7",
+        "firstName": "Jonathan",
+        "lastName": "Scott",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-5013c5c3043f425ea270fd4d622f",
+      "title": "Middle School Skills",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-17T11:00:00.000Z",
+      "endDatetime": "2026-10-17T12:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "b4456f95064b95d92044360a4ece1b35",
+        "name": "Middle School",
+        "color": "#9B00FF",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-089638da1d1c414795faaaa30911",
+      "title": "Shot Doctor - High School",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-17T11:00:00.000Z",
+      "endDatetime": "2026-10-17T12:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_2f875fae17bd0db3cdf7",
+        "name": "Shot Doctor - High School",
+        "color": "#dc5c20",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "usr_8d1673989c54e7",
+        "firstName": "Jonathan",
+        "lastName": "Scott",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-702e68efd6744e86bcac2eae5574",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-17T15:30:00.000Z",
+      "endDatetime": "2026-10-17T16:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-aaa581e5606b44009274fb247a2f",
+      "title": "IPT Middle School ",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-17T15:30:00.000Z",
+      "endDatetime": "2026-10-17T16:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_4b10a0d0fe07496ac60d",
+        "name": "I'M-Possible Training, Middle School",
+        "color": "#0fe61b",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "46451ec20cefbcb427869724171781e6",
+        "firstName": "Kyle",
+        "lastName": "Owens",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-755cb74563f0478fb386d49e9365",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-17T16:00:00.000Z",
+      "endDatetime": "2026-10-17T16:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-59c579c6bacb4e67968d4a7ef42f",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-17T16:30:00.000Z",
+      "endDatetime": "2026-10-17T17:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-fb22290dcfbd482d9846bda7c0b7",
+      "title": "IPT HS Underclassman",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-17T16:30:00.000Z",
+      "endDatetime": "2026-10-17T17:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_5065014b3c347fa10a21",
+        "name": "I'M-Possible Training, HS Underclassmen",
+        "color": "#d0021b",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "46451ec20cefbcb427869724171781e6",
+        "firstName": "Kyle",
+        "lastName": "Owens",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-db4d9c4ec02049caa209043a85bd",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-17T17:00:00.000Z",
+      "endDatetime": "2026-10-17T17:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-9118c6c8c59d4beca3a51ccc33d4",
+      "title": "IPT HS Upperclassman",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-17T17:30:00.000Z",
+      "endDatetime": "2026-10-17T18:30:00.000Z",
       "calendarItemType": {
         "uuid": "calitemtype_7a8ffd0d880a9c585521",
         "name": "I'M-Possible Training, HS Upperclassmen",

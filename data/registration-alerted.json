@@ -810,7 +810,8 @@
       "registrationOpenedAt": "2026-09-19T17:00:00.000Z",
       "title": "Middle School Skills",
       "startDatetime": "2026-09-26T11:00:00.000Z",
-      "issueNumber": 97
+      "issueNumber": 97,
+      "issueClosedAt": "2026-09-20T18:00:02.179Z"
     },
     "cal-a191a93383294bf381af38f98cd0": {
       "notifiedAt": "2026-09-19T21:30:03Z",
@@ -825,6 +826,20 @@
       "title": "Shot Doctor - Middle School (Grades 7-8)",
       "startDatetime": "2026-09-26T16:30:00.000Z",
       "issueNumber": 99
+    },
+    "cal-3177034ca25e43b4ae31989f4b74": {
+      "notifiedAt": "2026-09-20T18:00:03Z",
+      "registrationOpenedAt": "2026-09-20T18:00:00.000Z",
+      "title": "IPT Middle School",
+      "startDatetime": "2026-09-27T12:00:00.000Z",
+      "issueNumber": 100
+    },
+    "cal-5945e9b53ce549a78b94235a17f8": {
+      "notifiedAt": "2026-09-20T19:00:02Z",
+      "registrationOpenedAt": "2026-09-20T19:00:00.000Z",
+      "title": "Middle School Skills ",
+      "startDatetime": "2026-09-27T13:00:00.000Z",
+      "issueNumber": 101
     }
   },
   "advanceAlerted": {
@@ -1473,14 +1488,16 @@
       "registrationOpenedAt": "2026-09-20T18:00:00.000Z",
       "title": "IPT Middle School",
       "startDatetime": "2026-09-27T12:00:00.000Z",
-      "issueNumber": 96
+      "issueNumber": 96,
+      "issueClosedAt": "2026-09-20T19:00:01.080Z"
     },
     "cal-5945e9b53ce549a78b94235a17f8": {
       "notifiedAt": "2026-09-19T15:31:44Z",
       "registrationOpenedAt": "2026-09-20T19:00:00.000Z",
       "title": "Middle School Skills ",
       "startDatetime": "2026-09-27T13:00:00.000Z",
-      "issueNumber": 96
+      "issueNumber": 96,
+      "issueClosedAt": "2026-09-20T19:00:01.080Z"
     }
   }
 }

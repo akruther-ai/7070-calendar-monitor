@@ -1367,7 +1367,10 @@
         "color": "#dc5c20",
         "__typename": "CalendarItemType"
       },
-      "location": null,
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
       "mainCoach": {
         "userUuid": "usr_8d1673989c54e7",
         "firstName": "Jonathan",
@@ -1820,7 +1823,10 @@
         "color": "#333333",
         "__typename": "CalendarItemType"
       },
-      "location": null,
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
       "mainCoach": {
         "userUuid": "usr_354c5c2551abc4",
         "firstName": "Anna",

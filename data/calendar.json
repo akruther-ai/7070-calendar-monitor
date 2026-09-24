@@ -7,7 +7,7 @@
     "startDate": "2026-09-20",
     "endDate": "2026-10-17"
   },
-  "count": 335,
+  "count": 334,
   "items": [
     {
       "uuid": "cal-1e48901f9d5c4ab89fda8b5e2ff6",
@@ -1355,32 +1355,6 @@
       "__typename": "PublicCalendarItem"
     },
     {
-      "uuid": "cal-3abc31cf29c84f46b4bae77269c3",
-      "title": "Shot Doctor - High School",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-24T19:30:00.000Z",
-      "endDatetime": "2026-09-24T20:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_2f875fae17bd0db3cdf7",
-        "name": "Shot Doctor - High School",
-        "color": "#dc5c20",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "usr_8d1673989c54e7",
-        "firstName": "Jonathan",
-        "lastName": "Scott",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
       "uuid": "cal-26e4c7b529af47b1945a6800b1e5",
       "title": "High School Skills ",
       "type": "Class",
@@ -2200,27 +2174,6 @@
       "__typename": "PublicCalendarItem"
     },
     {
-      "uuid": "cal-77abece91eb3478c982633ffd580",
-      "title": "Shooting Machine",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-27T13:00:00.000Z",
-      "endDatetime": "2026-09-27T13:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
       "uuid": "cal-2fd2d5eeadab482898245d36f38d",
       "title": "IPT HS Underclassmen",
       "type": "Class",
@@ -2273,28 +2226,7 @@
       "__typename": "PublicCalendarItem"
     },
     {
-      "uuid": "cal-7e4cbe9c4b154cd3a2f424b39afb",
-      "title": "Shooting Machine",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-27T13:30:00.000Z",
-      "endDatetime": "2026-09-27T14:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-015b3915cdcc4b43944504381863",
+      "uuid": "cal-1cb1419d3a414c99acef20fd2005",
       "title": "Shooting Machine",
       "type": "Class",
       "isAllDay": false,
@@ -2367,27 +2299,6 @@
       "__typename": "PublicCalendarItem"
     },
     {
-      "uuid": "cal-39e979f86bb540c4b49ad0db0c59",
-      "title": "Shooting Machine",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-09-27T14:30:00.000Z",
-      "endDatetime": "2026-09-27T15:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
       "uuid": "cal-b1a51d4a10b24844a08fa6766585",
       "title": "Shooting Machine",
       "type": "Class",
@@ -2415,6 +2326,69 @@
       "isAllDay": false,
       "startDatetime": "2026-09-27T15:30:00.000Z",
       "endDatetime": "2026-09-27T16:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-e5e43f96869448e8bf77eabd0887",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-09-27T16:00:00.000Z",
+      "endDatetime": "2026-09-27T16:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-bf24ad495176415da0dd980f528a",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-09-27T16:30:00.000Z",
+      "endDatetime": "2026-09-27T17:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-5b7d688826644db4aacf95880b9d",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-09-27T17:00:00.000Z",
+      "endDatetime": "2026-09-27T17:30:00.000Z",
       "calendarItemType": {
         "uuid": "a0ed7304a452376769ab4c4666cdf828",
         "name": "Shooting Machine Access",

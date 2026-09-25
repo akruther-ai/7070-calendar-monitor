@@ -906,7 +906,8 @@
       "registrationOpenedAt": "2026-09-24T00:30:00.000Z",
       "title": "Upper Middle School Skills ",
       "startDatetime": "2026-09-30T18:30:00.000Z",
-      "issueNumber": 110
+      "issueNumber": 110,
+      "issueClosedAt": "2026-09-25T00:30:25.155Z"
     },
     "cal-e575f5c8813744d4af28fafdd1d2": {
       "notifiedAt": "2026-09-24T22:30:04Z",

@@ -1273,12 +1273,7 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": {
-        "userUuid": "a7c3d9b61017ec286d6b7b55edd40e94",
-        "firstName": "Noah",
-        "lastName": "Baca",
-        "__typename": "Profile"
-      },
+      "mainCoach": null,
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },

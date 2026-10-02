@@ -1066,7 +1066,8 @@
       "registrationOpenedAt": "2026-10-01T00:30:00.000Z",
       "title": "Middle School Club Team Skills",
       "startDatetime": "2026-10-07T18:30:00.000Z",
-      "issueNumber": 132
+      "issueNumber": 132,
+      "issueClosedAt": "2026-10-02T00:30:26.736Z"
     },
     "cal-01add7c18ca84775837dbf902e1b": {
       "notifiedAt": "2026-10-01T22:30:04Z",

@@ -1154,14 +1154,16 @@
       "registrationOpenedAt": "2026-10-04T18:00:00.000Z",
       "title": "IPT Middle School",
       "startDatetime": "2026-10-11T12:00:00.000Z",
-      "issueNumber": 144
+      "issueNumber": 144,
+      "issueClosedAt": "2026-10-05T23:08:36.320Z"
     },
     "cal-38f50aa1ee084262bc9e99dbe3b0": {
       "notifiedAt": "2026-10-04T19:00:02Z",
       "registrationOpenedAt": "2026-10-04T19:00:00.000Z",
       "title": "Middle School Skills ",
       "startDatetime": "2026-10-11T13:00:00.000Z",
-      "issueNumber": 145
+      "issueNumber": 145,
+      "issueClosedAt": "2026-10-05T23:08:36.320Z"
     }
   },
   "advanceAlerted": {

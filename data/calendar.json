@@ -7,7 +7,7 @@
     "startDate": "2026-10-04",
     "endDate": "2026-10-31"
   },
-  "count": 337,
+  "count": 335,
   "items": [
     {
       "uuid": "cal-1e48901f9d5c4ab89fda8b5e2ff6",
@@ -1605,27 +1605,6 @@
       "__typename": "PublicCalendarItem"
     },
     {
-      "uuid": "cal-45c65c9632c14554a77f8744407d",
-      "title": "Shooting Machine",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-10-09T18:30:00.000Z",
-      "endDatetime": "2026-10-09T19:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
       "uuid": "cal-ebffcaeccd8a4a94b5567a13f486",
       "title": "Middle School Skills",
       "type": "Class",
@@ -1652,27 +1631,6 @@
         "userUuid": "2551f41a56a1232fad7ffe663b32f8c0",
         "__typename": "Profile"
       },
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-dc8f57091dd34aad90fb0aab03c0",
-      "title": "Shooting Machine",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-10-09T19:00:00.000Z",
-      "endDatetime": "2026-10-09T19:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
     {

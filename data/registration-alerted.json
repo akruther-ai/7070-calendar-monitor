@@ -1224,6 +1224,20 @@
       "title": "Middle School Club Team Skills",
       "startDatetime": "2026-10-14T18:30:00.000Z",
       "issueNumber": 154
+    },
+    "cal-d28b11f6569b403083bc2094f7f2": {
+      "notifiedAt": "2026-10-08T22:30:05Z",
+      "registrationOpenedAt": "2026-10-08T22:30:00.000Z",
+      "title": "Middle School Skills",
+      "startDatetime": "2026-10-15T16:30:00.000Z",
+      "issueNumber": 156
+    },
+    "cal-6ab7441f1b344438baf5171b3ed1": {
+      "notifiedAt": "2026-10-08T22:30:05Z",
+      "registrationOpenedAt": "2026-10-08T22:30:00.000Z",
+      "title": "Middle School Club Team Skills ",
+      "startDatetime": "2026-10-15T16:30:00.000Z",
+      "issueNumber": 156
     }
   },
   "advanceAlerted": {
@@ -2301,6 +2315,20 @@
       "title": "Middle School Skills",
       "startDatetime": "2026-10-15T18:30:00.000Z",
       "issueNumber": 151
+    },
+    "cal-8231d4c37b0b45dbaae4baf5bb7a": {
+      "notifiedAt": "2026-10-08T22:30:04Z",
+      "registrationOpenedAt": "2026-10-10T00:30:00.000Z",
+      "title": "Middle School Skills",
+      "startDatetime": "2026-10-16T18:30:00.000Z",
+      "issueNumber": 155
+    },
+    "cal-e4bec7801bfb42559e13f518438f": {
+      "notifiedAt": "2026-10-08T22:30:04Z",
+      "registrationOpenedAt": "2026-10-10T01:30:00.000Z",
+      "title": "Middle Schools 5v5 Runs",
+      "startDatetime": "2026-10-16T19:30:00.000Z",
+      "issueNumber": 155
     }
   }
 }

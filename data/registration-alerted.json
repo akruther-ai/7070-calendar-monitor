@@ -1186,7 +1186,8 @@
       "registrationOpenedAt": "2026-10-06T23:30:00.000Z",
       "title": "Middle School Skills",
       "startDatetime": "2026-10-13T17:30:00.000Z",
-      "issueNumber": 149
+      "issueNumber": 149,
+      "issueClosedAt": "2026-10-08T00:23:05.402Z"
     },
     "cal-ad8d569eb3d849769e76d50c74ca": {
       "notifiedAt": "2026-10-07T00:30:03Z",
@@ -1215,6 +1216,13 @@
       "title": "Middle School Skills",
       "startDatetime": "2026-10-14T17:30:00.000Z",
       "issueNumber": 153
+    },
+    "cal-9341a37b1df14d549b8975007b26": {
+      "notifiedAt": "2026-10-08T00:30:04Z",
+      "registrationOpenedAt": "2026-10-08T00:30:00.000Z",
+      "title": "Middle School Club Team Skills",
+      "startDatetime": "2026-10-14T18:30:00.000Z",
+      "issueNumber": 154
     }
   },
   "advanceAlerted": {
@@ -2231,28 +2239,32 @@
       "registrationOpenedAt": "2026-10-07T22:30:00.000Z",
       "title": "Middle School Skills",
       "startDatetime": "2026-10-14T16:30:00.000Z",
-      "issueNumber": 147
+      "issueNumber": 147,
+      "issueClosedAt": "2026-10-08T00:30:02.545Z"
     },
     "cal-bc8912d8ad1f4d2fb537895783e9": {
       "notifiedAt": "2026-10-06T16:39:20Z",
       "registrationOpenedAt": "2026-10-07T22:30:00.000Z",
       "title": "Middle School Skills ",
       "startDatetime": "2026-10-14T16:30:00.000Z",
-      "issueNumber": 147
+      "issueNumber": 147,
+      "issueClosedAt": "2026-10-08T00:30:02.545Z"
     },
     "cal-139cc38c42ce4c26967b6353070b": {
       "notifiedAt": "2026-10-06T16:39:20Z",
       "registrationOpenedAt": "2026-10-07T23:30:00.000Z",
       "title": "Middle School Skills",
       "startDatetime": "2026-10-14T17:30:00.000Z",
-      "issueNumber": 147
+      "issueNumber": 147,
+      "issueClosedAt": "2026-10-08T00:30:02.545Z"
     },
     "cal-9341a37b1df14d549b8975007b26": {
       "notifiedAt": "2026-10-06T16:39:20Z",
       "registrationOpenedAt": "2026-10-08T00:30:00.000Z",
       "title": "Middle School Club Team Skills",
       "startDatetime": "2026-10-14T18:30:00.000Z",
-      "issueNumber": 147
+      "issueNumber": 147,
+      "issueClosedAt": "2026-10-08T00:30:02.545Z"
     },
     "cal-d28b11f6569b403083bc2094f7f2": {
       "notifiedAt": "2026-10-07T19:07:46Z",

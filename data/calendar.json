@@ -1,13 +1,13 @@
 {
   "source": "https://7070athletics.pushpress.com/landing/calendar?framed=1",
   "timeZone": "America/Denver",
-  "requestedFrom": "2026-10-09",
-  "targetThrough": "2026-10-30",
+  "requestedFrom": "2026-10-10",
+  "targetThrough": "2026-10-31",
   "dateRange": {
     "startDate": "2026-10-04",
     "endDate": "2026-10-31"
   },
-  "count": 334,
+  "count": 333,
   "items": [
     {
       "uuid": "cal-1e48901f9d5c4ab89fda8b5e2ff6",
@@ -1730,32 +1730,6 @@
         "userUuid": "usr_354c5c2551abc4",
         "firstName": "Anna",
         "lastName": "Poe",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-0ac464a3b2ee4a7b885ac0478b14",
-      "title": "Shot Doctor - Middle School (Grades 7-8)",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-10-10T10:00:00.000Z",
-      "endDatetime": "2026-10-10T11:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_ccfc37b0501835516a66",
-        "name": "Shot Doctor - Middle School Grades 7-8",
-        "color": "#417505",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "usr_8d1673989c54e7",
-        "firstName": "Jonathan",
-        "lastName": "Scott",
         "__typename": "Profile"
       },
       "assistantCoach": null,
@@ -3551,15 +3525,12 @@
         "__typename": "CalendarItemLocation"
       },
       "mainCoach": {
-        "userUuid": "ac130104cee48758d7145556887dac4f",
-        "firstName": "Keion",
-        "lastName": "Mitchem",
-        "__typename": "Profile"
-      },
-      "assistantCoach": {
         "userUuid": "2551f41a56a1232fad7ffe663b32f8c0",
+        "firstName": "Rusty",
+        "lastName": "Stevens",
         "__typename": "Profile"
       },
+      "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
     {

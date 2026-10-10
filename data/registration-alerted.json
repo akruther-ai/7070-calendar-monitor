@@ -1282,6 +1282,13 @@
       "title": "Middle Schools 5v5 Runs",
       "startDatetime": "2026-10-16T19:30:00.000Z",
       "issueNumber": 161
+    },
+    "cal-c792c85f0a9d403dbd4ef4434b83": {
+      "notifiedAt": "2026-10-10T16:00:05Z",
+      "registrationOpenedAt": "2026-10-10T16:00:00.000Z",
+      "title": "Shot Doctor - Middle School (Grades 7-8)",
+      "startDatetime": "2026-10-17T10:00:00.000Z",
+      "issueNumber": 163
     }
   },
   "advanceAlerted": {
@@ -2401,6 +2408,20 @@
       "title": "IPT Middle School ",
       "startDatetime": "2026-10-17T15:30:00.000Z",
       "issueNumber": 159
+    },
+    "cal-c5402c0d4e0e4d978a0b0ffbf13b": {
+      "notifiedAt": "2026-10-10T16:00:04Z",
+      "registrationOpenedAt": "2026-10-11T18:00:00.000Z",
+      "title": "IPT Middle School",
+      "startDatetime": "2026-10-18T12:00:00.000Z",
+      "issueNumber": 162
+    },
+    "cal-a6640e282b2745dda34d1a63e98d": {
+      "notifiedAt": "2026-10-10T16:00:04Z",
+      "registrationOpenedAt": "2026-10-11T19:00:00.000Z",
+      "title": "Middle School Skills ",
+      "startDatetime": "2026-10-18T13:00:00.000Z",
+      "issueNumber": 162
     }
   }
 }

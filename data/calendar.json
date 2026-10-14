@@ -7,7 +7,7 @@
     "startDate": "2026-10-11",
     "endDate": "2026-11-07"
   },
-  "count": 344,
+  "count": 351,
   "items": [
     {
       "uuid": "cal-1e48901f9d5c4ab89fda8b5e2ff6",
@@ -1456,15 +1456,12 @@
         "__typename": "CalendarItemLocation"
       },
       "mainCoach": {
-        "userUuid": "usr_88e7810f7504876b7c6b0c9bc4a2cc16",
-        "firstName": "Cody",
-        "lastName": "Bernbeck",
-        "__typename": "Profile"
-      },
-      "assistantCoach": {
         "userUuid": "ac130104cee48758d7145556887dac4f",
+        "firstName": "Keion",
+        "lastName": "Mitchem",
         "__typename": "Profile"
       },
+      "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
     {
@@ -1680,27 +1677,6 @@
       "__typename": "PublicCalendarItem"
     },
     {
-      "uuid": "cal-26ed232366e24a6f9c4cea52e416",
-      "title": "Shooting Machine",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-10-16T18:30:00.000Z",
-      "endDatetime": "2026-10-16T19:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
       "uuid": "cal-8231d4c37b0b45dbaae4baf5bb7a",
       "title": "Middle School Skills",
       "type": "Class",
@@ -1727,27 +1703,6 @@
         "userUuid": "46451ec20cefbcb427869724171781e6",
         "__typename": "Profile"
       },
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-87ccbb10178a465ca32cb00fd624",
-      "title": "Shooting Machine",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-10-16T19:00:00.000Z",
-      "endDatetime": "2026-10-16T19:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
     {
@@ -3617,10 +3572,7 @@
         "lastName": "Mitchem",
         "__typename": "Profile"
       },
-      "assistantCoach": {
-        "userUuid": "46451ec20cefbcb427869724171781e6",
-        "__typename": "Profile"
-      },
+      "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
     {
@@ -4453,6 +4405,27 @@
       "__typename": "PublicCalendarItem"
     },
     {
+      "uuid": "cal-14541f5dca7641de9b31ae5f4f32",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-26T16:30:00.000Z",
+      "endDatetime": "2026-10-26T17:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
       "uuid": "cal-3b713a2139c14ad28da1af213aed",
       "title": "Middle School Skills",
       "type": "Class",
@@ -4469,7 +4442,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "ac130104cee48758d7145556887dac4f",
+        "firstName": "Keion",
+        "lastName": "Mitchem",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -4490,21 +4468,26 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "usr_88e7810f7504876b7c6b0c9bc4a2cc16",
+        "firstName": "Cody",
+        "lastName": "Bernbeck",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
     {
-      "uuid": "cal-00a3a5fa65324bf5bcceace1d9ed",
-      "title": "Middle School Skills",
+      "uuid": "cal-79319df7d16e4a898430ede560ac",
+      "title": "Shooting Machine",
       "type": "Class",
       "isAllDay": false,
-      "startDatetime": "2026-10-26T16:30:00.000Z",
+      "startDatetime": "2026-10-26T17:00:00.000Z",
       "endDatetime": "2026-10-26T17:30:00.000Z",
       "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -4532,7 +4515,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "ac130104cee48758d7145556887dac4f",
+        "firstName": "Keion",
+        "lastName": "Mitchem",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -4553,7 +4541,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "usr_88e7810f7504876b7c6b0c9bc4a2cc16",
+        "firstName": "Cody",
+        "lastName": "Bernbeck",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -4574,28 +4567,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-ef8bb5ba8ece474ab058c47f003c",
-      "title": "High School Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-10-26T18:30:00.000Z",
-      "endDatetime": "2026-10-26T19:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "9ec2846f3e28b042afbea41b5873f9b9",
-        "name": "High School",
-        "color": "#AFAFAF",
-        "__typename": "CalendarItemType"
+      "mainCoach": {
+        "userUuid": "46451ec20cefbcb427869724171781e6",
+        "firstName": "Kyle",
+        "lastName": "Owens",
+        "__typename": "Profile"
       },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -4610,6 +4587,58 @@
         "uuid": "b4456f95064b95d92044360a4ece1b35",
         "name": "Middle School",
         "color": "#9B00FF",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "usr_88e7810f7504876b7c6b0c9bc4a2cc16",
+        "firstName": "Cody",
+        "lastName": "Bernbeck",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-7bced59909f14d61a35d0249fb2b",
+      "title": "HS Upper/Varsity",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-26T18:30:00.000Z",
+      "endDatetime": "2026-10-26T19:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_d8d680d48aa611f19cca0affe13b3daf",
+        "name": "High School Skills Varsity",
+        "color": "#8b572a",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "46451ec20cefbcb427869724171781e6",
+        "firstName": "Kyle",
+        "lastName": "Owens",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-09c02995d920470fbfd7967b175e",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-26T19:30:00.000Z",
+      "endDatetime": "2026-10-26T20:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -4637,21 +4666,26 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "46451ec20cefbcb427869724171781e6",
+        "firstName": "Kyle",
+        "lastName": "Owens",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
     {
-      "uuid": "cal-7bced59909f14d61a35d0249fb2b",
-      "title": "HS Upper/Varsity",
+      "uuid": "cal-d248a7f876534310b92fe0e1ed97",
+      "title": "Shooting Machine",
       "type": "Class",
       "isAllDay": false,
-      "startDatetime": "2026-10-26T19:30:00.000Z",
+      "startDatetime": "2026-10-26T20:00:00.000Z",
       "endDatetime": "2026-10-26T20:30:00.000Z",
       "calendarItemType": {
-        "uuid": "calitemtype_d8d680d48aa611f19cca0affe13b3daf",
-        "name": "High School Skills Varsity",
-        "color": "#8b572a",
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -4684,6 +4718,27 @@
       "__typename": "PublicCalendarItem"
     },
     {
+      "uuid": "cal-734cfb42f22849c6a758b8194048",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-27T16:30:00.000Z",
+      "endDatetime": "2026-10-27T17:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
       "uuid": "cal-fa1999aaaf9342e79915a3f3e5f9",
       "title": "Middle School Skills",
       "type": "Class",
@@ -4700,7 +4755,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "ac130104cee48758d7145556887dac4f",
+        "firstName": "Keion",
+        "lastName": "Mitchem",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -4721,7 +4781,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "usr_8d1673989c54e7",
+        "firstName": "Jonathan",
+        "lastName": "Scott",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -4736,6 +4801,32 @@
         "uuid": "calitemtype_4b10a0d0fe07496ac60d",
         "name": "I'M-Possible Training, Middle School",
         "color": "#0fe61b",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "46451ec20cefbcb427869724171781e6",
+        "firstName": "Kyle",
+        "lastName": "Owens",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-c271af3a9aa14e4bbbb8b5269987",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-27T17:00:00.000Z",
+      "endDatetime": "2026-10-27T17:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -4763,7 +4854,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "ac130104cee48758d7145556887dac4f",
+        "firstName": "Keion",
+        "lastName": "Mitchem",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -4784,7 +4880,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "usr_8d1673989c54e7",
+        "firstName": "Jonathan",
+        "lastName": "Scott",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -4805,7 +4906,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "46451ec20cefbcb427869724171781e6",
+        "firstName": "Kyle",
+        "lastName": "Owens",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -4862,6 +4968,27 @@
       "__typename": "PublicCalendarItem"
     },
     {
+      "uuid": "cal-6ce99853634f43d99140c567f5fa",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-27T18:30:00.000Z",
+      "endDatetime": "2026-10-27T19:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
       "uuid": "cal-6ba8b34b33464f7488804c17c58a",
       "title": "Middle School Skills",
       "type": "Class",
@@ -4878,7 +5005,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "usr_8d1673989c54e7",
+        "firstName": "Jonathan",
+        "lastName": "Scott",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -4925,6 +5057,53 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
+      "mainCoach": {
+        "userUuid": "ac130104cee48758d7145556887dac4f",
+        "firstName": "Keion",
+        "lastName": "Mitchem",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-c18e713d54c04361b39261083d81",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-27T19:00:00.000Z",
+      "endDatetime": "2026-10-27T19:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-01a4036a1090462aa18611a304a6",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-27T19:30:00.000Z",
+      "endDatetime": "2026-10-27T20:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
       "mainCoach": null,
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
@@ -4947,15 +5126,12 @@
         "__typename": "CalendarItemLocation"
       },
       "mainCoach": {
-        "userUuid": "usr_88e7810f7504876b7c6b0c9bc4a2cc16",
-        "firstName": "Cody",
-        "lastName": "Bernbeck",
+        "userUuid": "ac130104cee48758d7145556887dac4f",
+        "firstName": "Keion",
+        "lastName": "Mitchem",
         "__typename": "Profile"
       },
-      "assistantCoach": {
-        "userUuid": "usr_354c5c2551abc4",
-        "__typename": "Profile"
-      },
+      "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
     {
@@ -4976,11 +5152,32 @@
         "__typename": "CalendarItemLocation"
       },
       "mainCoach": {
-        "userUuid": "46451ec20cefbcb427869724171781e6",
-        "firstName": "Kyle",
-        "lastName": "Owens",
+        "userUuid": "usr_8d1673989c54e7",
+        "firstName": "Jonathan",
+        "lastName": "Scott",
         "__typename": "Profile"
       },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-938836a536e84b11ba2cae167fba",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-27T20:00:00.000Z",
+      "endDatetime": "2026-10-27T20:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -4991,6 +5188,27 @@
       "isAllDay": false,
       "startDatetime": "2026-10-27T20:30:00.000Z",
       "endDatetime": "2026-10-27T21:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-0e91e14255c84385ab23c6feebd1",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-10-28T16:30:00.000Z",
+      "endDatetime": "2026-10-28T17:00:00.000Z",
       "calendarItemType": {
         "uuid": "a0ed7304a452376769ab4c4666cdf828",
         "name": "Shooting Machine Access",
@@ -5022,7 +5240,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "usr_354c5c2551abc4",
+        "firstName": "Anna",
+        "lastName": "Poe",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -5043,33 +5266,33 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "ac130104cee48758d7145556887dac4f",
+        "firstName": "Keion",
+        "lastName": "Mitchem",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
     {
-      "uuid": "cal-7448817a1599415ca9490cb3d687",
-      "title": "Middle School Skills ",
+      "uuid": "cal-65996a2ad1434239b6e31aaa6a6c",
+      "title": "Shooting Machine",
       "type": "Class",
       "isAllDay": false,
-      "startDatetime": "2026-10-28T16:30:00.000Z",
+      "startDatetime": "2026-10-28T17:00:00.000Z",
       "endDatetime": "2026-10-28T17:30:00.000Z",
       "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
         "__typename": "CalendarItemType"
       },
       "location": {
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": {
-        "userUuid": "usr_8d1673989c54e7",
-        "firstName": "Jonathan",
-        "lastName": "Scott",
-        "__typename": "Profile"
-      },
+      "mainCoach": null,
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -5090,7 +5313,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "usr_354c5c2551abc4",
+        "firstName": "Anna",
+        "lastName": "Poe",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -5111,7 +5339,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "ac130104cee48758d7145556887dac4f",
+        "firstName": "Keion",
+        "lastName": "Mitchem",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -5206,9 +5439,9 @@
         "__typename": "CalendarItemLocation"
       },
       "mainCoach": {
-        "userUuid": "usr_88e7810f7504876b7c6b0c9bc4a2cc16",
-        "firstName": "Cody",
-        "lastName": "Bernbeck",
+        "userUuid": "usr_354c5c2551abc4",
+        "firstName": "Anna",
+        "lastName": "Poe",
         "__typename": "Profile"
       },
       "assistantCoach": null,
@@ -5232,15 +5465,12 @@
         "__typename": "CalendarItemLocation"
       },
       "mainCoach": {
-        "userUuid": "usr_88e7810f7504876b7c6b0c9bc4a2cc16",
-        "firstName": "Cody",
-        "lastName": "Bernbeck",
+        "userUuid": "ac130104cee48758d7145556887dac4f",
+        "firstName": "Keion",
+        "lastName": "Mitchem",
         "__typename": "Profile"
       },
-      "assistantCoach": {
-        "userUuid": "usr_354c5c2551abc4",
-        "__typename": "Profile"
-      },
+      "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
     {
@@ -5281,7 +5511,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "ac130104cee48758d7145556887dac4f",
+        "firstName": "Keion",
+        "lastName": "Mitchem",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -5302,7 +5537,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "usr_88e7810f7504876b7c6b0c9bc4a2cc16",
+        "firstName": "Cody",
+        "lastName": "Bernbeck",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -5349,7 +5589,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "usr_88e7810f7504876b7c6b0c9bc4a2cc16",
+        "firstName": "Cody",
+        "lastName": "Bernbeck",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -5370,7 +5615,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "ac130104cee48758d7145556887dac4f",
+        "firstName": "Keion",
+        "lastName": "Mitchem",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -5470,9 +5720,9 @@
         "__typename": "CalendarItemLocation"
       },
       "mainCoach": {
-        "userUuid": "46451ec20cefbcb427869724171781e6",
-        "firstName": "Kyle",
-        "lastName": "Owens",
+        "userUuid": "ac130104cee48758d7145556887dac4f",
+        "firstName": "Keion",
+        "lastName": "Mitchem",
         "__typename": "Profile"
       },
       "assistantCoach": null,
@@ -5522,15 +5772,12 @@
         "__typename": "CalendarItemLocation"
       },
       "mainCoach": {
-        "userUuid": "usr_88e7810f7504876b7c6b0c9bc4a2cc16",
-        "firstName": "Cody",
-        "lastName": "Bernbeck",
+        "userUuid": "ac130104cee48758d7145556887dac4f",
+        "firstName": "Keion",
+        "lastName": "Mitchem",
         "__typename": "Profile"
       },
-      "assistantCoach": {
-        "userUuid": "usr_354c5c2551abc4",
-        "__typename": "Profile"
-      },
+      "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
     {
@@ -5592,7 +5839,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "46451ec20cefbcb427869724171781e6",
+        "firstName": "Kyle",
+        "lastName": "Owens",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -5655,7 +5907,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "ac130104cee48758d7145556887dac4f",
+        "firstName": "Keion",
+        "lastName": "Mitchem",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -5718,8 +5975,16 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
-      "assistantCoach": null,
+      "mainCoach": {
+        "userUuid": "46451ec20cefbcb427869724171781e6",
+        "firstName": "Kyle",
+        "lastName": "Owens",
+        "__typename": "Profile"
+      },
+      "assistantCoach": {
+        "userUuid": "usr_8d1673989c54e7",
+        "__typename": "Profile"
+      },
       "__typename": "PublicCalendarItem"
     },
     {
@@ -5760,8 +6025,16 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
-      "assistantCoach": null,
+      "mainCoach": {
+        "userUuid": "ac130104cee48758d7145556887dac4f",
+        "firstName": "Keion",
+        "lastName": "Mitchem",
+        "__typename": "Profile"
+      },
+      "assistantCoach": {
+        "userUuid": "usr_8d1673989c54e7",
+        "__typename": "Profile"
+      },
       "__typename": "PublicCalendarItem"
     },
     {
@@ -5906,7 +6179,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "usr_354c5c2551abc4",
+        "firstName": "Anna",
+        "lastName": "Poe",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },

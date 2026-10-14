@@ -8,7 +8,7 @@
     "endDate": "2026-11-07"
   },
   "filter": "current/future item where title or calendarItemType.name contains \"middle school\" (case-insensitive)",
-  "count": 84,
+  "count": 82,
   "items": [
     {
       "uuid": "cal-6bf54896f45642198949e5133c84",
@@ -991,28 +991,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-00a3a5fa65324bf5bcceace1d9ed",
-      "title": "Middle School Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-10-26T16:30:00.000Z",
-      "endDatetime": "2026-10-26T17:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
-        "__typename": "CalendarItemType"
+      "mainCoach": {
+        "userUuid": "ac130104cee48758d7145556887dac4f",
+        "firstName": "Keion",
+        "lastName": "Mitchem",
+        "__typename": "Profile"
       },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -1033,7 +1017,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "ac130104cee48758d7145556887dac4f",
+        "firstName": "Keion",
+        "lastName": "Mitchem",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -1054,7 +1043,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "46451ec20cefbcb427869724171781e6",
+        "firstName": "Kyle",
+        "lastName": "Owens",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -1075,7 +1069,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "usr_88e7810f7504876b7c6b0c9bc4a2cc16",
+        "firstName": "Cody",
+        "lastName": "Bernbeck",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -1096,7 +1095,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "ac130104cee48758d7145556887dac4f",
+        "firstName": "Keion",
+        "lastName": "Mitchem",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -1117,7 +1121,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "46451ec20cefbcb427869724171781e6",
+        "firstName": "Kyle",
+        "lastName": "Owens",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -1138,7 +1147,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "usr_8d1673989c54e7",
+        "firstName": "Jonathan",
+        "lastName": "Scott",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -1159,7 +1173,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "usr_8d1673989c54e7",
+        "firstName": "Jonathan",
+        "lastName": "Scott",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -1180,31 +1199,10 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-7448817a1599415ca9490cb3d687",
-      "title": "Middle School Skills ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-10-28T16:30:00.000Z",
-      "endDatetime": "2026-10-28T17:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
       "mainCoach": {
-        "userUuid": "usr_8d1673989c54e7",
-        "firstName": "Jonathan",
-        "lastName": "Scott",
+        "userUuid": "ac130104cee48758d7145556887dac4f",
+        "firstName": "Keion",
+        "lastName": "Mitchem",
         "__typename": "Profile"
       },
       "assistantCoach": null,
@@ -1227,7 +1225,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "ac130104cee48758d7145556887dac4f",
+        "firstName": "Keion",
+        "lastName": "Mitchem",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -1249,9 +1252,9 @@
         "__typename": "CalendarItemLocation"
       },
       "mainCoach": {
-        "userUuid": "usr_88e7810f7504876b7c6b0c9bc4a2cc16",
-        "firstName": "Cody",
-        "lastName": "Bernbeck",
+        "userUuid": "usr_354c5c2551abc4",
+        "firstName": "Anna",
+        "lastName": "Poe",
         "__typename": "Profile"
       },
       "assistantCoach": null,
@@ -1274,7 +1277,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "ac130104cee48758d7145556887dac4f",
+        "firstName": "Keion",
+        "lastName": "Mitchem",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -1321,7 +1329,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "ac130104cee48758d7145556887dac4f",
+        "firstName": "Keion",
+        "lastName": "Mitchem",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -1394,8 +1407,16 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
-      "assistantCoach": null,
+      "mainCoach": {
+        "userUuid": "46451ec20cefbcb427869724171781e6",
+        "firstName": "Kyle",
+        "lastName": "Owens",
+        "__typename": "Profile"
+      },
+      "assistantCoach": {
+        "userUuid": "usr_8d1673989c54e7",
+        "__typename": "Profile"
+      },
       "__typename": "PublicCalendarItem"
     },
     {
@@ -1415,8 +1436,16 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
-      "assistantCoach": null,
+      "mainCoach": {
+        "userUuid": "ac130104cee48758d7145556887dac4f",
+        "firstName": "Keion",
+        "lastName": "Mitchem",
+        "__typename": "Profile"
+      },
+      "assistantCoach": {
+        "userUuid": "usr_8d1673989c54e7",
+        "__typename": "Profile"
+      },
       "__typename": "PublicCalendarItem"
     },
     {
@@ -1462,7 +1491,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "usr_354c5c2551abc4",
+        "firstName": "Anna",
+        "lastName": "Poe",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },

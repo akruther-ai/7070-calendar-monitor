@@ -1,125 +1,15 @@
 {
   "source": "https://7070athletics.pushpress.com/landing/calendar?framed=1",
   "timeZone": "America/Denver",
-  "requestedFrom": "2026-10-14",
-  "targetThrough": "2026-11-04",
+  "requestedFrom": "2026-10-15",
+  "targetThrough": "2026-11-05",
   "dateRange": {
     "startDate": "2026-10-11",
     "endDate": "2026-11-07"
   },
   "filter": "current/future item where title or calendarItemType.name contains \"middle school\" (case-insensitive)",
-  "count": 82,
+  "count": 78,
   "items": [
-    {
-      "uuid": "cal-6bf54896f45642198949e5133c84",
-      "title": "Middle School Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-10-14T16:30:00.000Z",
-      "endDatetime": "2026-10-14T17:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "ac130104cee48758d7145556887dac4f",
-        "firstName": "Keion",
-        "lastName": "Mitchem",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-bc8912d8ad1f4d2fb537895783e9",
-      "title": "Middle School Skills ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-10-14T16:30:00.000Z",
-      "endDatetime": "2026-10-14T17:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "46451ec20cefbcb427869724171781e6",
-        "firstName": "Kyle",
-        "lastName": "Owens",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-139cc38c42ce4c26967b6353070b",
-      "title": "Middle School Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-10-14T17:30:00.000Z",
-      "endDatetime": "2026-10-14T18:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "46451ec20cefbcb427869724171781e6",
-        "firstName": "Kyle",
-        "lastName": "Owens",
-        "__typename": "Profile"
-      },
-      "assistantCoach": {
-        "userUuid": "ac130104cee48758d7145556887dac4f",
-        "__typename": "Profile"
-      },
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-9341a37b1df14d549b8975007b26",
-      "title": "Middle School Club Team Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-10-14T18:30:00.000Z",
-      "endDatetime": "2026-10-14T19:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_c6f4df2473f12d3afa6f",
-        "name": "Middle School Club",
-        "color": "#82e9e8",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "ac130104cee48758d7145556887dac4f",
-        "firstName": "Keion",
-        "lastName": "Mitchem",
-        "__typename": "Profile"
-      },
-      "assistantCoach": {
-        "userUuid": "2551f41a56a1232fad7ffe663b32f8c0",
-        "__typename": "Profile"
-      },
-      "__typename": "PublicCalendarItem"
-    },
     {
       "uuid": "cal-d28b11f6569b403083bc2094f7f2",
       "title": "Middle School Skills",

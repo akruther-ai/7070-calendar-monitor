@@ -7,7 +7,7 @@
     "startDate": "2026-10-11",
     "endDate": "2026-11-07"
   },
-  "count": 345,
+  "count": 344,
   "items": [
     {
       "uuid": "cal-1e48901f9d5c4ab89fda8b5e2ff6",
@@ -1828,32 +1828,6 @@
         "userUuid": "usr_354c5c2551abc4",
         "firstName": "Anna",
         "lastName": "Poe",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-c792c85f0a9d403dbd4ef4434b83",
-      "title": "Shot Doctor - Middle School (Grades 7-8)",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-10-17T10:00:00.000Z",
-      "endDatetime": "2026-10-17T11:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_ccfc37b0501835516a66",
-        "name": "Shot Doctor - Middle School Grades 7-8",
-        "color": "#417505",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "usr_8d1673989c54e7",
-        "firstName": "Jonathan",
-        "lastName": "Scott",
         "__typename": "Profile"
       },
       "assistantCoach": null,

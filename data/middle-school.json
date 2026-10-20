@@ -8,7 +8,7 @@
     "endDate": "2026-11-14"
   },
   "filter": "current/future item where title or calendarItemType.name contains \"middle school\" (case-insensitive)",
-  "count": 79,
+  "count": 77,
   "items": [
     {
       "uuid": "cal-444b9fc2b878422ba6e981e6a103",
@@ -1190,27 +1190,6 @@
       "__typename": "PublicCalendarItem"
     },
     {
-      "uuid": "cal-fb1d0531c06e4558a1753e11594c",
-      "title": "Middle School Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-11-02T17:30:00.000Z",
-      "endDatetime": "2026-11-02T18:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
       "uuid": "cal-a69be78a9607461584b3dfbcd9b2",
       "title": "Middle School Skills",
       "type": "Class",
@@ -1573,27 +1552,6 @@
     },
     {
       "uuid": "cal-10344cd3274546cb85952624c7d0",
-      "title": "Middle School Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-11-09T17:30:00.000Z",
-      "endDatetime": "2026-11-09T18:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-8a2fdc52c28541a4aa60ad2a3079",
       "title": "Middle School Skills",
       "type": "Class",
       "isAllDay": false,

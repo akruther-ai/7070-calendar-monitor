@@ -1474,14 +1474,44 @@
       "registrationOpenedAt": "2026-10-18T18:00:00.000Z",
       "title": "IPT Middle School",
       "startDatetime": "2026-10-25T12:00:00.000Z",
-      "issueNumber": 191
+      "issueNumber": 191,
+      "issueClosedAt": "2026-10-19T19:28:05.668Z"
     },
     "cal-b24e1ec4a4214e549478188d2c1a": {
       "notifiedAt": "2026-10-18T19:00:03Z",
       "registrationOpenedAt": "2026-10-18T19:00:00.000Z",
       "title": "Middle School Skills ",
       "startDatetime": "2026-10-25T13:00:00.000Z",
-      "issueNumber": 192
+      "issueNumber": 192,
+      "issueClosedAt": "2026-10-19T19:28:05.668Z"
+    },
+    "cal-3b713a2139c14ad28da1af213aed": {
+      "notifiedAt": "2026-10-19T22:30:04Z",
+      "registrationOpenedAt": "2026-10-19T22:30:00.000Z",
+      "title": "Middle School Skills",
+      "startDatetime": "2026-10-26T16:30:00.000Z",
+      "issueNumber": 194
+    },
+    "cal-7a59624d2abe4f3b984e03bad226": {
+      "notifiedAt": "2026-10-19T23:30:03Z",
+      "registrationOpenedAt": "2026-10-19T23:30:00.000Z",
+      "title": "Middle School Skills",
+      "startDatetime": "2026-10-26T17:30:00.000Z",
+      "issueNumber": 195
+    },
+    "cal-c37c945009ec48cfa47c2087eb61": {
+      "notifiedAt": "2026-10-19T23:30:03Z",
+      "registrationOpenedAt": "2026-10-19T23:30:00.000Z",
+      "title": "Middle School Skills",
+      "startDatetime": "2026-10-26T17:30:00.000Z",
+      "issueNumber": 195
+    },
+    "cal-be602871c57e4ad7b169b1e4fe6e": {
+      "notifiedAt": "2026-10-20T00:30:03Z",
+      "registrationOpenedAt": "2026-10-20T00:30:00.000Z",
+      "title": "Middle School Skills",
+      "startDatetime": "2026-10-26T18:30:00.000Z",
+      "issueNumber": 196
     }
   },
   "advanceAlerted": {
@@ -2786,28 +2816,60 @@
       "registrationOpenedAt": "2026-10-19T22:30:00.000Z",
       "title": "Middle School Skills",
       "startDatetime": "2026-10-26T16:30:00.000Z",
-      "issueNumber": 190
+      "issueNumber": 190,
+      "issueClosedAt": "2026-10-20T00:30:01.120Z"
     },
     "cal-7a59624d2abe4f3b984e03bad226": {
       "notifiedAt": "2026-10-18T18:00:04Z",
       "registrationOpenedAt": "2026-10-19T23:30:00.000Z",
       "title": "Middle School Skills",
       "startDatetime": "2026-10-26T17:30:00.000Z",
-      "issueNumber": 190
+      "issueNumber": 190,
+      "issueClosedAt": "2026-10-20T00:30:01.120Z"
     },
     "cal-c37c945009ec48cfa47c2087eb61": {
       "notifiedAt": "2026-10-18T18:00:04Z",
       "registrationOpenedAt": "2026-10-19T23:30:00.000Z",
       "title": "Middle School Skills",
       "startDatetime": "2026-10-26T17:30:00.000Z",
-      "issueNumber": 190
+      "issueNumber": 190,
+      "issueClosedAt": "2026-10-20T00:30:01.120Z"
     },
     "cal-be602871c57e4ad7b169b1e4fe6e": {
       "notifiedAt": "2026-10-18T18:00:04Z",
       "registrationOpenedAt": "2026-10-20T00:30:00.000Z",
       "title": "Middle School Skills",
       "startDatetime": "2026-10-26T18:30:00.000Z",
-      "issueNumber": 190
+      "issueNumber": 190,
+      "issueClosedAt": "2026-10-20T00:30:01.120Z"
+    },
+    "cal-fa1999aaaf9342e79915a3f3e5f9": {
+      "notifiedAt": "2026-10-19T19:28:08Z",
+      "registrationOpenedAt": "2026-10-20T22:30:00.000Z",
+      "title": "Middle School Skills",
+      "startDatetime": "2026-10-27T16:30:00.000Z",
+      "issueNumber": 193
+    },
+    "cal-06f13c9962ab48baadf33a7d6b85": {
+      "notifiedAt": "2026-10-19T19:28:08Z",
+      "registrationOpenedAt": "2026-10-20T22:30:00.000Z",
+      "title": "IPT Middle School ",
+      "startDatetime": "2026-10-27T16:30:00.000Z",
+      "issueNumber": 193
+    },
+    "cal-7d9a2db0685941a19ed062753e6a": {
+      "notifiedAt": "2026-10-19T19:28:08Z",
+      "registrationOpenedAt": "2026-10-20T23:30:00.000Z",
+      "title": "Middle School Skills",
+      "startDatetime": "2026-10-27T17:30:00.000Z",
+      "issueNumber": 193
+    },
+    "cal-6ba8b34b33464f7488804c17c58a": {
+      "notifiedAt": "2026-10-19T19:28:08Z",
+      "registrationOpenedAt": "2026-10-21T00:30:00.000Z",
+      "title": "Middle School Skills",
+      "startDatetime": "2026-10-27T18:30:00.000Z",
+      "issueNumber": 193
     }
   }
 }

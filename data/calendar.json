@@ -7,7 +7,7 @@
     "startDate": "2026-10-18",
     "endDate": "2026-11-14"
   },
-  "count": 329,
+  "count": 332,
   "items": [
     {
       "uuid": "cal-c7d069244630447aada57b8d58a6",
@@ -966,32 +966,6 @@
         "userUuid": "46451ec20cefbcb427869724171781e6",
         "__typename": "Profile"
       },
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-ddf27daa50bd4c6d970f1bdbde92",
-      "title": "HS - Speed & Agility",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-10-21T17:30:00.000Z",
-      "endDatetime": "2026-10-21T18:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_93a97d2626c2c552666a",
-        "name": "Sports Performance Training - High School",
-        "color": "#f0c989",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "687ae36e7b3788d40f42ba41748a5f70",
-        "firstName": "Johnson",
-        "lastName": "Sports Performance",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
     {
@@ -4713,6 +4687,32 @@
       "__typename": "PublicCalendarItem"
     },
     {
+      "uuid": "cal-072591e7d18340f4a6a5a72519d2",
+      "title": "Elementary/MS - Speed & Agility",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-11-02T16:30:00.000Z",
+      "endDatetime": "2026-11-02T17:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_7956062fa0cc11f19cca0affe13b3daf",
+        "name": "Sports Performance Training - Elementary/MS",
+        "color": "#e2b5eb",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "687ae36e7b3788d40f42ba41748a5f70",
+        "firstName": "Johnson",
+        "lastName": "Sports Performance",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
       "uuid": "cal-bbd1106c7e1d4df79192444277de",
       "title": "Shooting Machine",
       "type": "Class",
@@ -4772,6 +4772,32 @@
         "__typename": "CalendarItemLocation"
       },
       "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-66d8a58d48e946ecbd2f5a9c61d2",
+      "title": "HS - Speed & Agility",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-11-02T17:30:00.000Z",
+      "endDatetime": "2026-11-02T18:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_93a97d2626c2c552666a",
+        "name": "Sports Performance Training - High School",
+        "color": "#f0c989",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "687ae36e7b3788d40f42ba41748a5f70",
+        "firstName": "Johnson",
+        "lastName": "Sports Performance",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -5340,58 +5366,6 @@
       "__typename": "PublicCalendarItem"
     },
     {
-      "uuid": "cal-83f87926f428470a94862b517ea9",
-      "title": "HS - Speed & Agility",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-11-04T17:30:00.000Z",
-      "endDatetime": "2026-11-04T18:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_93a97d2626c2c552666a",
-        "name": "Sports Performance Training - High School",
-        "color": "#f0c989",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "687ae36e7b3788d40f42ba41748a5f70",
-        "firstName": "Johnson",
-        "lastName": "Sports Performance",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-fdd288fca2e249ee99f2da06418f",
-      "title": "Elementary/MS - Speed & Agility",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-11-04T17:30:00.000Z",
-      "endDatetime": "2026-11-04T18:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_7956062fa0cc11f19cca0affe13b3daf",
-        "name": "Sports Performance Training - Elementary/MS",
-        "color": "#e2b5eb",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "687ae36e7b3788d40f42ba41748a5f70",
-        "firstName": "Johnson",
-        "lastName": "Sports Performance",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
       "uuid": "cal-26559757f0f2460bb9708a30a125",
       "title": "Shooting Machine",
       "type": "Class",
@@ -5863,6 +5837,32 @@
       "__typename": "PublicCalendarItem"
     },
     {
+      "uuid": "cal-4af8ef55c5584124bdad3f31299a",
+      "title": "Elementary/MS - Speed & Agility",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-11-06T16:30:00.000Z",
+      "endDatetime": "2026-11-06T17:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_7956062fa0cc11f19cca0affe13b3daf",
+        "name": "Sports Performance Training - Elementary/MS",
+        "color": "#e2b5eb",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "687ae36e7b3788d40f42ba41748a5f70",
+        "firstName": "Johnson",
+        "lastName": "Sports Performance",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
       "uuid": "cal-bffcd4a9824a4b46ad42c37091a7",
       "title": "Shooting Machine",
       "type": "Class",
@@ -5922,6 +5922,32 @@
         "__typename": "CalendarItemLocation"
       },
       "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-4e94a071e88b4243810947948776",
+      "title": "HS - Speed & Agility",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-11-06T17:30:00.000Z",
+      "endDatetime": "2026-11-06T18:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_93a97d2626c2c552666a",
+        "name": "Sports Performance Training - High School",
+        "color": "#f0c989",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "687ae36e7b3788d40f42ba41748a5f70",
+        "firstName": "Johnson",
+        "lastName": "Sports Performance",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -6266,6 +6292,32 @@
       "__typename": "PublicCalendarItem"
     },
     {
+      "uuid": "cal-448f5341dcff436da7bcf63c3697",
+      "title": "Elementary/MS - Speed & Agility",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-11-09T16:30:00.000Z",
+      "endDatetime": "2026-11-09T17:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_7956062fa0cc11f19cca0affe13b3daf",
+        "name": "Sports Performance Training - Elementary/MS",
+        "color": "#e2b5eb",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "687ae36e7b3788d40f42ba41748a5f70",
+        "firstName": "Johnson",
+        "lastName": "Sports Performance",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
       "uuid": "cal-9cf4c88dac9d4ab280ddcd982895",
       "title": "Shooting Machine",
       "type": "Class",
@@ -6325,6 +6377,32 @@
         "__typename": "CalendarItemLocation"
       },
       "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-fc1034dd31594749b3f43183dc47",
+      "title": "HS - Speed & Agility",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-11-09T17:30:00.000Z",
+      "endDatetime": "2026-11-09T18:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_93a97d2626c2c552666a",
+        "name": "Sports Performance Training - High School",
+        "color": "#f0c989",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "687ae36e7b3788d40f42ba41748a5f70",
+        "firstName": "Johnson",
+        "lastName": "Sports Performance",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -6872,58 +6950,6 @@
       "__typename": "PublicCalendarItem"
     },
     {
-      "uuid": "cal-29de08875a0e4503ad5cc2850a78",
-      "title": "HS - Speed & Agility",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-11-11T17:30:00.000Z",
-      "endDatetime": "2026-11-11T18:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_93a97d2626c2c552666a",
-        "name": "Sports Performance Training - High School",
-        "color": "#f0c989",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "687ae36e7b3788d40f42ba41748a5f70",
-        "firstName": "Johnson",
-        "lastName": "Sports Performance",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-c77da7fe5a654123b5e32b5f17b9",
-      "title": "Elementary/MS - Speed & Agility",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-11-11T17:30:00.000Z",
-      "endDatetime": "2026-11-11T18:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_7956062fa0cc11f19cca0affe13b3daf",
-        "name": "Sports Performance Training - Elementary/MS",
-        "color": "#e2b5eb",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "687ae36e7b3788d40f42ba41748a5f70",
-        "firstName": "Johnson",
-        "lastName": "Sports Performance",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
       "uuid": "cal-03ca69fc73984054ba9131276f5d",
       "title": "Shooting Machine",
       "type": "Class",
@@ -7395,6 +7421,32 @@
       "__typename": "PublicCalendarItem"
     },
     {
+      "uuid": "cal-97f5f75003a848bd9577a888392f",
+      "title": "Elementary/MS - Speed & Agility",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-11-13T16:30:00.000Z",
+      "endDatetime": "2026-11-13T17:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_7956062fa0cc11f19cca0affe13b3daf",
+        "name": "Sports Performance Training - Elementary/MS",
+        "color": "#e2b5eb",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "687ae36e7b3788d40f42ba41748a5f70",
+        "firstName": "Johnson",
+        "lastName": "Sports Performance",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
       "uuid": "cal-5593a42d004240c2831252089912",
       "title": "Shooting Machine",
       "type": "Class",
@@ -7454,6 +7506,32 @@
         "__typename": "CalendarItemLocation"
       },
       "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-ff76365605624d1887bfa0ab95a6",
+      "title": "HS - Speed & Agility",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-11-13T17:30:00.000Z",
+      "endDatetime": "2026-11-13T18:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_93a97d2626c2c552666a",
+        "name": "Sports Performance Training - High School",
+        "color": "#f0c989",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "687ae36e7b3788d40f42ba41748a5f70",
+        "firstName": "Johnson",
+        "lastName": "Sports Performance",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },

@@ -7,7 +7,7 @@
     "startDate": "2026-10-18",
     "endDate": "2026-11-14"
   },
-  "count": 331,
+  "count": 330,
   "items": [
     {
       "uuid": "cal-c7d069244630447aada57b8d58a6",
@@ -2328,27 +2328,6 @@
       "isAllDay": false,
       "startDatetime": "2026-10-25T15:30:00.000Z",
       "endDatetime": "2026-10-25T16:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-14541f5dca7641de9b31ae5f4f32",
-      "title": "Shooting Machine",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-10-26T16:30:00.000Z",
-      "endDatetime": "2026-10-26T17:00:00.000Z",
       "calendarItemType": {
         "uuid": "a0ed7304a452376769ab4c4666cdf828",
         "name": "Shooting Machine Access",

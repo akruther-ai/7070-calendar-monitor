@@ -1618,14 +1618,16 @@
       "registrationOpenedAt": "2026-10-24T00:30:00.000Z",
       "title": "Middle School Skills",
       "startDatetime": "2026-10-30T18:30:00.000Z",
-      "issueNumber": 211
+      "issueNumber": 211,
+      "issueClosedAt": "2026-10-25T01:42:47.472Z"
     },
     "cal-fc2d2b28b86e4ac1a2b03ef2864e": {
       "notifiedAt": "2026-10-24T01:30:03Z",
       "registrationOpenedAt": "2026-10-24T01:30:00.000Z",
       "title": "Middle Schools 5v5 Runs",
       "startDatetime": "2026-10-30T19:30:00.000Z",
-      "issueNumber": 212
+      "issueNumber": 212,
+      "issueClosedAt": "2026-10-25T01:42:47.472Z"
     },
     "cal-a9364c6f193b490cb66f953797e0": {
       "notifiedAt": "2026-10-24T16:00:04Z",

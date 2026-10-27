@@ -8,7 +8,7 @@
     "endDate": "2026-11-21"
   },
   "filter": "current/future item where title or calendarItemType.name contains \"middle school\" (case-insensitive)",
-  "count": 73,
+  "count": 72,
   "items": [
     {
       "uuid": "cal-fa1999aaaf9342e79915a3f3e5f9",
@@ -1229,44 +1229,28 @@
       "__typename": "PublicCalendarItem"
     },
     {
-      "uuid": "cal-58c3cd71468c4b9a8f5f0cc157cb",
-      "title": "Middle School Skills",
-      "type": "Class",
+      "uuid": "cal-fe237fdc7058405d9d62bea96137",
+      "title": "Middle School Pre-Season Boot Camp",
+      "type": "Event",
       "isAllDay": false,
       "startDatetime": "2026-11-13T18:30:00.000Z",
-      "endDatetime": "2026-11-13T19:30:00.000Z",
+      "endDatetime": "2026-11-13T20:45:00.000Z",
       "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
+        "uuid": "cit_00000000000000",
+        "name": "General",
+        "color": "#1A90D8",
         "__typename": "CalendarItemType"
       },
       "location": {
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-cb65e29bb9054da4bb06791b16be",
-      "title": "Middle Schools 5v5 Runs",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-11-13T19:30:00.000Z",
-      "endDatetime": "2026-11-13T20:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
-        "__typename": "CalendarItemType"
+      "mainCoach": {
+        "userUuid": "usr_8d1673989c54e7",
+        "firstName": "Jonathan",
+        "lastName": "Scott",
+        "__typename": "Profile"
       },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },

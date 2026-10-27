@@ -1,8 +1,8 @@
 {
   "source": "https://7070athletics.pushpress.com/landing/calendar?framed=1",
   "timeZone": "America/Denver",
-  "requestedFrom": "2026-10-26",
-  "targetThrough": "2026-11-16",
+  "requestedFrom": "2026-10-27",
+  "targetThrough": "2026-11-17",
   "dateRange": {
     "startDate": "2026-10-25",
     "endDate": "2026-11-21"

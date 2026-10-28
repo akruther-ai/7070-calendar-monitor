@@ -7,7 +7,7 @@
     "startDate": "2026-10-25",
     "endDate": "2026-11-21"
   },
-  "count": 322,
+  "count": 317,
   "items": [
     {
       "uuid": "cal-9b9a614ff95d46a3b33fff67a2eb",
@@ -6150,27 +6150,6 @@
       "__typename": "PublicCalendarItem"
     },
     {
-      "uuid": "cal-aaedb27ebb5a4cf9a44b3f6eee23",
-      "title": "Shooting Machine",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-11-16T17:30:00.000Z",
-      "endDatetime": "2026-11-16T18:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
       "uuid": "cal-3081b60207bb40368327090c293f",
       "title": "Shooting Machine",
       "type": "Class",
@@ -6256,27 +6235,6 @@
         "lastName": "Sports Performance",
         "__typename": "Profile"
       },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-6910a0c6c6244bb2b2a474263a34",
-      "title": "Shooting Machine",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-11-16T18:00:00.000Z",
-      "endDatetime": "2026-11-16T18:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -6506,27 +6464,6 @@
         "uuid": "b4456f95064b95d92044360a4ece1b35",
         "name": "Middle School",
         "color": "#9B00FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-0d719dd73c734307bee2be8a3c88",
-      "title": "IPT Middle School ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-11-17T16:30:00.000Z",
-      "endDatetime": "2026-11-17T17:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_4b10a0d0fe07496ac60d",
-        "name": "I'M-Possible Training, Middle School",
-        "color": "#0fe61b",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -6858,27 +6795,6 @@
       "__typename": "PublicCalendarItem"
     },
     {
-      "uuid": "cal-b050b1236efc4ea5a46ebe0abeae",
-      "title": "Shooting Machine",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-11-18T19:30:00.000Z",
-      "endDatetime": "2026-11-18T20:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
       "uuid": "cal-f42250f650b24838b008b5c1b4dd",
       "title": "IPT Middle School",
       "type": "Class",
@@ -7179,27 +7095,6 @@
       "isAllDay": false,
       "startDatetime": "2026-11-19T19:00:00.000Z",
       "endDatetime": "2026-11-19T19:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "a0ed7304a452376769ab4c4666cdf828",
-        "name": "Shooting Machine Access",
-        "color": "#61BAFC",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-2383d2c1c67c4847b673086bc635",
-      "title": "Shooting Machine",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-11-19T19:30:00.000Z",
-      "endDatetime": "2026-11-19T20:00:00.000Z",
       "calendarItemType": {
         "uuid": "a0ed7304a452376769ab4c4666cdf828",
         "name": "Shooting Machine Access",

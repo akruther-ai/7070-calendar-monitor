@@ -7,7 +7,7 @@
     "startDate": "2026-10-25",
     "endDate": "2026-11-21"
   },
-  "count": 316,
+  "count": 315,
   "items": [
     {
       "uuid": "cal-9b9a614ff95d46a3b33fff67a2eb",
@@ -1527,32 +1527,6 @@
         "userUuid": "ac130104cee48758d7145556887dac4f",
         "firstName": "Keion",
         "lastName": "Mitchem",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-e01e464c7b764f4584dc9383180d",
-      "title": "Shot Doctor - Elementary (Grades 4-6)",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-10-29T17:30:00.000Z",
-      "endDatetime": "2026-10-29T18:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_03f4b6b824d956d7e572",
-        "name": "Shot Doctor - Elementary Grades 4-6",
-        "color": "#f5a623",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "usr_8d1673989c54e7",
-        "firstName": "Jonathan",
-        "lastName": "Scott",
         "__typename": "Profile"
       },
       "assistantCoach": null,

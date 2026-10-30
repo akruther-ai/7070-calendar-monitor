@@ -3352,6 +3352,20 @@
       "title": "Middle Schools 5v5 Runs",
       "startDatetime": "2026-11-06T19:30:00.000Z",
       "issueNumber": 230
+    },
+    "cal-4f313ef4dad64f47974374612c00": {
+      "notifiedAt": "2026-10-30T15:36:55Z",
+      "registrationOpenedAt": "2026-10-31T17:00:00.000Z",
+      "title": "Middle School Skills",
+      "startDatetime": "2026-11-07T11:00:00.000Z",
+      "issueNumber": 234
+    },
+    "cal-0b7bebcd6c5843938ada203013f0": {
+      "notifiedAt": "2026-10-30T15:36:55Z",
+      "registrationOpenedAt": "2026-10-31T19:00:00.000Z",
+      "title": "Shot Doctor - Middle School (Grades 7-8)",
+      "startDatetime": "2026-11-07T13:00:00.000Z",
+      "issueNumber": 234
     }
   }
 }

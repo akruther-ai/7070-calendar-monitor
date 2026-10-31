@@ -1,13 +1,13 @@
 {
   "source": "https://7070athletics.pushpress.com/landing/calendar?framed=1",
   "timeZone": "America/Denver",
-  "requestedFrom": "2026-10-30",
-  "targetThrough": "2026-11-20",
+  "requestedFrom": "2026-10-31",
+  "targetThrough": "2026-11-21",
   "dateRange": {
     "startDate": "2026-10-25",
     "endDate": "2026-11-21"
   },
-  "count": 314,
+  "count": 313,
   "items": [
     {
       "uuid": "cal-9b9a614ff95d46a3b33fff67a2eb",
@@ -2013,32 +2013,6 @@
         "userUuid": "usr_354c5c2551abc4",
         "firstName": "Anna",
         "lastName": "Poe",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-a9364c6f193b490cb66f953797e0",
-      "title": "Shot Doctor - Middle School (Grades 7-8)",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-10-31T10:00:00.000Z",
-      "endDatetime": "2026-10-31T11:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_ccfc37b0501835516a66",
-        "name": "Shot Doctor - Middle School Grades 7-8",
-        "color": "#417505",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "usr_8d1673989c54e7",
-        "firstName": "Jonathan",
-        "lastName": "Scott",
         "__typename": "Profile"
       },
       "assistantCoach": null,

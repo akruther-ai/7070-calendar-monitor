@@ -7,7 +7,7 @@
     "startDate": "2026-11-01",
     "endDate": "2026-11-28"
   },
-  "count": 293,
+  "count": 292,
   "items": [
     {
       "uuid": "cal-9b9a614ff95d46a3b33fff67a2eb",
@@ -3740,27 +3740,6 @@
         "lastName": "Owens",
         "__typename": "Profile"
       },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-5d41cf1296cf4678acc2ec2056ba",
-      "title": "High School skills ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-11-15T14:00:00.000Z",
-      "endDatetime": "2026-11-15T15:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "9ec2846f3e28b042afbea41b5873f9b9",
-        "name": "High School",
-        "color": "#AFAFAF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },

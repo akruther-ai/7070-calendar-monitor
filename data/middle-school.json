@@ -1,67 +1,15 @@
 {
   "source": "https://7070athletics.pushpress.com/landing/calendar?framed=1",
   "timeZone": "America/Denver",
-  "requestedFrom": "2026-10-31",
-  "targetThrough": "2026-11-21",
+  "requestedFrom": "2026-11-01",
+  "targetThrough": "2026-11-22",
   "dateRange": {
-    "startDate": "2026-10-25",
-    "endDate": "2026-11-21"
+    "startDate": "2026-11-01",
+    "endDate": "2026-11-28"
   },
   "filter": "current/future item where title or calendarItemType.name contains \"middle school\" (case-insensitive)",
-  "count": 56,
+  "count": 71,
   "items": [
-    {
-      "uuid": "cal-08293a5163ca42c0a999b47192f5",
-      "title": "Middle School Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-10-31T11:00:00.000Z",
-      "endDatetime": "2026-10-31T12:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "usr_354c5c2551abc4",
-        "firstName": "Anna",
-        "lastName": "Poe",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-d3caad0c40484dc3893b37ca84ce",
-      "title": "IPT Middle School ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-10-31T12:00:00.000Z",
-      "endDatetime": "2026-10-31T13:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_4b10a0d0fe07496ac60d",
-        "name": "I'M-Possible Training, Middle School",
-        "color": "#0fe61b",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "46451ec20cefbcb427869724171781e6",
-        "firstName": "Kyle",
-        "lastName": "Owens",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
     {
       "uuid": "cal-f142c8d6c96240a7b8b62f9c4183",
       "title": "IPT Middle School",
@@ -1390,6 +1338,378 @@
         "__typename": "CalendarItemLocation"
       },
       "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-f280f30cfa694def8f3de8cd47b4",
+      "title": "IPT Middle School",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-11-22T12:00:00.000Z",
+      "endDatetime": "2026-11-22T13:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_4b10a0d0fe07496ac60d",
+        "name": "I'M-Possible Training, Middle School",
+        "color": "#0fe61b",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "46451ec20cefbcb427869724171781e6",
+        "firstName": "Kyle",
+        "lastName": "Owens",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-7e644d8c483044a985dc0ef12166",
+      "title": "MS/HS Skills",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-11-22T14:00:00.000Z",
+      "endDatetime": "2026-11-22T15:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "60d1145043d821ef20224f3557d76d97",
+        "name": "High School/Middle School Skills",
+        "color": "#00F9FF",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-409d49e5a30849bf961d6c6644d0",
+      "title": "Middle School Skills",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-11-23T16:30:00.000Z",
+      "endDatetime": "2026-11-23T17:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "b4456f95064b95d92044360a4ece1b35",
+        "name": "Middle School",
+        "color": "#9B00FF",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-b81abf22b5044f019c17340d6d92",
+      "title": "Middle School Skills",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-11-23T17:30:00.000Z",
+      "endDatetime": "2026-11-23T18:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "b4456f95064b95d92044360a4ece1b35",
+        "name": "Middle School",
+        "color": "#9B00FF",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-2968a75100cc417e87939f16e76d",
+      "title": "MS/HS Skills",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-11-23T18:30:00.000Z",
+      "endDatetime": "2026-11-23T19:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "60d1145043d821ef20224f3557d76d97",
+        "name": "High School/Middle School Skills",
+        "color": "#00F9FF",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-b3d5f86512304dd680b765ea2436",
+      "title": "Middle School Club Team Skills",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-11-23T18:30:00.000Z",
+      "endDatetime": "2026-11-23T19:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_c6f4df2473f12d3afa6f",
+        "name": "Middle School Club",
+        "color": "#82e9e8",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-159a9998e55d498f9f3a71e932db",
+      "title": "IPT Middle School",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-11-23T19:30:00.000Z",
+      "endDatetime": "2026-11-23T20:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_4b10a0d0fe07496ac60d",
+        "name": "I'M-Possible Training, Middle School",
+        "color": "#0fe61b",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "46451ec20cefbcb427869724171781e6",
+        "firstName": "Kyle",
+        "lastName": "Owens",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-c13a37d0371a4025a142ba7224d7",
+      "title": "Middle School Skills",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-11-24T16:30:00.000Z",
+      "endDatetime": "2026-11-24T17:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "b4456f95064b95d92044360a4ece1b35",
+        "name": "Middle School",
+        "color": "#9B00FF",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-3ffe6bdd514947fdadeb2252e83a",
+      "title": "Middle School Skills",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-11-24T17:30:00.000Z",
+      "endDatetime": "2026-11-24T18:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "b4456f95064b95d92044360a4ece1b35",
+        "name": "Middle School",
+        "color": "#9B00FF",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-aebc3188e0c2464ebe8b0a304d01",
+      "title": "MS/HS Skills",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-11-24T18:30:00.000Z",
+      "endDatetime": "2026-11-24T19:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "60d1145043d821ef20224f3557d76d97",
+        "name": "High School/Middle School Skills",
+        "color": "#00F9FF",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-3244da70585b433f8a0278a5b570",
+      "title": "Middle School Club Team Skills",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-11-24T18:30:00.000Z",
+      "endDatetime": "2026-11-24T19:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_c6f4df2473f12d3afa6f",
+        "name": "Middle School Club",
+        "color": "#82e9e8",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-2d42fea7952b47efbdab7451e34f",
+      "title": "Middle School Skills",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-11-25T13:00:00.000Z",
+      "endDatetime": "2026-11-25T14:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "b4456f95064b95d92044360a4ece1b35",
+        "name": "Middle School",
+        "color": "#9B00FF",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-1e62782236254e1ba57a6eea725c",
+      "title": "MS/HS Skills",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-11-25T14:00:00.000Z",
+      "endDatetime": "2026-11-25T15:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "60d1145043d821ef20224f3557d76d97",
+        "name": "High School/Middle School Skills",
+        "color": "#00F9FF",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-20284e4fdc2b4dbdb92a3e31e5a1",
+      "title": "MS/HS Skills",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-11-27T17:30:00.000Z",
+      "endDatetime": "2026-11-27T18:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "60d1145043d821ef20224f3557d76d97",
+        "name": "High School/Middle School Skills",
+        "color": "#00F9FF",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-0cbc0c6b7b48440f821f8da0af27",
+      "title": "Middle Schools 5v5 Runs",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-11-27T18:30:00.000Z",
+      "endDatetime": "2026-11-27T19:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "b4456f95064b95d92044360a4ece1b35",
+        "name": "Middle School",
+        "color": "#9B00FF",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-03fa92c6df2e47e68e0ea2df2c0e",
+      "title": "Middle School Skills",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-11-28T11:00:00.000Z",
+      "endDatetime": "2026-11-28T12:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "b4456f95064b95d92044360a4ece1b35",
+        "name": "Middle School",
+        "color": "#9B00FF",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-5dbb42498d454980b9fa9c11781c",
+      "title": "Shot Doctor - Middle School (Grades 7-8)",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-11-28T13:00:00.000Z",
+      "endDatetime": "2026-11-28T14:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_ccfc37b0501835516a66",
+        "name": "Shot Doctor - Middle School Grades 7-8",
+        "color": "#417505",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "usr_8d1673989c54e7",
+        "firstName": "Jonathan",
+        "lastName": "Scott",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     }

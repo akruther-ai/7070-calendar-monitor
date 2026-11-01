@@ -1778,7 +1778,8 @@
       "registrationOpenedAt": "2026-10-31T01:30:00.000Z",
       "title": "Middle Schools 5v5 Runs",
       "startDatetime": "2026-11-06T19:30:00.000Z",
-      "issueNumber": 236
+      "issueNumber": 236,
+      "issueClosedAt": "2026-11-01T07:57:51.534Z"
     },
     "cal-4f313ef4dad64f47974374612c00": {
       "notifiedAt": "2026-10-31T17:00:04Z",

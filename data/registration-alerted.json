@@ -1810,14 +1810,16 @@
       "registrationOpenedAt": "2026-11-03T00:30:00.000Z",
       "title": "Middle School Skills",
       "startDatetime": "2026-11-09T17:30:00.000Z",
-      "issueNumber": 242
+      "issueNumber": 242,
+      "issueClosedAt": "2026-11-04T02:07:41.305Z"
     },
     "cal-c1a85159650249dc921a383269cc": {
       "notifiedAt": "2026-11-03T01:30:04Z",
       "registrationOpenedAt": "2026-11-03T01:30:00.000Z",
       "title": "Middle School Skills",
       "startDatetime": "2026-11-09T18:30:00.000Z",
-      "issueNumber": 243
+      "issueNumber": 243,
+      "issueClosedAt": "2026-11-04T02:07:41.305Z"
     },
     "cal-fbfe667091fe4c1782bf83888934": {
       "notifiedAt": "2026-11-03T23:30:06Z",

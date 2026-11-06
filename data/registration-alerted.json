@@ -3617,6 +3617,20 @@
       "title": "Middle School Pre-Season Boot Camp",
       "startDatetime": "2026-11-13T18:30:00.000Z",
       "issueNumber": 250
+    },
+    "cal-6177fd0f095b46f0807c5252a0a4": {
+      "notifiedAt": "2026-11-06T18:06:22Z",
+      "registrationOpenedAt": "2026-11-07T18:00:00.000Z",
+      "title": "Middle School Skills",
+      "startDatetime": "2026-11-14T11:00:00.000Z",
+      "issueNumber": 254
+    },
+    "cal-d331fdb6dc13445e857dd356b399": {
+      "notifiedAt": "2026-11-06T18:06:22Z",
+      "registrationOpenedAt": "2026-11-07T20:00:00.000Z",
+      "title": "Shot Doctor - Middle School (Grades 7-8)",
+      "startDatetime": "2026-11-14T13:00:00.000Z",
+      "issueNumber": 254
     }
   }
 }

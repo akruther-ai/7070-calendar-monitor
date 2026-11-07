@@ -1866,21 +1866,24 @@
       "registrationOpenedAt": "2026-11-05T23:30:00.000Z",
       "title": "Middle School Skills",
       "startDatetime": "2026-11-12T16:30:00.000Z",
-      "issueNumber": 251
+      "issueNumber": 251,
+      "issueClosedAt": "2026-11-07T01:30:02.226Z"
     },
     "cal-d12592befdc543dfb19e6a98e222": {
       "notifiedAt": "2026-11-05T23:30:05Z",
       "registrationOpenedAt": "2026-11-05T23:30:00.000Z",
       "title": "Middle School Club Team Skills ",
       "startDatetime": "2026-11-12T16:30:00.000Z",
-      "issueNumber": 251
+      "issueNumber": 251,
+      "issueClosedAt": "2026-11-07T01:30:02.226Z"
     },
     "cal-c66f399810c941849c750ba8d1d6": {
       "notifiedAt": "2026-11-06T00:30:03Z",
       "registrationOpenedAt": "2026-11-06T00:30:00.000Z",
       "title": "Middle School Skills",
       "startDatetime": "2026-11-12T17:30:00.000Z",
-      "issueNumber": 252
+      "issueNumber": 252,
+      "issueClosedAt": "2026-11-07T01:30:02.226Z"
     },
     "cal-2ff7c25de00d4753ba2cd58c531d": {
       "notifiedAt": "2026-11-06T01:30:04Z",
@@ -1895,6 +1898,13 @@
       "title": "Middle School Skills",
       "startDatetime": "2026-11-12T18:30:00.000Z",
       "issueNumber": 253
+    },
+    "cal-fe237fdc7058405d9d62bea96137": {
+      "notifiedAt": "2026-11-07T01:30:04Z",
+      "registrationOpenedAt": "2026-11-07T01:30:00.000Z",
+      "title": "Middle School Pre-Season Boot Camp",
+      "startDatetime": "2026-11-13T18:30:00.000Z",
+      "issueNumber": 255
     }
   },
   "advanceAlerted": {
@@ -3616,7 +3626,8 @@
       "registrationOpenedAt": "2026-11-07T01:30:00.000Z",
       "title": "Middle School Pre-Season Boot Camp",
       "startDatetime": "2026-11-13T18:30:00.000Z",
-      "issueNumber": 250
+      "issueNumber": 250,
+      "issueClosedAt": "2026-11-07T01:30:02.226Z"
     },
     "cal-6177fd0f095b46f0807c5252a0a4": {
       "notifiedAt": "2026-11-06T18:06:22Z",

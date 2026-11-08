@@ -1906,7 +1906,8 @@
       "registrationOpenedAt": "2026-11-07T01:30:00.000Z",
       "title": "Middle School Pre-Season Boot Camp",
       "startDatetime": "2026-11-13T18:30:00.000Z",
-      "issueNumber": 255
+      "issueNumber": 255,
+      "issueClosedAt": "2026-11-08T02:21:34.924Z"
     },
     "cal-6177fd0f095b46f0807c5252a0a4": {
       "notifiedAt": "2026-11-07T18:00:05Z",

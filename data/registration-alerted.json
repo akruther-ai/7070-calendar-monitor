@@ -1946,28 +1946,32 @@
       "registrationOpenedAt": "2026-11-09T23:30:00.000Z",
       "title": "Middle School Skills",
       "startDatetime": "2026-11-16T16:30:00.000Z",
-      "issueNumber": 264
+      "issueNumber": 264,
+      "issueClosedAt": "2026-11-11T02:30:01.137Z"
     },
     "cal-6c2b78c709794c3998f828aa6c52": {
       "notifiedAt": "2026-11-10T00:30:04Z",
       "registrationOpenedAt": "2026-11-10T00:30:00.000Z",
       "title": "Middle School Skills",
       "startDatetime": "2026-11-16T17:30:00.000Z",
-      "issueNumber": 265
+      "issueNumber": 265,
+      "issueClosedAt": "2026-11-11T02:30:01.137Z"
     },
     "cal-929a44c66797485f9d2ded92ba0d": {
       "notifiedAt": "2026-11-10T01:30:03Z",
       "registrationOpenedAt": "2026-11-10T01:30:00.000Z",
       "title": "MS/HS Skills",
       "startDatetime": "2026-11-16T18:30:00.000Z",
-      "issueNumber": 266
+      "issueNumber": 266,
+      "issueClosedAt": "2026-11-11T02:30:01.137Z"
     },
     "cal-7dc41cab66784296b352dbb397ac": {
       "notifiedAt": "2026-11-10T01:30:03Z",
       "registrationOpenedAt": "2026-11-10T01:30:00.000Z",
       "title": "Middle School Club Team Skills",
       "startDatetime": "2026-11-16T18:30:00.000Z",
-      "issueNumber": 266
+      "issueNumber": 266,
+      "issueClosedAt": "2026-11-11T02:30:01.137Z"
     },
     "cal-adf495e670c24753b684a1e2d992": {
       "notifiedAt": "2026-11-10T02:30:03Z",
@@ -1975,6 +1979,20 @@
       "title": "IPT Middle School",
       "startDatetime": "2026-11-16T19:30:00.000Z",
       "issueNumber": 267
+    },
+    "cal-83c145b6f58c48228f16b8b770de": {
+      "notifiedAt": "2026-11-10T23:30:05Z",
+      "registrationOpenedAt": "2026-11-10T23:30:00.000Z",
+      "title": "Middle School Skills",
+      "startDatetime": "2026-11-17T16:30:00.000Z",
+      "issueNumber": 270
+    },
+    "cal-060e52361e924f90b1ab28155736": {
+      "notifiedAt": "2026-11-11T02:30:03Z",
+      "registrationOpenedAt": "2026-11-11T02:30:00.000Z",
+      "title": "MS/HS Skills",
+      "startDatetime": "2026-11-17T19:30:00.000Z",
+      "issueNumber": 271
     }
   },
   "advanceAlerted": {
@@ -3776,14 +3794,16 @@
       "registrationOpenedAt": "2026-11-10T23:30:00.000Z",
       "title": "Middle School Skills",
       "startDatetime": "2026-11-17T16:30:00.000Z",
-      "issueNumber": 263
+      "issueNumber": 263,
+      "issueClosedAt": "2026-11-11T02:30:01.137Z"
     },
     "cal-060e52361e924f90b1ab28155736": {
       "notifiedAt": "2026-11-09T22:46:46Z",
       "registrationOpenedAt": "2026-11-11T02:30:00.000Z",
       "title": "MS/HS Skills",
       "startDatetime": "2026-11-17T19:30:00.000Z",
-      "issueNumber": 263
+      "issueNumber": 263,
+      "issueClosedAt": "2026-11-11T02:30:01.137Z"
     },
     "cal-f3f17642c3bd4584b9a2233deae0": {
       "notifiedAt": "2026-11-10T18:05:59Z",

@@ -2031,6 +2031,13 @@
       "title": "IPT Middle School",
       "startDatetime": "2026-11-18T19:30:00.000Z",
       "issueNumber": 276
+    },
+    "cal-be8af30feba04741b2dea36eeca2": {
+      "notifiedAt": "2026-11-12T23:30:06Z",
+      "registrationOpenedAt": "2026-11-12T23:30:00.000Z",
+      "title": "Middle School Skills",
+      "startDatetime": "2026-11-19T16:30:00.000Z",
+      "issueNumber": 278
     }
   },
   "advanceAlerted": {
@@ -3910,6 +3917,20 @@
       "title": "MS/HS Skills",
       "startDatetime": "2026-11-19T18:30:00.000Z",
       "issueNumber": 272
+    },
+    "cal-0ae682a8d160422ca99c8885b7da": {
+      "notifiedAt": "2026-11-12T23:30:05Z",
+      "registrationOpenedAt": "2026-11-14T00:30:00.000Z",
+      "title": "MS/HS Skills",
+      "startDatetime": "2026-11-20T17:30:00.000Z",
+      "issueNumber": 277
+    },
+    "cal-e3366b9ff42844be96b0802d3984": {
+      "notifiedAt": "2026-11-12T23:30:05Z",
+      "registrationOpenedAt": "2026-11-14T01:30:00.000Z",
+      "title": "Middle Schools 5v5 Runs",
+      "startDatetime": "2026-11-20T18:30:00.000Z",
+      "issueNumber": 277
     }
   }
 }

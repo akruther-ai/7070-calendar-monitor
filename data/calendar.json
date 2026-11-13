@@ -1,13 +1,13 @@
 {
   "source": "https://7070athletics.pushpress.com/landing/calendar?framed=1",
   "timeZone": "America/Denver",
-  "requestedFrom": "2026-11-12",
-  "targetThrough": "2026-12-03",
+  "requestedFrom": "2026-11-13",
+  "targetThrough": "2026-12-04",
   "dateRange": {
     "startDate": "2026-11-08",
     "endDate": "2026-12-05"
   },
-  "count": 299,
+  "count": 302,
   "items": [
     {
       "uuid": "cal-9b9a614ff95d46a3b33fff67a2eb",
@@ -1898,6 +1898,69 @@
       "isAllDay": false,
       "startDatetime": "2026-11-15T15:30:00.000Z",
       "endDatetime": "2026-11-15T16:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-b1a2e26de6314cd8804a50a1f41e",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-11-15T16:00:00.000Z",
+      "endDatetime": "2026-11-15T16:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-b221d315884c4c5886179236b032",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-11-15T16:30:00.000Z",
+      "endDatetime": "2026-11-15T17:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "a0ed7304a452376769ab4c4666cdf828",
+        "name": "Shooting Machine Access",
+        "color": "#61BAFC",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-62d07a99fff44513827c1b3b3c95",
+      "title": "Shooting Machine",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-11-15T17:00:00.000Z",
+      "endDatetime": "2026-11-15T17:30:00.000Z",
       "calendarItemType": {
         "uuid": "a0ed7304a452376769ab4c4666cdf828",
         "name": "Shooting Machine Access",

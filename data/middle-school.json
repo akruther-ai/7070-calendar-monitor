@@ -8,7 +8,7 @@
     "endDate": "2026-12-05"
   },
   "filter": "current/future item where title or calendarItemType.name contains \"middle school\" (case-insensitive)",
-  "count": 63,
+  "count": 65,
   "items": [
     {
       "uuid": "cal-fe237fdc7058405d9d62bea96137",
@@ -563,6 +563,27 @@
       "__typename": "PublicCalendarItem"
     },
     {
+      "uuid": "cal-3687c554835443d48d95c7d95fe1",
+      "title": "Shot Doctor - MS (Grades 7-8)",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-11-19T18:30:00.000Z",
+      "endDatetime": "2026-11-19T19:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_ccfc37b0501835516a66",
+        "name": "Shot Doctor - Middle School Grades 7-8",
+        "color": "#417505",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
       "uuid": "cal-0ae682a8d160422ca99c8885b7da",
       "title": "MS/HS Skills",
       "type": "Class",
@@ -611,6 +632,27 @@
         "lastName": "Mitchem",
         "__typename": "Profile"
       },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-2fc68a0350a74f1a8baf148d4436",
+      "title": "Shot Doctor - MS (Grades 7-8)",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-11-22T11:00:00.000Z",
+      "endDatetime": "2026-11-22T12:00:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_ccfc37b0501835516a66",
+        "name": "Shot Doctor - Middle School Grades 7-8",
+        "color": "#417505",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },

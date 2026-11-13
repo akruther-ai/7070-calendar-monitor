@@ -2018,14 +2018,16 @@
       "registrationOpenedAt": "2026-11-12T01:30:00.000Z",
       "title": "Middle School Club Team Skills",
       "startDatetime": "2026-11-18T18:30:00.000Z",
-      "issueNumber": 275
+      "issueNumber": 275,
+      "issueClosedAt": "2026-11-13T01:30:27.044Z"
     },
     "cal-4167ec602d00468eb56a3f08115c": {
       "notifiedAt": "2026-11-12T01:30:04Z",
       "registrationOpenedAt": "2026-11-12T01:30:00.000Z",
       "title": "MS/HS Skills",
       "startDatetime": "2026-11-18T18:30:00.000Z",
-      "issueNumber": 275
+      "issueNumber": 275,
+      "issueClosedAt": "2026-11-13T01:30:27.044Z"
     },
     "cal-f42250f650b24838b008b5c1b4dd": {
       "notifiedAt": "2026-11-12T02:30:03Z",

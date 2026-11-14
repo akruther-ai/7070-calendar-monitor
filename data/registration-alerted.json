@@ -2050,7 +2050,8 @@
       "registrationOpenedAt": "2026-11-13T00:30:00.000Z",
       "title": "Middle School Skills",
       "startDatetime": "2026-11-19T17:30:00.000Z",
-      "issueNumber": 279
+      "issueNumber": 279,
+      "issueClosedAt": "2026-11-14T00:37:36.037Z"
     },
     "cal-5b5e5174860d43418ead91025c08": {
       "notifiedAt": "2026-11-13T01:30:03Z",
@@ -2072,6 +2073,20 @@
       "title": "Shot Doctor - MS (Grades 7-8)",
       "startDatetime": "2026-11-19T18:30:00.000Z",
       "issueNumber": 281
+    },
+    "cal-0ae682a8d160422ca99c8885b7da": {
+      "notifiedAt": "2026-11-14T00:37:38Z",
+      "registrationOpenedAt": "2026-11-14T00:30:00.000Z",
+      "title": "MS/HS Skills",
+      "startDatetime": "2026-11-20T17:30:00.000Z",
+      "issueNumber": 282
+    },
+    "cal-e3366b9ff42844be96b0802d3984": {
+      "notifiedAt": "2026-11-14T01:30:04Z",
+      "registrationOpenedAt": "2026-11-14T01:30:00.000Z",
+      "title": "Middle Schools 5v5 Runs",
+      "startDatetime": "2026-11-20T18:30:00.000Z",
+      "issueNumber": 283
     }
   },
   "advanceAlerted": {
@@ -3961,14 +3976,16 @@
       "registrationOpenedAt": "2026-11-14T00:30:00.000Z",
       "title": "MS/HS Skills",
       "startDatetime": "2026-11-20T17:30:00.000Z",
-      "issueNumber": 277
+      "issueNumber": 277,
+      "issueClosedAt": "2026-11-14T01:30:02.144Z"
     },
     "cal-e3366b9ff42844be96b0802d3984": {
       "notifiedAt": "2026-11-12T23:30:05Z",
       "registrationOpenedAt": "2026-11-14T01:30:00.000Z",
       "title": "Middle Schools 5v5 Runs",
       "startDatetime": "2026-11-20T18:30:00.000Z",
-      "issueNumber": 277
+      "issueNumber": 277,
+      "issueClosedAt": "2026-11-14T01:30:02.144Z"
     }
   }
 }

@@ -2042,7 +2042,8 @@
       "registrationOpenedAt": "2026-11-12T23:30:00.000Z",
       "title": "Middle School Skills",
       "startDatetime": "2026-11-19T16:30:00.000Z",
-      "issueNumber": 278
+      "issueNumber": 278,
+      "issueClosedAt": "2026-11-14T00:00:08.752Z"
     },
     "cal-ebe04adbb3dd4677b23654f6b372": {
       "notifiedAt": "2026-11-13T00:30:05Z",
@@ -2064,6 +2065,13 @@
       "title": "MS/HS Skills",
       "startDatetime": "2026-11-19T18:30:00.000Z",
       "issueNumber": 280
+    },
+    "cal-3687c554835443d48d95c7d95fe1": {
+      "notifiedAt": "2026-11-14T00:00:11Z",
+      "registrationOpenedAt": "2026-11-13T01:30:00.000Z",
+      "title": "Shot Doctor - MS (Grades 7-8)",
+      "startDatetime": "2026-11-19T18:30:00.000Z",
+      "issueNumber": 281
     }
   },
   "advanceAlerted": {

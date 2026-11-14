@@ -1,12 +1,6 @@
 {
   "initialized": true,
   "alerted": {
-    "cal-338f07ff4fe14dfd92e2105eaa3f": {
-      "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-16T18:00:00.000Z",
-      "startDatetime": "2026-08-23T12:00:00.000Z",
-      "title": "IPT Middle School"
-    },
     "cal-79b6475fed934deea3c3a00f4ded": {
       "suppressedInitialBacklog": true,
       "registrationOpenedAt": "2026-08-16T19:00:00.000Z",

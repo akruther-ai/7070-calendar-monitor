@@ -1,12 +1,6 @@
 {
   "initialized": true,
   "alerted": {
-    "cal-79b6475fed934deea3c3a00f4ded": {
-      "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-16T19:00:00.000Z",
-      "startDatetime": "2026-08-23T13:00:00.000Z",
-      "title": "Middle School Skills "
-    },
     "cal-01fb2eb41768480fa370bf4abde6": {
       "suppressedInitialBacklog": true,
       "registrationOpenedAt": "2026-08-17T22:30:00.000Z",

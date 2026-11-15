@@ -2080,6 +2080,20 @@
       "startDatetime": "2026-11-20T18:30:00.000Z",
       "issueNumber": 283,
       "issueClosedAt": "2026-11-15T02:07:41.541Z"
+    },
+    "cal-2fc68a0350a74f1a8baf148d4436": {
+      "notifiedAt": "2026-11-15T18:00:06Z",
+      "registrationOpenedAt": "2026-11-15T18:00:00.000Z",
+      "title": "Shot Doctor - MS (Grades 7-8)",
+      "startDatetime": "2026-11-22T11:00:00.000Z",
+      "issueNumber": 286
+    },
+    "cal-f280f30cfa694def8f3de8cd47b4": {
+      "notifiedAt": "2026-11-15T19:00:03Z",
+      "registrationOpenedAt": "2026-11-15T19:00:00.000Z",
+      "title": "IPT Middle School",
+      "startDatetime": "2026-11-22T12:00:00.000Z",
+      "issueNumber": 287
     }
   },
   "advanceAlerted": {
@@ -4000,6 +4014,41 @@
       "title": "MS/HS Skills",
       "startDatetime": "2026-11-22T14:00:00.000Z",
       "issueNumber": 284
+    },
+    "cal-409d49e5a30849bf961d6c6644d0": {
+      "notifiedAt": "2026-11-15T18:00:05Z",
+      "registrationOpenedAt": "2026-11-16T23:30:00.000Z",
+      "title": "Middle School Skills",
+      "startDatetime": "2026-11-23T16:30:00.000Z",
+      "issueNumber": 285
+    },
+    "cal-b81abf22b5044f019c17340d6d92": {
+      "notifiedAt": "2026-11-15T18:00:05Z",
+      "registrationOpenedAt": "2026-11-17T00:30:00.000Z",
+      "title": "Middle School Skills",
+      "startDatetime": "2026-11-23T17:30:00.000Z",
+      "issueNumber": 285
+    },
+    "cal-2968a75100cc417e87939f16e76d": {
+      "notifiedAt": "2026-11-15T18:00:05Z",
+      "registrationOpenedAt": "2026-11-17T01:30:00.000Z",
+      "title": "MS/HS Skills",
+      "startDatetime": "2026-11-23T18:30:00.000Z",
+      "issueNumber": 285
+    },
+    "cal-b3d5f86512304dd680b765ea2436": {
+      "notifiedAt": "2026-11-15T18:00:05Z",
+      "registrationOpenedAt": "2026-11-17T01:30:00.000Z",
+      "title": "Middle School Club Team Skills",
+      "startDatetime": "2026-11-23T18:30:00.000Z",
+      "issueNumber": 285
+    },
+    "cal-159a9998e55d498f9f3a71e932db": {
+      "notifiedAt": "2026-11-15T18:00:05Z",
+      "registrationOpenedAt": "2026-11-17T02:30:00.000Z",
+      "title": "IPT Middle School",
+      "startDatetime": "2026-11-23T19:30:00.000Z",
+      "issueNumber": 285
     }
   }
 }

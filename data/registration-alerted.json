@@ -1,36 +1,6 @@
 {
   "initialized": true,
   "alerted": {
-    "cal-01fb2eb41768480fa370bf4abde6": {
-      "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-17T22:30:00.000Z",
-      "startDatetime": "2026-08-24T16:30:00.000Z",
-      "title": "Middle School Skills"
-    },
-    "cal-cf3d50db8a1144ba927a93b34542": {
-      "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-17T22:30:00.000Z",
-      "startDatetime": "2026-08-24T16:30:00.000Z",
-      "title": "Middle School Skills "
-    },
-    "cal-8f9d563df16c4a50bff717ee1d9b": {
-      "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-17T23:30:00.000Z",
-      "startDatetime": "2026-08-24T17:30:00.000Z",
-      "title": "Middle School Skills"
-    },
-    "cal-2d62de03b977470dbb571d9594a8": {
-      "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-18T00:30:00.000Z",
-      "startDatetime": "2026-08-24T18:30:00.000Z",
-      "title": "Shot Doctor - Middle School (Grades 7-8)"
-    },
-    "cal-032d236b29eb41dba8f964a3e392": {
-      "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-18T00:30:00.000Z",
-      "startDatetime": "2026-08-24T18:30:00.000Z",
-      "title": "Upper Middle School Skills "
-    },
     "cal-5ab6a9ad78c74ed6a7f3513a8657": {
       "suppressedInitialBacklog": true,
       "registrationOpenedAt": "2026-08-18T22:30:00.000Z",

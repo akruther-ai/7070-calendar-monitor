@@ -7,7 +7,7 @@
     "startDate": "2026-11-15",
     "endDate": "2026-12-12"
   },
-  "count": 325,
+  "count": 322,
   "items": [
     {
       "uuid": "cal-3ba365e5e9f747aa8ef6d6de26b2",
@@ -553,32 +553,6 @@
         "userUuid": "usr_88e7810f7504876b7c6b0c9bc4a2cc16",
         "firstName": "Cody",
         "lastName": "Bernbeck",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-2a416f6f97fb4aad906344b27d5e",
-      "title": "HS - Speed & Agility",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-11-16T17:30:00.000Z",
-      "endDatetime": "2026-11-16T18:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_93a97d2626c2c552666a",
-        "name": "Sports Performance Training - High School",
-        "color": "#f0c989",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "687ae36e7b3788d40f42ba41748a5f70",
-        "firstName": "Johnson",
-        "lastName": "Sports Performance",
         "__typename": "Profile"
       },
       "assistantCoach": null,
@@ -4403,27 +4377,6 @@
       "__typename": "PublicCalendarItem"
     },
     {
-      "uuid": "cal-3e4acff755744a8faba3bd8ff690",
-      "title": "IPT Middle School ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-12-01T16:30:00.000Z",
-      "endDatetime": "2026-12-01T17:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_4b10a0d0fe07496ac60d",
-        "name": "I'M-Possible Training, Middle School",
-        "color": "#0fe61b",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
       "uuid": "cal-e80fd0d1de8a444c84d55e357412",
       "title": "Shooting Machine",
       "type": "Class",
@@ -6205,27 +6158,6 @@
         "uuid": "b4456f95064b95d92044360a4ece1b35",
         "name": "Middle School",
         "color": "#9B00FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-9cc0796b9db44a93a17700d2cfad",
-      "title": "IPT Middle School ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-12-08T16:30:00.000Z",
-      "endDatetime": "2026-12-08T17:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_4b10a0d0fe07496ac60d",
-        "name": "I'M-Possible Training, Middle School",
-        "color": "#0fe61b",
         "__typename": "CalendarItemType"
       },
       "location": {

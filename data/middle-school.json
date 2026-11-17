@@ -8,7 +8,7 @@
     "endDate": "2026-12-12"
   },
   "filter": "current/future item where title or calendarItemType.name contains \"middle school\" (case-insensitive)",
-  "count": 83,
+  "count": 81,
   "items": [
     {
       "uuid": "cal-5b7dcccee13545afa4d73a9716f0",
@@ -1148,27 +1148,6 @@
       "__typename": "PublicCalendarItem"
     },
     {
-      "uuid": "cal-3e4acff755744a8faba3bd8ff690",
-      "title": "IPT Middle School ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-12-01T16:30:00.000Z",
-      "endDatetime": "2026-12-01T17:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_4b10a0d0fe07496ac60d",
-        "name": "I'M-Possible Training, Middle School",
-        "color": "#0fe61b",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
       "uuid": "cal-6624e8eb8cee4e3d8424aa638b2a",
       "title": "MS/HS Skills",
       "type": "Class",
@@ -1640,27 +1619,6 @@
         "uuid": "b4456f95064b95d92044360a4ece1b35",
         "name": "Middle School",
         "color": "#9B00FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-9cc0796b9db44a93a17700d2cfad",
-      "title": "IPT Middle School ",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-12-08T16:30:00.000Z",
-      "endDatetime": "2026-12-08T17:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_4b10a0d0fe07496ac60d",
-        "name": "I'M-Possible Training, Middle School",
-        "color": "#0fe61b",
         "__typename": "CalendarItemType"
       },
       "location": {

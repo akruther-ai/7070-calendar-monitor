@@ -1,73 +1,15 @@
 {
   "source": "https://7070athletics.pushpress.com/landing/calendar?framed=1",
   "timeZone": "America/Denver",
-  "requestedFrom": "2026-11-17",
-  "targetThrough": "2026-12-08",
+  "requestedFrom": "2026-11-18",
+  "targetThrough": "2026-12-09",
   "dateRange": {
     "startDate": "2026-11-15",
     "endDate": "2026-12-12"
   },
   "filter": "current/future item where title or calendarItemType.name contains \"middle school\" (case-insensitive)",
-  "count": 76,
+  "count": 74,
   "items": [
-    {
-      "uuid": "cal-83c145b6f58c48228f16b8b770de",
-      "title": "Middle School Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-11-17T16:30:00.000Z",
-      "endDatetime": "2026-11-17T17:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "ac130104cee48758d7145556887dac4f",
-        "firstName": "Keion",
-        "lastName": "Mitchem",
-        "__typename": "Profile"
-      },
-      "assistantCoach": {
-        "userUuid": "usr_88e7810f7504876b7c6b0c9bc4a2cc16",
-        "__typename": "Profile"
-      },
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-060e52361e924f90b1ab28155736",
-      "title": "MS/HS Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-11-17T19:30:00.000Z",
-      "endDatetime": "2026-11-17T20:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "60d1145043d821ef20224f3557d76d97",
-        "name": "High School/Middle School Skills",
-        "color": "#00F9FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "46451ec20cefbcb427869724171781e6",
-        "firstName": "Kyle",
-        "lastName": "Owens",
-        "__typename": "Profile"
-      },
-      "assistantCoach": {
-        "userUuid": "ac130104cee48758d7145556887dac4f",
-        "__typename": "Profile"
-      },
-      "__typename": "PublicCalendarItem"
-    },
     {
       "uuid": "cal-f3f17642c3bd4584b9a2233deae0",
       "title": "Middle School Skills",

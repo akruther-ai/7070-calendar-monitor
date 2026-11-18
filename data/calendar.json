@@ -7,7 +7,7 @@
     "startDate": "2026-11-15",
     "endDate": "2026-12-12"
   },
-  "count": 322,
+  "count": 321,
   "items": [
     {
       "uuid": "cal-3ba365e5e9f747aa8ef6d6de26b2",
@@ -1166,32 +1166,6 @@
       "__typename": "PublicCalendarItem"
     },
     {
-      "uuid": "cal-f42250f650b24838b008b5c1b4dd",
-      "title": "IPT Middle School",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-11-18T19:30:00.000Z",
-      "endDatetime": "2026-11-18T20:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_4b10a0d0fe07496ac60d",
-        "name": "I'M-Possible Training, Middle School",
-        "color": "#0fe61b",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "46451ec20cefbcb427869724171781e6",
-        "firstName": "Kyle",
-        "lastName": "Owens",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
       "uuid": "cal-e3622dac583246779fda04886cf7",
       "title": "Shooting Machine",
       "type": "Class",
@@ -1617,9 +1591,9 @@
         "__typename": "CalendarItemLocation"
       },
       "mainCoach": {
-        "userUuid": "46451ec20cefbcb427869724171781e6",
-        "firstName": "Kyle",
-        "lastName": "Owens",
+        "userUuid": "ac130104cee48758d7145556887dac4f",
+        "firstName": "Keion",
+        "lastName": "Mitchem",
         "__typename": "Profile"
       },
       "assistantCoach": null,

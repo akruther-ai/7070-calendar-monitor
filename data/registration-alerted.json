@@ -1,24 +1,6 @@
 {
   "initialized": true,
   "alerted": {
-    "cal-a37d4513322d4be799e6afe99728": {
-      "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-20T22:30:00.000Z",
-      "startDatetime": "2026-08-27T16:30:00.000Z",
-      "title": "Middle School Skills"
-    },
-    "cal-f94864989a384bf7aa7a13d326c0": {
-      "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-20T22:30:00.000Z",
-      "startDatetime": "2026-08-27T16:30:00.000Z",
-      "title": "Middle School Skills "
-    },
-    "cal-26014d9743534b6a82b7b60c96e1": {
-      "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-20T23:30:00.000Z",
-      "startDatetime": "2026-08-27T17:30:00.000Z",
-      "title": "Middle School Skills"
-    },
     "cal-3ecd4020261f4a659cfa16aa54cb": {
       "suppressedInitialBacklog": true,
       "registrationOpenedAt": "2026-08-21T00:30:00.000Z",
@@ -2066,7 +2048,8 @@
       "registrationOpenedAt": "2026-11-17T23:30:00.000Z",
       "title": "Middle School Skills",
       "startDatetime": "2026-11-24T16:30:00.000Z",
-      "issueNumber": 296
+      "issueNumber": 296,
+      "issueClosedAt": "2026-11-18T23:33:35.202Z"
     },
     "cal-3ffe6bdd514947fdadeb2252e83a": {
       "notifiedAt": "2026-11-18T00:30:04Z",

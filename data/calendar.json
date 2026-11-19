@@ -2342,6 +2342,32 @@
       "__typename": "PublicCalendarItem"
     },
     {
+      "uuid": "cal-822650bf9e094e829f85d08af638",
+      "title": "HS - Speed & Agility",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-11-23T16:30:00.000Z",
+      "endDatetime": "2026-11-23T17:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_93a97d2626c2c552666a",
+        "name": "Sports Performance Training - High School",
+        "color": "#f0c989",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "687ae36e7b3788d40f42ba41748a5f70",
+        "firstName": "Johnson",
+        "lastName": "Sports Performance",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
       "uuid": "cal-cf810eeb12ab42ca9fc341f09db1",
       "title": "Shooting Machine",
       "type": "Class",
@@ -2430,32 +2456,6 @@
         "userUuid": "ac130104cee48758d7145556887dac4f",
         "firstName": "Keion",
         "lastName": "Mitchem",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-822650bf9e094e829f85d08af638",
-      "title": "HS - Speed & Agility",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-11-23T17:30:00.000Z",
-      "endDatetime": "2026-11-23T18:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_93a97d2626c2c552666a",
-        "name": "Sports Performance Training - High School",
-        "color": "#f0c989",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "687ae36e7b3788d40f42ba41748a5f70",
-        "firstName": "Johnson",
-        "lastName": "Sports Performance",
         "__typename": "Profile"
       },
       "assistantCoach": null,
@@ -3246,6 +3246,32 @@
       "__typename": "PublicCalendarItem"
     },
     {
+      "uuid": "cal-9f79bad920dc48d78489a6f4849e",
+      "title": "HS - Speed & Agility",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-11-27T16:30:00.000Z",
+      "endDatetime": "2026-11-27T17:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_93a97d2626c2c552666a",
+        "name": "Sports Performance Training - High School",
+        "color": "#f0c989",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "687ae36e7b3788d40f42ba41748a5f70",
+        "firstName": "Johnson",
+        "lastName": "Sports Performance",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
       "uuid": "cal-d998b950073d4c06a0d9149a7c8e",
       "title": "Shooting Machine",
       "type": "Class",
@@ -3314,32 +3340,6 @@
         "userUuid": "usr_8d1673989c54e7",
         "__typename": "Profile"
       },
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-9f79bad920dc48d78489a6f4849e",
-      "title": "HS - Speed & Agility",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-11-27T17:30:00.000Z",
-      "endDatetime": "2026-11-27T18:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_93a97d2626c2c552666a",
-        "name": "Sports Performance Training - High School",
-        "color": "#f0c989",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "687ae36e7b3788d40f42ba41748a5f70",
-        "firstName": "Johnson",
-        "lastName": "Sports Performance",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
     {
@@ -4005,6 +4005,32 @@
       "__typename": "PublicCalendarItem"
     },
     {
+      "uuid": "cal-2c0b3307fa2440c2a34e1900dd74",
+      "title": "HS - Speed & Agility",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-11-30T16:30:00.000Z",
+      "endDatetime": "2026-11-30T17:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "calitemtype_93a97d2626c2c552666a",
+        "name": "Sports Performance Training - High School",
+        "color": "#f0c989",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": {
+        "userUuid": "687ae36e7b3788d40f42ba41748a5f70",
+        "firstName": "Johnson",
+        "lastName": "Sports Performance",
+        "__typename": "Profile"
+      },
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
       "uuid": "cal-3d293afa4e634ead8a24794f4e4e",
       "title": "Shooting Machine",
       "type": "Class",
@@ -4085,32 +4111,6 @@
         "__typename": "CalendarItemLocation"
       },
       "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-2c0b3307fa2440c2a34e1900dd74",
-      "title": "HS - Speed & Agility",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-11-30T17:30:00.000Z",
-      "endDatetime": "2026-11-30T18:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_93a97d2626c2c552666a",
-        "name": "Sports Performance Training - High School",
-        "color": "#f0c989",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "687ae36e7b3788d40f42ba41748a5f70",
-        "firstName": "Johnson",
-        "lastName": "Sports Performance",
-        "__typename": "Profile"
-      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },

@@ -2068,14 +2068,16 @@
       "registrationOpenedAt": "2026-11-18T20:00:00.000Z",
       "title": "Middle School Skills",
       "startDatetime": "2026-11-25T13:00:00.000Z",
-      "issueNumber": 299
+      "issueNumber": 299,
+      "issueClosedAt": "2026-11-19T21:52:01.158Z"
     },
     "cal-1e62782236254e1ba57a6eea725c": {
       "notifiedAt": "2026-11-18T21:00:03Z",
       "registrationOpenedAt": "2026-11-18T21:00:00.000Z",
       "title": "MS/HS Skills",
       "startDatetime": "2026-11-25T14:00:00.000Z",
-      "issueNumber": 300
+      "issueNumber": 300,
+      "issueClosedAt": "2026-11-19T21:52:01.158Z"
     }
   },
   "advanceAlerted": {
@@ -4087,6 +4089,20 @@
       "startDatetime": "2026-11-25T14:00:00.000Z",
       "issueNumber": 295,
       "issueClosedAt": "2026-11-18T21:00:01.108Z"
+    },
+    "cal-20284e4fdc2b4dbdb92a3e31e5a1": {
+      "notifiedAt": "2026-11-19T21:52:04Z",
+      "registrationOpenedAt": "2026-11-21T00:30:00.000Z",
+      "title": "MS/HS Skills",
+      "startDatetime": "2026-11-27T17:30:00.000Z",
+      "issueNumber": 301
+    },
+    "cal-0cbc0c6b7b48440f821f8da0af27": {
+      "notifiedAt": "2026-11-19T21:52:04Z",
+      "registrationOpenedAt": "2026-11-21T01:30:00.000Z",
+      "title": "Middle Schools 5v5 Runs",
+      "startDatetime": "2026-11-27T18:30:00.000Z",
+      "issueNumber": 301
     }
   }
 }

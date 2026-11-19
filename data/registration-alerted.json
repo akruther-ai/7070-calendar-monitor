@@ -1,18 +1,6 @@
 {
   "initialized": true,
   "alerted": {
-    "cal-3ecd4020261f4a659cfa16aa54cb": {
-      "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-21T00:30:00.000Z",
-      "startDatetime": "2026-08-27T18:30:00.000Z",
-      "title": "Shot Doctor - Middle School (Grades 7-8)"
-    },
-    "cal-cfa4cdf9abac42018d41db2b8a56": {
-      "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-21T00:30:00.000Z",
-      "startDatetime": "2026-08-27T18:30:00.000Z",
-      "title": "Upper Middle School Skills "
-    },
     "cal-fc5942c02c6042c1b3848d4d7a7c": {
       "suppressedInitialBacklog": true,
       "registrationOpenedAt": "2026-08-21T23:30:00.000Z",
@@ -2056,21 +2044,24 @@
       "registrationOpenedAt": "2026-11-18T00:30:00.000Z",
       "title": "Middle School Skills",
       "startDatetime": "2026-11-24T17:30:00.000Z",
-      "issueNumber": 297
+      "issueNumber": 297,
+      "issueClosedAt": "2026-11-19T04:28:50.833Z"
     },
     "cal-aebc3188e0c2464ebe8b0a304d01": {
       "notifiedAt": "2026-11-18T01:30:03Z",
       "registrationOpenedAt": "2026-11-18T01:30:00.000Z",
       "title": "MS/HS Skills",
       "startDatetime": "2026-11-24T18:30:00.000Z",
-      "issueNumber": 298
+      "issueNumber": 298,
+      "issueClosedAt": "2026-11-19T04:28:50.833Z"
     },
     "cal-3244da70585b433f8a0278a5b570": {
       "notifiedAt": "2026-11-18T01:30:03Z",
       "registrationOpenedAt": "2026-11-18T01:30:00.000Z",
       "title": "Middle School Club Team Skills",
       "startDatetime": "2026-11-24T18:30:00.000Z",
-      "issueNumber": 298
+      "issueNumber": 298,
+      "issueClosedAt": "2026-11-19T04:28:50.833Z"
     },
     "cal-2d42fea7952b47efbdab7451e34f": {
       "notifiedAt": "2026-11-18T20:00:05Z",

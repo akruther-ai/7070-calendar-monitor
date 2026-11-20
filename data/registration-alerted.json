@@ -1,18 +1,6 @@
 {
   "initialized": true,
   "alerted": {
-    "cal-fc5942c02c6042c1b3848d4d7a7c": {
-      "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-21T23:30:00.000Z",
-      "startDatetime": "2026-08-28T17:30:00.000Z",
-      "title": "Middle School Skills"
-    },
-    "cal-65047da5f2654c5d9467dc11ea73": {
-      "suppressedInitialBacklog": true,
-      "registrationOpenedAt": "2026-08-22T00:30:00.000Z",
-      "startDatetime": "2026-08-28T18:30:00.000Z",
-      "title": "Middle Schools 3v3"
-    },
     "cal-28f39101e25740bcaf288f51c8ae": {
       "suppressedInitialBacklog": true,
       "registrationOpenedAt": "2026-08-24T22:30:00.000Z",
@@ -117,14 +105,6 @@
       "startDatetime": "2026-09-02T18:30:00.000Z",
       "issueNumber": 14,
       "recoveredFromIssue": true,
-      "issueClosedAt": "2026-08-28T03:57:47.749Z"
-    },
-    "cal-5de58d62ab6e41cdb351f39c4611": {
-      "notifiedAt": "2026-08-27T01:41:00Z",
-      "registrationOpenedAt": "2026-08-22T01:30:00.000Z",
-      "title": "Middle Schools 3v3",
-      "startDatetime": "2026-08-28T19:30:00.000Z",
-      "issueNumber": 16,
       "issueClosedAt": "2026-08-28T03:57:47.749Z"
     },
     "cal-fc07343695a447039cf174667fca": {

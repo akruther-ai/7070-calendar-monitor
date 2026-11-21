@@ -8,7 +8,7 @@
     "endDate": "2026-12-12"
   },
   "filter": "current/future item where title or calendarItemType.name contains \"middle school\" (case-insensitive)",
-  "count": 64,
+  "count": 63,
   "items": [
     {
       "uuid": "cal-0ae682a8d160422ca99c8885b7da",
@@ -569,7 +569,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "usr_8d1673989c54e7",
+        "firstName": "Jonathan",
+        "lastName": "Scott",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -590,7 +595,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "ac130104cee48758d7145556887dac4f",
+        "firstName": "Keion",
+        "lastName": "Mitchem",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -611,7 +621,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "ac130104cee48758d7145556887dac4f",
+        "firstName": "Keion",
+        "lastName": "Mitchem",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -632,7 +647,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "usr_88e7810f7504876b7c6b0c9bc4a2cc16",
+        "firstName": "Cody",
+        "lastName": "Bernbeck",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -653,7 +673,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "ac130104cee48758d7145556887dac4f",
+        "firstName": "Keion",
+        "lastName": "Mitchem",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -768,32 +793,6 @@
       "__typename": "PublicCalendarItem"
     },
     {
-      "uuid": "cal-350179d2fefc4b37bd735761646a",
-      "title": "Middle School Club Team Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-12-02T18:30:00.000Z",
-      "endDatetime": "2026-12-02T19:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_c6f4df2473f12d3afa6f",
-        "name": "Middle School Club",
-        "color": "#82e9e8",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "usr_88e7810f7504876b7c6b0c9bc4a2cc16",
-        "firstName": "Cody",
-        "lastName": "Bernbeck",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
       "uuid": "cal-9e94f8a4a0ea479a89e4728fd303",
       "title": "MS/HS Skills",
       "type": "Class",
@@ -878,16 +877,16 @@
       "__typename": "PublicCalendarItem"
     },
     {
-      "uuid": "cal-42cf1bc0c68a48a5ad0877103eec",
-      "title": "Middle School Club Team Skills",
+      "uuid": "cal-4409bfb10ef34728858066de90b7",
+      "title": "MS/HS Skills",
       "type": "Class",
       "isAllDay": false,
       "startDatetime": "2026-12-03T18:30:00.000Z",
       "endDatetime": "2026-12-03T19:30:00.000Z",
       "calendarItemType": {
-        "uuid": "calitemtype_c6f4df2473f12d3afa6f",
-        "name": "Middle School Club",
-        "color": "#82e9e8",
+        "uuid": "60d1145043d821ef20224f3557d76d97",
+        "name": "High School/Middle School Skills",
+        "color": "#00F9FF",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -899,16 +898,37 @@
       "__typename": "PublicCalendarItem"
     },
     {
-      "uuid": "cal-4409bfb10ef34728858066de90b7",
-      "title": "MS/HS Skills",
+      "uuid": "cal-6558522fd7044d16ae36a42b3b10",
+      "title": "Shot Doctor - Middle School (+HS)",
       "type": "Class",
       "isAllDay": false,
-      "startDatetime": "2026-12-03T18:30:00.000Z",
-      "endDatetime": "2026-12-03T19:30:00.000Z",
+      "startDatetime": "2026-12-03T19:30:00.000Z",
+      "endDatetime": "2026-12-03T20:30:00.000Z",
       "calendarItemType": {
-        "uuid": "60d1145043d821ef20224f3557d76d97",
-        "name": "High School/Middle School Skills",
-        "color": "#00F9FF",
+        "uuid": "calitemtype_74d9f810e50311f19e2f12ed770fe3b1",
+        "name": "Shot Doc - MS/HS",
+        "color": "#9b9b9b",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-fe45b27c0cd244719ea101f94c00",
+      "title": "Middle School Skills",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-12-04T16:30:00.000Z",
+      "endDatetime": "2026-12-04T17:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "b4456f95064b95d92044360a4ece1b35",
+        "name": "Middle School",
+        "color": "#9B00FF",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -963,15 +983,15 @@
     },
     {
       "uuid": "cal-cce07fc815e844eab5dc68af8029",
-      "title": "Middle School Skills",
+      "title": "MS/HS Skills",
       "type": "Class",
       "isAllDay": false,
       "startDatetime": "2026-12-05T11:00:00.000Z",
       "endDatetime": "2026-12-05T12:00:00.000Z",
       "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
+        "uuid": "60d1145043d821ef20224f3557d76d97",
+        "name": "High School/Middle School Skills",
+        "color": "#00F9FF",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -984,15 +1004,15 @@
     },
     {
       "uuid": "cal-4bc25ad62c594f4990ba6ab62820",
-      "title": "Shot Doctor - Middle School (Grades 7-8)",
+      "title": "Shot Doctor - Middle School (+HS)",
       "type": "Class",
       "isAllDay": false,
       "startDatetime": "2026-12-05T13:00:00.000Z",
       "endDatetime": "2026-12-05T14:00:00.000Z",
       "calendarItemType": {
-        "uuid": "calitemtype_ccfc37b0501835516a66",
-        "name": "Shot Doctor - Middle School Grades 7-8",
-        "color": "#417505",
+        "uuid": "calitemtype_74d9f810e50311f19e2f12ed770fe3b1",
+        "name": "Shot Doc - MS/HS",
+        "color": "#9b9b9b",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -1039,8 +1059,8 @@
       "title": "MS/HS Skills",
       "type": "Class",
       "isAllDay": false,
-      "startDatetime": "2026-12-06T14:00:00.000Z",
-      "endDatetime": "2026-12-06T15:00:00.000Z",
+      "startDatetime": "2026-12-06T13:00:00.000Z",
+      "endDatetime": "2026-12-06T14:00:00.000Z",
       "calendarItemType": {
         "uuid": "60d1145043d821ef20224f3557d76d97",
         "name": "High School/Middle School Skills",
@@ -1108,27 +1128,6 @@
         "uuid": "60d1145043d821ef20224f3557d76d97",
         "name": "High School/Middle School Skills",
         "color": "#00F9FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-c2124586da6d4a3bbe0a95164da6",
-      "title": "Middle School Club Team Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-12-07T18:30:00.000Z",
-      "endDatetime": "2026-12-07T19:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_c6f4df2473f12d3afa6f",
-        "name": "Middle School Club",
-        "color": "#82e9e8",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -1250,32 +1249,6 @@
       "__typename": "PublicCalendarItem"
     },
     {
-      "uuid": "cal-b4ade52e4333433b912a209e8c31",
-      "title": "Middle School Club Team Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-12-09T18:30:00.000Z",
-      "endDatetime": "2026-12-09T19:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_c6f4df2473f12d3afa6f",
-        "name": "Middle School Club",
-        "color": "#82e9e8",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "usr_88e7810f7504876b7c6b0c9bc4a2cc16",
-        "firstName": "Cody",
-        "lastName": "Bernbeck",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
       "uuid": "cal-2fb478835b884adf80f7ed7020e4",
       "title": "MS/HS Skills",
       "type": "Class",
@@ -1360,16 +1333,16 @@
       "__typename": "PublicCalendarItem"
     },
     {
-      "uuid": "cal-d8c952c670da46e08ff0b4f67c90",
-      "title": "Middle School Club Team Skills",
+      "uuid": "cal-a841851e5ea74192b74844a5eb12",
+      "title": "MS/HS Skills",
       "type": "Class",
       "isAllDay": false,
       "startDatetime": "2026-12-10T18:30:00.000Z",
       "endDatetime": "2026-12-10T19:30:00.000Z",
       "calendarItemType": {
-        "uuid": "calitemtype_c6f4df2473f12d3afa6f",
-        "name": "Middle School Club",
-        "color": "#82e9e8",
+        "uuid": "60d1145043d821ef20224f3557d76d97",
+        "name": "High School/Middle School Skills",
+        "color": "#00F9FF",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -1381,16 +1354,37 @@
       "__typename": "PublicCalendarItem"
     },
     {
-      "uuid": "cal-a841851e5ea74192b74844a5eb12",
-      "title": "MS/HS Skills",
+      "uuid": "cal-544ee0748d6a41c98bb189b98585",
+      "title": "Shot Doctor - Middle School (+HS)",
       "type": "Class",
       "isAllDay": false,
-      "startDatetime": "2026-12-10T18:30:00.000Z",
-      "endDatetime": "2026-12-10T19:30:00.000Z",
+      "startDatetime": "2026-12-10T19:30:00.000Z",
+      "endDatetime": "2026-12-10T20:30:00.000Z",
       "calendarItemType": {
-        "uuid": "60d1145043d821ef20224f3557d76d97",
-        "name": "High School/Middle School Skills",
-        "color": "#00F9FF",
+        "uuid": "calitemtype_74d9f810e50311f19e2f12ed770fe3b1",
+        "name": "Shot Doc - MS/HS",
+        "color": "#9b9b9b",
+        "__typename": "CalendarItemType"
+      },
+      "location": {
+        "uuid": "location_139d2de9e2a0bf",
+        "__typename": "CalendarItemLocation"
+      },
+      "mainCoach": null,
+      "assistantCoach": null,
+      "__typename": "PublicCalendarItem"
+    },
+    {
+      "uuid": "cal-ae2e19130e594d8695626fbef3cc",
+      "title": "Middle School Skills",
+      "type": "Class",
+      "isAllDay": false,
+      "startDatetime": "2026-12-11T16:30:00.000Z",
+      "endDatetime": "2026-12-11T17:30:00.000Z",
+      "calendarItemType": {
+        "uuid": "b4456f95064b95d92044360a4ece1b35",
+        "name": "Middle School",
+        "color": "#9B00FF",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -1445,15 +1439,15 @@
     },
     {
       "uuid": "cal-23c0349281884109b13ff761fd9b",
-      "title": "Middle School Skills",
+      "title": "MS/HS Skills",
       "type": "Class",
       "isAllDay": false,
       "startDatetime": "2026-12-12T11:00:00.000Z",
       "endDatetime": "2026-12-12T12:00:00.000Z",
       "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
+        "uuid": "60d1145043d821ef20224f3557d76d97",
+        "name": "High School/Middle School Skills",
+        "color": "#00F9FF",
         "__typename": "CalendarItemType"
       },
       "location": {
@@ -1466,15 +1460,15 @@
     },
     {
       "uuid": "cal-b4ce2f5aa5994f019986ab456ebc",
-      "title": "Shot Doctor - Middle School (Grades 7-8)",
+      "title": "Shot Doctor - Middle School (+HS)",
       "type": "Class",
       "isAllDay": false,
       "startDatetime": "2026-12-12T13:00:00.000Z",
       "endDatetime": "2026-12-12T14:00:00.000Z",
       "calendarItemType": {
-        "uuid": "calitemtype_ccfc37b0501835516a66",
-        "name": "Shot Doctor - Middle School Grades 7-8",
-        "color": "#417505",
+        "uuid": "calitemtype_74d9f810e50311f19e2f12ed770fe3b1",
+        "name": "Shot Doc - MS/HS",
+        "color": "#9b9b9b",
         "__typename": "CalendarItemType"
       },
       "location": {

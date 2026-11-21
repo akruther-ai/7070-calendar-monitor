@@ -2079,6 +2079,13 @@
       "title": "Middle School Skills",
       "startDatetime": "2026-11-28T11:00:00.000Z",
       "issueNumber": 307
+    },
+    "cal-5dbb42498d454980b9fa9c11781c": {
+      "notifiedAt": "2026-11-21T20:00:05Z",
+      "registrationOpenedAt": "2026-11-21T20:00:00.000Z",
+      "title": "Shot Doctor - Middle School (Grades 7-8)",
+      "startDatetime": "2026-11-28T13:00:00.000Z",
+      "issueNumber": 308
     }
   },
   "advanceAlerted": {
@@ -4112,14 +4119,16 @@
       "registrationOpenedAt": "2026-11-21T18:00:00.000Z",
       "title": "Middle School Skills",
       "startDatetime": "2026-11-28T11:00:00.000Z",
-      "issueNumber": 302
+      "issueNumber": 302,
+      "issueClosedAt": "2026-11-21T20:00:02.268Z"
     },
     "cal-5dbb42498d454980b9fa9c11781c": {
       "notifiedAt": "2026-11-20T18:47:45Z",
       "registrationOpenedAt": "2026-11-21T20:00:00.000Z",
       "title": "Shot Doctor - Middle School (Grades 7-8)",
       "startDatetime": "2026-11-28T13:00:00.000Z",
-      "issueNumber": 302
+      "issueNumber": 302,
+      "issueClosedAt": "2026-11-21T20:00:02.268Z"
     },
     "cal-68453eb1103244c2bdbdd7af169d": {
       "notifiedAt": "2026-11-21T18:00:05Z",

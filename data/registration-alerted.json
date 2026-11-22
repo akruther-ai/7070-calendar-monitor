@@ -2088,7 +2088,8 @@
       "registrationOpenedAt": "2026-11-21T20:00:00.000Z",
       "title": "Shot Doctor - Middle School (Grades 7-8)",
       "startDatetime": "2026-11-28T13:00:00.000Z",
-      "issueNumber": 308
+      "issueNumber": 308,
+      "issueClosedAt": "2026-11-22T20:00:25.331Z"
     },
     "cal-68453eb1103244c2bdbdd7af169d": {
       "notifiedAt": "2026-11-22T19:00:04Z",

@@ -2080,7 +2080,8 @@
       "registrationOpenedAt": "2026-11-21T18:00:00.000Z",
       "title": "Middle School Skills",
       "startDatetime": "2026-11-28T11:00:00.000Z",
-      "issueNumber": 307
+      "issueNumber": 307,
+      "issueClosedAt": "2026-11-22T18:31:17.646Z"
     },
     "cal-5dbb42498d454980b9fa9c11781c": {
       "notifiedAt": "2026-11-21T20:00:05Z",
@@ -2088,6 +2089,20 @@
       "title": "Shot Doctor - Middle School (Grades 7-8)",
       "startDatetime": "2026-11-28T13:00:00.000Z",
       "issueNumber": 308
+    },
+    "cal-68453eb1103244c2bdbdd7af169d": {
+      "notifiedAt": "2026-11-22T19:00:04Z",
+      "registrationOpenedAt": "2026-11-22T19:00:00.000Z",
+      "title": "IPT Middle School",
+      "startDatetime": "2026-11-29T12:00:00.000Z",
+      "issueNumber": 310
+    },
+    "cal-3f46b144b4f04ac5a747bb39faf3": {
+      "notifiedAt": "2026-11-22T20:00:03Z",
+      "registrationOpenedAt": "2026-11-22T20:00:00.000Z",
+      "title": "MS/HS Skills",
+      "startDatetime": "2026-11-29T13:00:00.000Z",
+      "issueNumber": 311
     }
   },
   "advanceAlerted": {
@@ -4137,14 +4152,51 @@
       "registrationOpenedAt": "2026-11-22T19:00:00.000Z",
       "title": "IPT Middle School",
       "startDatetime": "2026-11-29T12:00:00.000Z",
-      "issueNumber": 306
+      "issueNumber": 306,
+      "issueClosedAt": "2026-11-22T20:00:01.111Z"
     },
     "cal-3f46b144b4f04ac5a747bb39faf3": {
       "notifiedAt": "2026-11-21T18:00:05Z",
       "registrationOpenedAt": "2026-11-22T20:00:00.000Z",
       "title": "MS/HS Skills",
       "startDatetime": "2026-11-29T13:00:00.000Z",
-      "issueNumber": 306
+      "issueNumber": 306,
+      "issueClosedAt": "2026-11-22T20:00:01.111Z"
+    },
+    "cal-408de639109f4d47bce3da90dedc": {
+      "notifiedAt": "2026-11-22T18:31:20Z",
+      "registrationOpenedAt": "2026-11-23T23:30:00.000Z",
+      "title": "Middle School Skills",
+      "startDatetime": "2026-11-30T16:30:00.000Z",
+      "issueNumber": 309
+    },
+    "cal-5bb42afa8e3c428dbf150c04f673": {
+      "notifiedAt": "2026-11-22T18:31:20Z",
+      "registrationOpenedAt": "2026-11-24T00:30:00.000Z",
+      "title": "Middle School Skills",
+      "startDatetime": "2026-11-30T17:30:00.000Z",
+      "issueNumber": 309
+    },
+    "cal-58b081b0fea046e9a56d95e8861f": {
+      "notifiedAt": "2026-11-22T18:31:20Z",
+      "registrationOpenedAt": "2026-11-24T01:30:00.000Z",
+      "title": "MS/HS Skills",
+      "startDatetime": "2026-11-30T18:30:00.000Z",
+      "issueNumber": 309
+    },
+    "cal-de5b576f4bd4421ba7a69e9de507": {
+      "notifiedAt": "2026-11-22T18:31:20Z",
+      "registrationOpenedAt": "2026-11-24T01:30:00.000Z",
+      "title": "Middle School Club Team Skills",
+      "startDatetime": "2026-11-30T18:30:00.000Z",
+      "issueNumber": 309
+    },
+    "cal-4c359ae2662c4ac09d70e1369c63": {
+      "notifiedAt": "2026-11-22T18:31:20Z",
+      "registrationOpenedAt": "2026-11-24T02:30:00.000Z",
+      "title": "IPT Middle School",
+      "startDatetime": "2026-11-30T19:30:00.000Z",
+      "issueNumber": 309
     }
   }
 }

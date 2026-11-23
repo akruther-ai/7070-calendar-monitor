@@ -1,8 +1,8 @@
 {
   "source": "https://7070athletics.pushpress.com/landing/calendar?framed=1",
   "timeZone": "America/Denver",
-  "requestedFrom": "2026-11-22",
-  "targetThrough": "2026-12-13",
+  "requestedFrom": "2026-11-23",
+  "targetThrough": "2026-12-14",
   "dateRange": {
     "startDate": "2026-11-22",
     "endDate": "2026-12-19"
@@ -5582,10 +5582,7 @@
         "color": "#1A90D8",
         "__typename": "CalendarItemType"
       },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
+      "location": null,
       "mainCoach": null,
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
@@ -5870,10 +5867,7 @@
         "color": "#61BAFC",
         "__typename": "CalendarItemType"
       },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
+      "location": null,
       "mainCoach": null,
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"

@@ -1,13 +1,13 @@
 {
   "source": "https://7070athletics.pushpress.com/landing/calendar?framed=1",
   "timeZone": "America/Denver",
-  "requestedFrom": "2026-11-24",
-  "targetThrough": "2026-12-15",
+  "requestedFrom": "2026-11-25",
+  "targetThrough": "2026-12-16",
   "dateRange": {
     "startDate": "2026-11-22",
     "endDate": "2026-12-19"
   },
-  "count": 319,
+  "count": 317,
   "items": [
     {
       "uuid": "cal-3ba365e5e9f747aa8ef6d6de26b2",
@@ -1761,27 +1761,6 @@
       "__typename": "PublicCalendarItem"
     },
     {
-      "uuid": "cal-a3ee856eea7542f7811ed2aac0fb",
-      "title": "IPT Underclassmen",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-11-28T13:00:00.000Z",
-      "endDatetime": "2026-11-28T14:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_5065014b3c347fa10a21",
-        "name": "I'M-Possible Training, HS Underclassmen",
-        "color": "#d0021b",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
       "uuid": "cal-4915855e1c044e54908a2624f809",
       "title": "Shot Doctor - High School",
       "type": "Class",
@@ -1804,27 +1783,6 @@
         "lastName": "Scott",
         "__typename": "Profile"
       },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-2f4e224a36db4069b71155b8d229",
-      "title": "IPT Upperclassmen",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-11-28T14:00:00.000Z",
-      "endDatetime": "2026-11-28T15:00:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_7a8ffd0d880a9c585521",
-        "name": "I'M-Possible Training, HS Upperclassmen",
-        "color": "#f8e71c",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": null,
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },

@@ -1,119 +1,15 @@
 {
   "source": "https://7070athletics.pushpress.com/landing/calendar?framed=1",
   "timeZone": "America/Denver",
-  "requestedFrom": "2026-11-24",
-  "targetThrough": "2026-12-15",
+  "requestedFrom": "2026-11-25",
+  "targetThrough": "2026-12-16",
   "dateRange": {
     "startDate": "2026-11-22",
     "endDate": "2026-12-19"
   },
   "filter": "current/future item where title or calendarItemType.name contains \"middle school\" (case-insensitive)",
-  "count": 75,
+  "count": 71,
   "items": [
-    {
-      "uuid": "cal-c13a37d0371a4025a142ba7224d7",
-      "title": "Middle School Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-11-24T16:30:00.000Z",
-      "endDatetime": "2026-11-24T17:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "usr_8d1673989c54e7",
-        "firstName": "Jonathan",
-        "lastName": "Scott",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-3ffe6bdd514947fdadeb2252e83a",
-      "title": "Middle School Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-11-24T17:30:00.000Z",
-      "endDatetime": "2026-11-24T18:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "b4456f95064b95d92044360a4ece1b35",
-        "name": "Middle School",
-        "color": "#9B00FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "ac130104cee48758d7145556887dac4f",
-        "firstName": "Keion",
-        "lastName": "Mitchem",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-aebc3188e0c2464ebe8b0a304d01",
-      "title": "MS/HS Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-11-24T18:30:00.000Z",
-      "endDatetime": "2026-11-24T19:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "60d1145043d821ef20224f3557d76d97",
-        "name": "High School/Middle School Skills",
-        "color": "#00F9FF",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "usr_8d1673989c54e7",
-        "firstName": "Jonathan",
-        "lastName": "Scott",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
-    {
-      "uuid": "cal-3244da70585b433f8a0278a5b570",
-      "title": "Middle School Club Team Skills",
-      "type": "Class",
-      "isAllDay": false,
-      "startDatetime": "2026-11-24T18:30:00.000Z",
-      "endDatetime": "2026-11-24T19:30:00.000Z",
-      "calendarItemType": {
-        "uuid": "calitemtype_c6f4df2473f12d3afa6f",
-        "name": "Middle School Club",
-        "color": "#82e9e8",
-        "__typename": "CalendarItemType"
-      },
-      "location": {
-        "uuid": "location_139d2de9e2a0bf",
-        "__typename": "CalendarItemLocation"
-      },
-      "mainCoach": {
-        "userUuid": "ac130104cee48758d7145556887dac4f",
-        "firstName": "Keion",
-        "lastName": "Mitchem",
-        "__typename": "Profile"
-      },
-      "assistantCoach": null,
-      "__typename": "PublicCalendarItem"
-    },
     {
       "uuid": "cal-2d42fea7952b47efbdab7451e34f",
       "title": "Middle School Skills",

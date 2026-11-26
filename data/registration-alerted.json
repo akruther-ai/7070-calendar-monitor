@@ -2014,7 +2014,8 @@
       "registrationOpenedAt": "2026-11-25T02:30:00.000Z",
       "title": "MS/HS Skills",
       "startDatetime": "2026-12-01T19:30:00.000Z",
-      "issueNumber": 319
+      "issueNumber": 319,
+      "issueClosedAt": "2026-11-26T02:30:29.618Z"
     },
     "cal-a8b9a7f883e842258b79b958b179": {
       "notifiedAt": "2026-11-25T23:30:05Z",

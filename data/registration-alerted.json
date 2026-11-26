@@ -2029,6 +2029,20 @@
       "title": "Middle School Skills",
       "startDatetime": "2026-12-02T17:30:00.000Z",
       "issueNumber": 322
+    },
+    "cal-9e94f8a4a0ea479a89e4728fd303": {
+      "notifiedAt": "2026-11-26T01:30:07Z",
+      "registrationOpenedAt": "2026-11-26T01:30:00.000Z",
+      "title": "MS/HS Skills",
+      "startDatetime": "2026-12-02T18:30:00.000Z",
+      "issueNumber": 323
+    },
+    "cal-28bc03a185ad4a24a2da47e1d6fe": {
+      "notifiedAt": "2026-11-26T02:30:07Z",
+      "registrationOpenedAt": "2026-11-26T02:30:00.000Z",
+      "title": "IPT Middle School",
+      "startDatetime": "2026-12-02T19:30:00.000Z",
+      "issueNumber": 324
     }
   },
   "advanceAlerted": {
@@ -4046,28 +4060,32 @@
       "registrationOpenedAt": "2026-11-25T23:30:00.000Z",
       "title": "Middle School Skills",
       "startDatetime": "2026-12-02T16:30:00.000Z",
-      "issueNumber": 317
+      "issueNumber": 317,
+      "issueClosedAt": "2026-11-26T02:30:01.142Z"
     },
     "cal-bc0e27ba7f8f4c26bca0838f8548": {
       "notifiedAt": "2026-11-24T17:36:35Z",
       "registrationOpenedAt": "2026-11-26T00:30:00.000Z",
       "title": "Middle School Skills",
       "startDatetime": "2026-12-02T17:30:00.000Z",
-      "issueNumber": 317
+      "issueNumber": 317,
+      "issueClosedAt": "2026-11-26T02:30:01.142Z"
     },
     "cal-9e94f8a4a0ea479a89e4728fd303": {
       "notifiedAt": "2026-11-24T17:36:35Z",
       "registrationOpenedAt": "2026-11-26T01:30:00.000Z",
       "title": "MS/HS Skills",
       "startDatetime": "2026-12-02T18:30:00.000Z",
-      "issueNumber": 317
+      "issueNumber": 317,
+      "issueClosedAt": "2026-11-26T02:30:01.142Z"
     },
     "cal-28bc03a185ad4a24a2da47e1d6fe": {
       "notifiedAt": "2026-11-24T17:36:35Z",
       "registrationOpenedAt": "2026-11-26T02:30:00.000Z",
       "title": "IPT Middle School",
       "startDatetime": "2026-12-02T19:30:00.000Z",
-      "issueNumber": 317
+      "issueNumber": 317,
+      "issueClosedAt": "2026-11-26T02:30:01.142Z"
     },
     "cal-d683b4617c784918acb486dd5f27": {
       "notifiedAt": "2026-11-25T20:04:07Z",

@@ -1,8 +1,8 @@
 {
   "source": "https://7070athletics.pushpress.com/landing/calendar?framed=1",
   "timeZone": "America/Denver",
-  "requestedFrom": "2026-11-27",
-  "targetThrough": "2026-12-18",
+  "requestedFrom": "2026-11-28",
+  "targetThrough": "2026-12-19",
   "dateRange": {
     "startDate": "2026-11-22",
     "endDate": "2026-12-19"
@@ -1653,9 +1653,9 @@
         "__typename": "CalendarItemLocation"
       },
       "mainCoach": {
-        "userUuid": "usr_354c5c2551abc4",
-        "firstName": "Anna",
-        "lastName": "Poe",
+        "userUuid": "usr_b3ed2cd76b3e81504338b0381eb49848",
+        "firstName": "Tommy",
+        "lastName": "Perez",
         "__typename": "Profile"
       },
       "assistantCoach": null,
@@ -1679,9 +1679,9 @@
         "__typename": "CalendarItemLocation"
       },
       "mainCoach": {
-        "userUuid": "usr_354c5c2551abc4",
-        "firstName": "Anna",
-        "lastName": "Poe",
+        "userUuid": "usr_b3ed2cd76b3e81504338b0381eb49848",
+        "firstName": "Tommy",
+        "lastName": "Perez",
         "__typename": "Profile"
       },
       "assistantCoach": null,
@@ -1704,7 +1704,12 @@
         "uuid": "location_139d2de9e2a0bf",
         "__typename": "CalendarItemLocation"
       },
-      "mainCoach": null,
+      "mainCoach": {
+        "userUuid": "usr_354c5c2551abc4",
+        "firstName": "Anna",
+        "lastName": "Poe",
+        "__typename": "Profile"
+      },
       "assistantCoach": null,
       "__typename": "PublicCalendarItem"
     },
@@ -1726,9 +1731,9 @@
         "__typename": "CalendarItemLocation"
       },
       "mainCoach": {
-        "userUuid": "usr_8d1673989c54e7",
-        "firstName": "Jonathan",
-        "lastName": "Scott",
+        "userUuid": "usr_354c5c2551abc4",
+        "firstName": "Anna",
+        "lastName": "Poe",
         "__typename": "Profile"
       },
       "assistantCoach": null,
@@ -1752,9 +1757,9 @@
         "__typename": "CalendarItemLocation"
       },
       "mainCoach": {
-        "userUuid": "usr_8d1673989c54e7",
-        "firstName": "Jonathan",
-        "lastName": "Scott",
+        "userUuid": "usr_354c5c2551abc4",
+        "firstName": "Anna",
+        "lastName": "Poe",
         "__typename": "Profile"
       },
       "assistantCoach": null,
@@ -1778,9 +1783,9 @@
         "__typename": "CalendarItemLocation"
       },
       "mainCoach": {
-        "userUuid": "usr_8d1673989c54e7",
-        "firstName": "Jonathan",
-        "lastName": "Scott",
+        "userUuid": "usr_354c5c2551abc4",
+        "firstName": "Anna",
+        "lastName": "Poe",
         "__typename": "Profile"
       },
       "assistantCoach": null,

@@ -2038,7 +2038,8 @@
       "registrationOpenedAt": "2026-11-27T02:30:00.000Z",
       "title": "Shot Doctor - Middle School (+HS)",
       "startDatetime": "2026-12-03T19:30:00.000Z",
-      "issueNumber": 329
+      "issueNumber": 329,
+      "issueClosedAt": "2026-11-28T03:28:45.575Z"
     },
     "cal-fe45b27c0cd244719ea101f94c00": {
       "notifiedAt": "2026-11-27T23:30:05Z",
